@@ -1,26 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GeraAdvantage.App">
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.App">
     <Application.Resources>
-        <Style TargetType="Button">
-            <Setter Property="BackgroundColor"
-                    Value="DodgerBlue" />
-            <Setter Property="TextColor"
-                    Value="White" />
-            <Setter Property="CornerRadius"
-                    Value="0" />
-            <Setter Property="HeightRequest"
-                    Value="40" />
-            <Setter Property="HorizontalOptions"
-                    Value="FillAndExpand" />
+        <Style
+            TargetType="NavigationPage">
+            <Setter
+                Property="BarBackgroundColor"
+                Value="DodgerBlue" />
+            <Setter
+                Property="BarTextColor"
+                Value="Color.White" />
         </Style>
-        <Style TargetType="Entry">
-            <Setter Property="FontSize"
-                    Value="Medium" />
-            <Setter Property="HorizontalOptions"
-                    Value="FillAndExpand" />
-
+        <Style
+            TargetType="Button">
+            <Setter
+                Property="BackgroundColor"
+                Value="DodgerBlue" />
+            <Setter
+                Property="TextColor"
+                Value="White" />
+            <Setter
+                Property="CornerRadius"
+                Value="0" />
+            <Setter
+                Property="HeightRequest"
+                Value="40" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+        </Style>
+        <Style
+            TargetType="Entry">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="TextColor"
+                Value="White" />
+            <Setter
+                Property="PlaceholderColor"
+                Value="White" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+        </Style>
+        <Style
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Black" />
         </Style>
     </Application.Resources>
 </Application>
+

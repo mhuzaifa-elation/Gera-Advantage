@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeraAdvantage.Views.CreateChecklist_Page"
+    Title="Create Checklist"
+    BackgroundColor="White">
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On
+                    Platform="iOS"
+                    Value="0, 20, 0, 20" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <ScrollView>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Margin="10,0,10,0">
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Orientation="Horizontal">
+
+                        <Label
+                            VerticalOptions="Center"
+                            Text="Project Title"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Building"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Category"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Floor"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Flat Type"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Side"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Flat Number"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Room"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Structural Member"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Structural Member Details"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Username"
+                            Text="{Binding UsernameB}" />
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Contractor"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                    <Button
+                        Text="View" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
