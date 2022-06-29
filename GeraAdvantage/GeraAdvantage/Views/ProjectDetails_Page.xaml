@@ -6,13 +6,10 @@
     BackgroundColor="White"
     Title="Project Title">
     <ContentPage.ToolbarItems>
-
         <ToolbarItem
             Order="Primary"
             IconImageSource="refresh.png"
-            Priority="0" 
-            />
-        
+            Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
@@ -20,333 +17,333 @@
             HorizontalOptions="FillAndExpand"
             Orientation="Vertical">
             <ScrollView>
-            <Grid
-                RowDefinitions="*,*,*,*,*,*,*,*,*,*"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                Margin="10,0,5,0"
-                RowSpacing="0">
-                <StackLayout
-                    Grid.Row="0"
-                    VerticalOptions="FillAndExpand"
+                <Grid
+                    RowDefinitions="*,*,*,*,*,*,*,*,*,*"
                     HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="BtnChecklist_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="checklist.png"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0"/>
+                    VerticalOptions="Start"
+                    Margin="10,0,5,0"
+                    RowSpacing="0">
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Checklist"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="Checklist"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="0"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="BtnChecklist_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="checklist.png"
+                            VerticalOptions="Center"
+                            Margin="0,0,10,0" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Checklist"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="Checklist"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="1"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="edit.png"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Create NC/C"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="Add new NC/C"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="1"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="edit.png"
+                            VerticalOptions="Center"
+                            Margin="0,0,10,0" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Create NC/C"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="Add new NC/C"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="2"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="rotate.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="NC/C Management"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="View and update existing NC/C"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="2"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="rotate.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="NC/C Management"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="View and update existing NC/C"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="3"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="dashboard.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="NC Dashboard"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="As per severity,status,root cause"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="3"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="dashboard.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="NC Dashboard"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="As per severity,status,root cause"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="4"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="dashboard.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Conformity Dashboard"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="As per status"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="4"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="dashboard.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Conformity Dashboard"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="As per status"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="5"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="document.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Potential NC Management"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="view and update existing potential NC"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="5"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="document.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Potential NC Management"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="view and update existing potential NC"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="6"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="list.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="NC List"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="As per building,category,contractor,creator"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="6"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="list.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="NC List"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="As per building,category,contractor,creator"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="7"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="person.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Stake Holders"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="View list of project stakeholders"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="7"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="person.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Stake Holders"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="View list of project stakeholders"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="8"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="list.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Project Dashboard"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="View count of C as per Feedback and NC as per Severity"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="8"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="list.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Project Dashboard"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="View count of C as per Feedback and NC as per Severity"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Row="9"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="pdfdoc.png"
-                        Margin="0,0,10,0"
-                        VerticalOptions="Center" />
                     <StackLayout
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Vertical"
-                        Spacing="0">
-                        <Label
-                            Text="Ready Reckoner"
-                            FontSize="Large"
-                            VerticalTextAlignment="Center" />
-                        <Label
-                            Text="View details of standard procedures"
-                            FontSize="Small"
-                            VerticalTextAlignment="Center" />
+                        Grid.Row="9"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="pdfdoc.png"
+                            Margin="0,0,10,0"
+                            VerticalOptions="Center" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Ready Reckoner"
+                                FontSize="Large"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Text="View details of standard procedures"
+                                FontSize="Small"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
                     </StackLayout>
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                </StackLayout>
-            </Grid>
+                </Grid>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

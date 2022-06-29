@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GC6dKrfxDeAGP/1Vt7XVZ5bAYY4Aov+KPGfM/iSVfU/QePjRwBHgBERP2E1DGhyKro5f/ACc9+Dkkw1GLoXUag==",
+  "dgSpecHash": "dU6rQqoAiJsECuCBQFgbI4K05CljNTN54Jh8pG0GMy7a5lzXzLG9hy3LyzCi7pSWoqKhSNbeMjDK/OzgIslRvQ==",
   "success": true,
-  "projectFilePath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
+  "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

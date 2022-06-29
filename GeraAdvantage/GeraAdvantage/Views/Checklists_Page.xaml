@@ -45,30 +45,30 @@
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Orientation="Vertical">
-                <StackLayout
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped" />
-                    </StackLayout.GestureRecognizers>
-                    <Image
-                        Source="rotate.png"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0" />
-                    <Label
-                        Text="Update Checklist"
-                        FontSize="Large"
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        VerticalTextAlignment="Center" />
-                    <Image
-                        Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
-                    
-                </StackLayout>
+                    <StackLayout
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="BtnUpdateChecklist_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="rotate.png"
+                            VerticalOptions="Center"
+                            Margin="0,0,10,0" />
+                        <Label
+                            Text="Update Checklist"
+                            FontSize="Large"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                        <Image
+                            Source="right.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </StackLayout>
 
                 </StackLayout>
                 <StackLayout
@@ -95,9 +95,9 @@
                         HorizontalOptions="End"
                         VerticalOptions="CenterAndExpand" />
                 </StackLayout>
-                
+
             </Grid>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -982,29 +982,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
+      "projectUniqueName": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
       "projectName": "GeraAdvantage.iOS",
-      "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
-      "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-      "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\obj\\",
+      "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
+      "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1016,8 +1008,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
-              "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
+            "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+              "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
             }
           }
         }

@@ -181,4 +181,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\down.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home.png" />
+  </ItemGroup>
 </Project>

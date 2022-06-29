@@ -16,6 +16,10 @@ namespace GeraAdvantage.Views
         {
             InitializeComponent();
         }
+        private async void BtnUpdateChecklist_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UpdateChecklists_Page());
+        }
         private async void BtnCreateChecklist_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CreateChecklist_Page());
