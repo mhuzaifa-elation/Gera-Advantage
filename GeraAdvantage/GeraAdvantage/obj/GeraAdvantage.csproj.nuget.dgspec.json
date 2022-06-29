@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\GIT\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {}
+    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\GIT\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\GIT\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
         "projectName": "GeraAdvantage",
-        "projectPath": "D:\\Projects\\GIT\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
-        "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\GIT\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
+        "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
+        "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -65,7 +72,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
