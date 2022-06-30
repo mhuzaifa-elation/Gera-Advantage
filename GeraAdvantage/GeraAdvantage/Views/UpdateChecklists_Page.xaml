@@ -11,7 +11,8 @@
             IconImageSource="refresh.png" />
         <ToolbarItem
             Order="Primary"
-            IconImageSource="filter.png" />
+            IconImageSource="filter.png"
+            Clicked="BtnFilter_Clicked" />
         <ToolbarItem
             Order="Primary"
             IconImageSource="home.png" />

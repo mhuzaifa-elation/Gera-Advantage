@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GeraAdvantage.Views.CreateChecklist_Page"
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.CreateChecklist_Page"
     Title="Create Checklist"
     BackgroundColor="White">
     <ContentPage.Padding>
@@ -208,8 +209,8 @@
                 HorizontalOptions="Center"
                 Orientation="Horizontal"
                 VerticalOptions="End">
-                    <Button
-                        Text="View" />
+                <Button
+                    Text="View" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

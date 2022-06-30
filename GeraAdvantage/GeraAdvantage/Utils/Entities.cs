@@ -7,6 +7,13 @@ namespace GeraAdvantage.Utils
     internal class Entities
     {
         public enum Status { Pending, Sent_To_QA, Approved,Pending_For_NC_Closure };
+        public class FilterDetail
+        {
+            public string Title { get; set; }
+        } public class FilterType
+        {
+            public string Type { get; set; }
+        }
         public class Project
         {
             public string Title { get; set; }

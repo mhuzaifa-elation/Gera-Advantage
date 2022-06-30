@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.NonConformity"
+    Title="Non-Conformity"
+    BackgroundColor="White">
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On
+                    Platform="iOS"
+                    Value="0, 20, 0, 20" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <ScrollView>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Margin="10,10,10,0">
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Orientation="Horizontal">
+                        <CheckBox
+                            Color="Gray" />
+                        <Label
+                            VerticalOptions="Center"
+                            Text="Potential NC"
+                            FontSize="Medium"
+                            TextColor="Black" />
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Building"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Floor"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Flat Type"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Flat Number"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Room"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Category"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Sub-Category"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Root Cause"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Proposed Severity"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Severity"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText }" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Assign Contractor"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Select Responsible Engineer"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Grid>
+                            <Picker
+                                ItemsSource="{Binding SampleText}" />
+                            <Image
+                                Source="down.png"
+                                HorizontalOptions="End"
+                                Margin="5" />
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Contractor Company Name"
+                            FontSize="Default"
+                            TextColor="Black" />
+                        <Label
+                            Text="Gera"
+                            FontSize="Default"
+                            TextColor="Black" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="NC Comment"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="Black"
+                            PlaceholderColor="Gray"
+                            Placeholder="Add comment if any" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Corrective Action"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="Black"
+                            PlaceholderColor="Gray"
+                            Placeholder="Add Corrective Action if any" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start">
+                        <Label
+                            Text="Preventive Action"
+                            FontSize="Default"
+                            TextColor="Black"
+                            FontAttributes="Bold" />
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="Black"
+                            PlaceholderColor="Gray"
+                            Placeholder="Add Preventice Action if any" />
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="End"
+                Margin="10"
+                Spacing="10">
+                <Button
+                    Text="Add Photo"
+                    HorizontalOptions="FillAndExpand" />
+                <Button
+                    HorizontalOptions="FillAndExpand"
+                    Text="Save" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
