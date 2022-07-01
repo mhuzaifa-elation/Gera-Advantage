@@ -13,6 +13,8 @@
                 Text="Filters"
                 FontSize="20"
                 TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
                 HorizontalOptions="StartAndExpand" />
             <Button
                 Text="Clear All"
@@ -59,7 +61,7 @@
                                             Text="{Binding Type}"
                                             Padding="5,3,5,3"
                                             TextColor="Black"
-                                            FontSize="Medium"
+                                            FontSize="Default"
                                             FontAttributes="Bold"
                                             VerticalOptions="CenterAndExpand"
                                             HorizontalOptions="CenterAndExpand"

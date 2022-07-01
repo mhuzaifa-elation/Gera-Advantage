@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.NonConformityFiltersTemplate"
+    BackgroundColor="White"
+    Title="Project Title">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Project Name"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Margin="15,4,0,4" />
+            <ListView
+                x:Name="listView"
+                HasUnevenRows="true"
+                SeparatorColor="DarkGray"
+                SelectionMode="None"
+                ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Padding="15,15,5,5"
+                                Orientation="Horizontal">
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Start"
+                                    Orientation="Vertical">
+                                    <StackLayout
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start"
+                                        Orientation="Horizontal">
+                                        <Label
+                                            Text="{Binding Title}"
+                                            FontSize="Medium"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions="Start" />
+                                        <Image
+                                            Source="right.png"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="CenterAndExpand" />
+                                    </StackLayout>
+                                    <StackLayout
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start"
+                                        Orientation="Horizontal">
+                                        <Grid
+                                            ColumnDefinitions="*,*,*"
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="FillAndExpand">
+                                            <StackLayout
+                                                Grid.Column="0"
+                                                Orientation="Vertical"
+                                                BackgroundColor="LightGray"
+                                                Padding="0,3,0,3"
+                                                Spacing="0">
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="TotalNCCount_Tapped"/>
+                                                </StackLayout.GestureRecognizers>
+                                                <Label
+                                                    Text="Total NCs"
+                                                    VerticalTextAlignment="Start"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                                <Label
+                                                    Text="{Binding TotalNCCount}"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                            </StackLayout>
+
+                                            <StackLayout
+                                                Grid.Column="1"
+                                                Orientation="Vertical"
+                                                BackgroundColor="LightGray"
+                                                Padding="0,3,0,3"
+                                                Spacing="0">
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="OpenNCCount_Tapped" />
+                                                </StackLayout.GestureRecognizers>
+                                                <Label
+                                                    Text="Open NCs"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                                <Label
+                                                    Text="{Binding OpenNCCount}"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                            </StackLayout>
+
+                                            <StackLayout
+                                                Grid.Column="2"
+                                                Orientation="Vertical"
+                                                BackgroundColor="LightGray"
+                                                Padding="0,3,0,3"
+                                                Spacing="0">
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="ClosedNCCount_Tapped" />
+                                                </StackLayout.GestureRecognizers>
+                                                <Label
+                                                    Text="Closed NCs"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                                <Label
+                                                    Text="{Binding ClosedNCCount}"
+                                                    HorizontalTextAlignment="Center"
+                                                    TextColor="DodgerBlue" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,21 +13,9 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateChecklists_Page : ContentPage
     {
-        private List<Checklist> _checklist;
 
-        private List<Checklist> CheckList
-        {
-            get => _checklist;
-            set
-            {
-                if (value == _checklist)
-                {
-                    return;
-                }
-                _checklist = value;
-                OnPropertyChanged(nameof(CheckList));
-            }
-        }
+        private List<Checklist> CheckList;
+        
         public UpdateChecklists_Page()
         {
             BindingContext = this;
@@ -49,17 +37,7 @@ namespace GeraAdvantage.Views
             CheckList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Pending_For_NC_Closure });
         }
 
-        void OnImageTapped(object sender, EventArgs args)
-        {
-            var image = sender as Image;
-            var viewCell = image.Parent.Parent as ViewCell;
-
-            if (image.HeightRequest < 250)
-            {
-                image.HeightRequest = image.Height + 100;
-                viewCell.ForceUpdateSize();
-            }
-        }
+        
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

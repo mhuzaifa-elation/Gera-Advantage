@@ -1935,3 +1935,5 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\res\drawable\clipboardtick.png
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\res\drawable\clipboardcross.png

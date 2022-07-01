@@ -21,6 +21,10 @@ namespace GeraAdvantage
         {
             await Navigation.PushAsync(new CreateNC());
         }
+        private async void NCManagement_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NCManagement());
+        }
         private async void BtnChecklist_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Checklists_Page());

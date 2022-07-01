@@ -63,3 +63,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\Conformity.xaml.g.cs
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\CreateNC.xaml.g.cs
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\NonConformity.xaml.g.cs
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\NCManagement.xaml.g.cs
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\NonConformityFiltersTemplate.xaml.g.cs
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\NCList.xaml.g.cs

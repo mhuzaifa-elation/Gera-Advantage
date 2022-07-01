@@ -187,4 +187,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clipboardcross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clipboardtick.png" />
+  </ItemGroup>
 </Project>

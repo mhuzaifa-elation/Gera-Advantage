@@ -19,6 +19,7 @@ namespace GeraAdvantage.Utils
             public string Title { get; set; }
             public int TotalNCCount { get; set; }
             public int OpenNCCount { get; set; }
+            public int ClosedNCCount { get; set; }
 
         }
         public class Checklist
@@ -30,6 +31,9 @@ namespace GeraAdvantage.Utils
             public string CreatedBy { get; set; }
             public string UpdatedBy { get; set; }
             public Status Cstatus { get; set; }
+            public string ProjDate { get; set; }
+            public string Deadline { get; set; }
+            public bool IsPast { get; set; }
 
         }
     }
