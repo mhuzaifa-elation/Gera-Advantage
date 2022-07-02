@@ -22,6 +22,14 @@ namespace GeraAdvantage.Utils
             public int ClosedNCCount { get; set; }
 
         }
+        public class NCHistory
+        {
+            public string Status { get; set; }
+            public string Comment { get; set; }
+            public string UpdatedBy { get; set; }
+            public string UpdatedAt { get; set; }
+
+        }
         public class Checklist
         {
             public string Title { get; set; }

@@ -29,7 +29,7 @@
                 HasUnevenRows="true"
                 SeparatorColor="DarkGray"
                 SelectionMode="None"
-                ItemTapped="listView_ItemTapped">
+                ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

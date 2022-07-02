@@ -21,8 +21,9 @@ namespace GeraAdvantage.Views
         {
             await Navigation.PushAsync(new NonConformityFiltersTemplate());
         }
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void ConformityDetails_Tapped(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new ConformityDetails());
         }
     }
 }

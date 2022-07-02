@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeraAdvantage.Views.EditNCDetails"
+             BackgroundColor="White">
+    <NavigationPage.TitleView>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="CenterAndExpand"
+            Margin="0,0,10,0">
+            <Label
+                Text="Edit NC Details"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="StartAndExpand" />
+            <Button
+                Text="Save"
+                TextColor="Black"
+                BackgroundColor="White"
+                HorizontalOptions="End"
+                CornerRadius="4" />
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Vertical"
+                Margin="10"
+                Spacing="10">
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Flat Number:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Category:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Sub-Category:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Severity:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Responsible Engineer:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Assigned Contractor:"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

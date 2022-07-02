@@ -41,9 +41,9 @@ namespace GeraAdvantage.Views
             }
         }
 
-        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            await Navigation.PushAsync(new NCDetails());
         }
 
     }

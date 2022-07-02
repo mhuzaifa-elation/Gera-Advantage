@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.NCDetails"
+    BackgroundColor="White"
+    Title="NC Details">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Order="Primary"
+            IconImageSource="edit.png"
+            Priority="0" 
+            Clicked="EditNCDetails_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Vertical">
+            <ScrollView>
+                <StackLayout
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical"
+                    Margin="10"
+                    Spacing="10">
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="NC No"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Checklist No:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Building:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Flat Type:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Floor:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Flat No:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Room:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Category:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Sub-Category:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Root Cause:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Proposed Severity:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Severity:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Created Date:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Deadline Date:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Assigned Contractor:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Created By:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Updated By:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Responsible Engineer:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <StackLayout
+                        HeightRequest="1"
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="FillAndExpand" />
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Contractor Status:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="NC Status:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Button
+                        Text="Update"
+                        HorizontalOptions="End"
+                        Clicked="BtnUpdate_Clicked"/>
+                    <StackLayout
+                        HeightRequest="1"
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="FillAndExpand" />
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Corrective Action:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Label
+                            Grid.Column="0"
+                            Text="Preventive Action:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid>
+                        <Label
+                            Grid.Column="0"
+                            Text="Contractor's Comment:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Grid>
+                        <Label
+                            Grid.Column="0"
+                            Text="NC Comment:"
+                            TextColor="Gray" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding SampleText}"
+                            FontAttributes="Bold" />
+                    </Grid>
+                    <Entry
+                        Placeholder="Add Comment"
+                        PlaceholderColor="Gray"
+                        TextColor="Black"
+                        BackgroundColor="LightGray" />
+                    <Button
+                        Text="Show History"
+                        HorizontalOptions="End"
+                        Clicked="ShowHistory_Clicked"/>
+                    <StackLayout
+                        HeightRequest="1"
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="FillAndExpand" />
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        Margin="5,5,5,15">
+                        <Button
+                            Grid.Column="0"
+                            Text="Add Photo" 
+                            Clicked="AddPhoto_Clicked"/>
+                        <Button
+                            Grid.Column="1"
+                            Text="Save" />
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

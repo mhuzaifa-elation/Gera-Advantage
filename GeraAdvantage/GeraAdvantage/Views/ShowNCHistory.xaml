@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.ShowNCHistory"
+    BackgroundColor="White"
+    Title="NC History">
+    <ContentPage.Content>
+        <ListView
+            x:Name="listView"
+            HasUnevenRows="true"
+            SeparatorColor="DarkGray"
+            SelectionMode="None"
+            IsEnabled="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Margin="12">
+                            <StackLayout
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start">
+                                <Frame
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Start"
+                                    BorderColor="Black">
+                                    <StackLayout
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start">
+                                        <Grid
+                                            ColumnDefinitions="40*,60*"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Label
+                                                Grid.Column="0"
+                                                Text="Status :"
+                                                TextColor="Gray"
+                                                FontSize="Medium" />
+                                            <Label
+                                                Grid.Column="1"
+                                                Text="{Binding Status}"
+                                                FontAttributes="Bold"
+                                                FontSize="Medium" />
+                                        </Grid>
+                                        <Grid
+                                            ColumnDefinitions="40*,60*"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Label
+                                                Grid.Column="0"
+                                                Text="Comment :"
+                                                TextColor="Gray" />
+                                            <Label
+                                                Grid.Column="1"
+                                                Text="{Binding Comment}" />
+                                        </Grid>
+                                        <Grid
+                                            ColumnDefinitions="40*,60*"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Label
+                                                Grid.Column="0"
+                                                Text="Updated by :"
+                                                TextColor="Gray" />
+                                            <Label
+                                                Grid.Column="1"
+                                                Text="{Binding UpdatedBy}" />
+                                        </Grid>
+                                        <Grid
+                                            ColumnDefinitions="40*,60*"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Label
+                                                Grid.Column="0"
+                                                Text="Updated at :"
+                                                TextColor="Gray" />
+                                            <Label
+                                                Grid.Column="1"
+                                                Text="{Binding UpdatedAt}" />
+                                        </Grid>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>

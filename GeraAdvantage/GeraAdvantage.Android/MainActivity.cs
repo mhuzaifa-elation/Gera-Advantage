@@ -14,6 +14,7 @@ namespace GeraAdvantage.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Rg.Plugins.Popup.Popup.Init(this);
 
             AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

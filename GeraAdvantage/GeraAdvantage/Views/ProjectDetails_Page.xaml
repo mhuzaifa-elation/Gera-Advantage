@@ -65,7 +65,7 @@
                                 Tapped="BtnCreateNC_Tapped" />
                         </StackLayout.GestureRecognizers>
                         <Image
-                            Source="edit.png"
+                            Source="pencil.png"
                             VerticalOptions="Center"
                             Margin="0,0,10,0" />
                         <StackLayout

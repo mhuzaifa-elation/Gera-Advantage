@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xa+xwbsbjnjWvPhn3OiHRofhHUqBKn+kVbvJmuXC5KCVguzvjfldE5FIT58rPuyVlSUcDxkBabI/Pd6oij1fTA==",
+  "dgSpecHash": "Q68+zRLFePB5o0D2nUfolUSmer1yYi5URbqjJ2UysPuydiJddkR8y5bnjTcoV0F15tgF7w5z32XezGEnn64u2w==",
   "success": true,
   "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",

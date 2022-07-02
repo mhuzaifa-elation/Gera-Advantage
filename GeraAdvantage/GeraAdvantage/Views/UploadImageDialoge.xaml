@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="GeraAdvantage.Views.UploadImageDialoge">
+    <StackLayout
+        BackgroundColor="DodgerBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="FillAndExpand"
+        Margin="30,0,30,0">
+        <StackLayout
+            HeightRequest="50"
+            BackgroundColor="White">
+            <Label
+                Margin="5,0,0,0"
+                Text="Upload Image"
+                FontSize="20"
+                TextColor="DodgerBlue"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout
+            HeightRequest="100"
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            <Grid
+                ColumnDefinitions="*,*"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout
+                    Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical">
+                    <Image
+                        HeightRequest="50"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Source="gallery.png" 
+                        />
+                    <Label
+                        Text="Gallery"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Vertical">
+                    <Image
+                        HeightRequest="50"
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Source="camera.png" />
+                    <Label
+                        Text="Camera"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>
