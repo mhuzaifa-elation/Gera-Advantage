@@ -17,6 +17,26 @@ namespace GeraAdvantage
         {
             InitializeComponent();
         }
+        private async void StakeHolders_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StakeHoldersList());
+        }
+        private async void PotentialNCManagement_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NCList());
+        }
+        private async void NCList_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NonConformityFiltersTemplate());
+        }
+        private async void ConformityDashboard_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ConformityDashboard());
+        }
+        private async void NCDashboard_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NCDashboard());
+        }
         private async void BtnCreateNC_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CreateNC());

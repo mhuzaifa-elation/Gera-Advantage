@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.NCList"
     BackgroundColor="White"
-    Title="Checklist">
+    Title="Project Title">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Order="Primary"
@@ -177,4 +177,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

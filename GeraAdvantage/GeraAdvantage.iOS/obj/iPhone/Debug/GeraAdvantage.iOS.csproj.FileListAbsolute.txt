@@ -13,6 +13,8 @@ D:\Projects\GIT\GeraAdvantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\G
 D:\Projects\GIT\GeraAdvantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\GeraAdvantage.iOS.csproj.CoreCompileInputs.cache
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\GeraAdvantage.iOS.exe
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\GeraAdvantage.iOS.pdb
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.dll
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Rg.Plugins.Popup.pdb
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll

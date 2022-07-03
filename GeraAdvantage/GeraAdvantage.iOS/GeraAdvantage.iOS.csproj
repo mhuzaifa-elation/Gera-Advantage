@@ -205,4 +205,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\gallery.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\noimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\noperson.png" />
+  </ItemGroup>
 </Project>

@@ -20,7 +20,13 @@ namespace GeraAdvantage.Utils
             public int TotalNCCount { get; set; }
             public int OpenNCCount { get; set; }
             public int ClosedNCCount { get; set; }
+            public string Severity { get; set; }
 
+        }
+        public class StakeHolder
+        {
+            public string Name { get; set; }
+            public string Designation { get; set; }
         }
         public class NCHistory
         {

@@ -6,7 +6,6 @@
     BackgroundColor="White"
     Title="Gera Projects">
     <ContentPage.ToolbarItems>
-
         <ToolbarItem
             Order="Primary"
             IconImageSource="notification.png"

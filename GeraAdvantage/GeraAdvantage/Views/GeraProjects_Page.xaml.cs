@@ -28,10 +28,8 @@ namespace GeraAdvantage
             projectsList.Add(new Project { Title = "Mocca", TotalNCCount = 12, OpenNCCount = 1 });
             projectsList.Add(new Project { Title = "Espresso", TotalNCCount = 6, OpenNCCount = 43 });
             projectsList.Add(new Project { Title = "Latte", TotalNCCount = 2, OpenNCCount = 5 });
-            projectsList.Add(new Project { Title = "Americano", TotalNCCount = 12, OpenNCCount = 1 });
-            projectsList.Add(new Project { Title = "Arabica", TotalNCCount = 9, OpenNCCount = 4 });
-            projectsList.Add(new Project { Title = "Arabica", TotalNCCount = 9, OpenNCCount = 4 });
-            projectsList.Add(new Project { Title = "Arabica", TotalNCCount = 9, OpenNCCount = 4 });
+            //projectsList.Add(new Project { Title = "Americano", TotalNCCount = 12, OpenNCCount = 1 });
+            //projectsList.Add(new Project { Title = "Arabica", TotalNCCount = 9, OpenNCCount = 4 });
         }
 
         private void DefineGridLayout()
@@ -53,7 +51,7 @@ namespace GeraAdvantage
                     var GridCellLayout = new StackLayout
                     {
 
-                        HeightRequest = 200,
+                        HeightRequest = 240,
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         Orientation = StackOrientation.Vertical,
                     };
@@ -61,7 +59,15 @@ namespace GeraAdvantage
                     {
                         HeightRequest = 130,
                         VerticalOptions = LayoutOptions.StartAndExpand,
+                        HorizontalOptions = LayoutOptions.FillAndExpand
+                    };
+                    var image = new Image
+                    {
+                        Source = "noimage.png",
+                        Aspect = Aspect.AspectFit,
+                        VerticalOptions = LayoutOptions.FillAndExpand,
                         HorizontalOptions = LayoutOptions.FillAndExpand,
+                        Opacity = 0.5
                     };
 
                     var innerlayout = new StackLayout
@@ -99,6 +105,7 @@ namespace GeraAdvantage
                     innerlayout.Children.Add(Titlelabel);
                     innerlayout.Children.Add(TotalNClabel);
                     innerlayout.Children.Add(OpenNClabel);
+                    frame.Children.Add(image);
                     GridCellLayout.Children.Add(frame);
                     GridCellLayout.Children.Add(innerlayout);
 
