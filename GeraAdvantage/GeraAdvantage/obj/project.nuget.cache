@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w8MStslZyhkTYrVLKR5eB4Oikpjp+KthTcsLvhoa33VpOQDxr2aaK/xgN1Sk8flNGzZWOrfM+52BtYctUpSrwQ==",
+  "dgSpecHash": "ogfQlJAYx1/bkxLTKaE/3wK0EGSMxioyFD2VrRYN8CfX9t6FY/jp5gGJBp+c+tYzh316yzw5ryNQU+MfFH6nXQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],

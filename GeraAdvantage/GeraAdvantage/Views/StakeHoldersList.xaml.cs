@@ -30,9 +30,9 @@ namespace GeraAdvantage.Views
             StakeHolders.Add(new StakeHolder { Name = "Mocca", Designation = "B-Bld -as - 0.1" });
         }
 
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            await Navigation.PushAsync(new StakeholderDetail());
         }
 
         private void Search_Clicked(object sender, EventArgs e)

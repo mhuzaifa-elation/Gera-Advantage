@@ -76,3 +76,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\GeraAdvantage.iOS.csproj.CopyComplete
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\GeraAdvantage.iOS.exe
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\obj\iPhone\Debug\GeraAdvantage.iOS.pdb
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Plugin.Messaging.Abstractions.dll
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Plugin.Messaging.Abstractions.pdb
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.iOS\bin\iPhone\Debug\Plugin.Messaging.dll
