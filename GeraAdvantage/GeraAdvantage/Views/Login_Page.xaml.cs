@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static GeraAdvantage.Utils.Entities;
 
 namespace GeraAdvantage
 {
@@ -15,11 +16,13 @@ namespace GeraAdvantage
         public Login_Page()
         {
             InitializeComponent();
+            
         }
-
         private void btnlogin_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new GeraProjects_Page());
         }
     }
+
+
 }

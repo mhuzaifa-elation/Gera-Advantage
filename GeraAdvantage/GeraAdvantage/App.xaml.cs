@@ -8,8 +8,8 @@ namespace GeraAdvantage
     {
         public App()
         {
+            DevExpress.XamarinForms.Charts.Initializer.Init();
             InitializeComponent();
-
             MainPage = new NavigationPage(new Login_Page());
         }
 

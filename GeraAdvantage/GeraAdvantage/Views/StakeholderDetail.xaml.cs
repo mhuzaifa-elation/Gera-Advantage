@@ -12,11 +12,26 @@ namespace GeraAdvantage.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StakeholderDetail : ContentPage
-    {        public StakeholderDetail()
+    {
+
+        public StakeholderDetail()
         {
             InitializeComponent();
         }
+
+        public StakeholderDetail(string title, bool isMyProfile)
+         {
+            InitializeComponent(); 
+            PageTitle.Text = title;
+            btnEdit.IsVisible = isMyProfile;
+        }
+
         private void Phone_Clicked(object sender, EventArgs e) => CrossMessaging.Current.PhoneDialer.MakePhoneCall(lblPhone.Text);
         private void Mail_Clicked(object sender, EventArgs e) => Device.OpenUri(new Uri($"mailto:{lblMail.Text}"));
+
+        private async void btnEdit_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileEditor());
+        }
     }
 }

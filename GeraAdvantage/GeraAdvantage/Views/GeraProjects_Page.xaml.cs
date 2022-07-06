@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeraAdvantage.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -123,6 +124,11 @@ namespace GeraAdvantage
                     projectsGLayout.Children.Add(GridCellLayout, columnIndex, rowIndex);
                 }
             }
+        }
+
+        private async void MyProfile_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StakeholderDetail("My Profile",true));
         }
     }
 }

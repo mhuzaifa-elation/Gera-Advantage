@@ -10,7 +10,13 @@ namespace GeraAdvantage.Utils
         public class FilterDetail
         {
             public string Title { get; set; }
-        } public class FilterType
+        }
+        public class SampleChart
+        {
+            public string Name { get; set; }
+            public double Number { get; set; }
+        }
+        public class FilterType
         {
             public string Type { get; set; }
         }

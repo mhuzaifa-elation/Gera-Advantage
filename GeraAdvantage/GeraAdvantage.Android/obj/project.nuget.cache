@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FSoZ64IaxNKyplvn8ZAIeS5NhKqVDCgzJ2qnif61Fs/bplV08vOtWwFrC9vVKOmLOR9TskALKCpCgZIYtwpcgg==",
+  "dgSpecHash": "6bYAN4V3uOyCtk2Io8nY6HRgmUjcwwpNPpaRQvmUoGMP3T46HUqq5MYUrO171j9YgqI3fLpJHL9wKoZL5/gh5A==",
   "success": true,
   "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\devexpress.xamarinforms.charts\\22.1.3\\devexpress.xamarinforms.charts.22.1.3.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\devexpress.xamarinforms.core\\22.1.3\\devexpress.xamarinforms.core.22.1.3.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",

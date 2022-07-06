@@ -12,9 +12,9 @@
             Priority="0" />
         <ToolbarItem
             Text="My Profile"
-            IconImageSource="notification.png"
             Order="Secondary"
-            Priority="0" />
+            Priority="0" 
+            Clicked="MyProfile_Clicked"/>
         <ToolbarItem
             Text="Change Password"
             Order="Secondary"

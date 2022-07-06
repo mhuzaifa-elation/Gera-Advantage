@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ogfQlJAYx1/bkxLTKaE/3wK0EGSMxioyFD2VrRYN8CfX9t6FY/jp5gGJBp+c+tYzh316yzw5ryNQU+MfFH6nXQ==",
+  "dgSpecHash": "ryn5ZUi2QU2AWSa4HbjBMcYcJyax3ZsvYJ5/EXkLbMOSQMi+IheZZvgL8PsZJznocSTGxfqNMOK/ZLssjik7+w==",
   "success": true,
   "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\devexpress.xamarinforms.charts\\22.1.3\\devexpress.xamarinforms.charts.22.1.3.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\devexpress.xamarinforms.core\\22.1.3\\devexpress.xamarinforms.core.22.1.3.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.ProfileEditor"
+    BackgroundColor="White">
+    <NavigationPage.TitleView>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="CenterAndExpand"
+            Margin="0,0,10,0">
+            <Label
+                Text="My Profile"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="StartAndExpand" />
+            <Button
+                Text="Apply"
+                TextColor="DodgerBlue"
+                BackgroundColor="White"
+                HorizontalOptions="End"
+                CornerRadius="4" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Margin="10"
+                Spacing="0">
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    Aspect="AspectFit"
+                    Source="noperson.png"
+                    VerticalOptions="Start"/>
+                    <Entry
+                        VerticalOptions="End"
+                        HorizontalOptions="FillAndExpand"   
+                        Placeholder="Username"
+                        PlaceholderColor="Gray"
+                        TextColor="Black"/>
+                </StackLayout>
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,5,0,5" />
+                <Label
+                    Text="Comapny Name"
+                    FontSize="Medium"
+                    TextColor="Gray"
+                    FontAttributes="Bold" />
+                <Entry
+                    VerticalOptions="End"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="enter company "
+                    PlaceholderColor="Gray"
+                    TextColor="Black" />
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,5,0,5" />
+                <Label
+                    Text="Contact Details"
+                    FontSize="Medium"
+                    TextColor="Gray"
+                    FontAttributes="Bold" />
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Orientation="Horizontal"
+                    Margin="0,5,0,5">
+                    <Entry
+                        VerticalOptions="End"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="enter phone "
+                        PlaceholderColor="Gray"
+                        TextColor="Black" />
+                    <ImageButton
+                        Aspect="AspectFit"
+                        Source="phone.png"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        CornerRadius="15"
+                        Padding="5" />
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Orientation="Horizontal"
+                    Margin="0,5,0,5">
+                    <Entry
+                        VerticalOptions="End"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="enter phone "
+                        PlaceholderColor="Gray"
+                        TextColor="Black" />
+                    <ImageButton
+                        Aspect="AspectFit"
+                        Source="mail.png"
+                        BackgroundColor="DodgerBlue"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        CornerRadius="15"
+                        Padding="5" />
+                </StackLayout>
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="Gray"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,5,0,5" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

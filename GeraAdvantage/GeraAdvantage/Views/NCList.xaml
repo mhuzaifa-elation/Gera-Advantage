@@ -11,7 +11,9 @@
             IconImageSource="refresh.png" />
         <ToolbarItem
             Order="Primary"
-            IconImageSource="filter.png" />
+            IconImageSource="
+            
+            .png" />
         <ToolbarItem
             Order="Primary"
             IconImageSource="home.png" />

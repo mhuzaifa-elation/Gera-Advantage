@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://nuget.devexpress.com/HvX2vJIFTaoeJSEMs5p3bb9sb7Mq7HkFv2N8bE5TdH4w53Hj6K/api": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -40,6 +40,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "DevExpress.XamarinForms.Charts": {
+              "target": "Package",
+              "version": "[22.1.3, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
