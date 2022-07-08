@@ -210,7 +210,8 @@
                 Orientation="Horizontal"
                 VerticalOptions="End">
                 <Button
-                    Text="View" />
+                    Text="View"
+                    Clicked="BtnView_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

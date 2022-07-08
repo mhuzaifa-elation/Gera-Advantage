@@ -40,5 +40,10 @@ namespace GeraAdvantage.Views
                         "Chicago"                    
             };
         }
+
+        private async void BtnView_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ViewCheckList());
+        }
     }
 }

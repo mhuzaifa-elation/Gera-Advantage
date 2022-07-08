@@ -1,35 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
+    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
+    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
         "projectName": "GeraAdvantage.Android",
-        "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
-        "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
+        "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
+        "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid12.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.devexpress.com/HvX2vJIFTaoeJSEMs5p3bb9sb7Mq7HkFv2N8bE5TdH4w53Hj6K/api": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
-                "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
+              "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+                "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
               }
             }
           }
@@ -38,10 +44,6 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
-            "DevExpress.XamarinForms.Charts": {
-              "target": "Package",
-              "version": "[22.1.3, )"
-            },
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[2.1.0, )"
@@ -58,25 +60,32 @@
         }
       }
     },
-    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
         "projectName": "GeraAdvantage",
-        "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
-        "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
+        "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
+        "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.devexpress.com/HvX2vJIFTaoeJSEMs5p3bb9sb7Mq7HkFv2N8bE5TdH4w53Hj6K/api": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -94,10 +103,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "DevExpress.XamarinForms.Charts": {
-              "target": "Package",
-              "version": "[22.1.3, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -131,7 +136,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

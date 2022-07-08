@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeraAdvantage.Views.ViewCheckList"
+             Title="Create Checklist"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Margin="10"
+                     Spacing="0">
+            <Label
+                FontSize="Medium"
+                Text="Project Title" />
+            <Label
+                FontSize="Small"
+                Text="B-Bldg | Ground | BG02" />
+            <Label
+                FontSize="Small"
+                TextColor="DodgerBlue"
+                Text="A/C Installation" />
+            <Label
+                FontSize="Small"
+                Text="Not Applicable |" />
+            <Grid
+                ColumnDefinitions="*,*,*"
+                HeightRequest="100">
+                <Grid
+                    Grid.Column="0">
+                    
+                    <ImageButton
+                        Source="barrow.png" 
+                        HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent"/>
+                    <Label
+                        Text="asd"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                </Grid>
+                <Grid
+                    Grid.Column="1">
+                    
+                    <ImageButton
+                        Source="garrow.png" 
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent" />
+                    <Label
+                        Text="asd"
+                        TextColor="Black"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                </Grid>
+                <Grid
+                    Grid.Column="2">
+                    
+                    <ImageButton
+                        Source="garrow.png" 
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent" />
+                    <Label
+                        Text="asd"
+                        TextColor="Black"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                </Grid>
+            </Grid>
+            <ListView
+                x:Name="listView"
+                HasUnevenRows="true"
+                SeparatorColor="DarkGray"
+                SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Padding="15,15,5,5"
+                                Orientation="Horizontal">
+                                <StackLayout
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Orientation="Horizontal"
+                                    Spacing="0">
+                                    <Label
+                                        Text="{Binding Title}"
+                                        FontSize="Medium"
+                                        VerticalOptions="Center"
+                                        TextColor="Black" />
+                                    <StackLayout
+                                        HeightRequest="60"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="30,5,30,5"
+                                        IsVisible="{Binding isthree}">
+                                        <Button
+                                            Grid.Column="0"
+                                            Text="Yes"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Green"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="Start"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                        <Button
+                                            Grid.Column="0"
+                                            Text="No"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Red"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="CenterAndExpand"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                        <Button
+                                            Grid.Column="0"
+                                            Text="NA"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Purple"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="End"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                    </StackLayout>
+                                    <StackLayout
+                                        HeightRequest="60"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="30,5,30,5"
+                                        IsVisible="{Binding isfour}">
+                                        <Button
+                                            Text="A"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Green"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="Start"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                        <Button
+                                            Text="AWC"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Yellow"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="CenterAndExpand"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                        <Button
+                                            Text="R"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Red"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="End"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                        <Button
+                                            Text="NA"
+                                            FontSize="13"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Purple"
+                                            CornerRadius="30"
+                                            WidthRequest="60"
+                                            HorizontalOptions="End"
+                                            HeightRequest="60"
+                                            BorderWidth="3"
+                                            BorderColor="Transparent" />
+                                    </StackLayout>
+                                </StackLayout>
+                               
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
