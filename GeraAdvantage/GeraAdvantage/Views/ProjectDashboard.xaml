@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+    x:Class="GeraAdvantage.Views.ProjectDashboard"
+    Title="Project Dashboard"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Margin="10">
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Select Category:"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Grid
+                    ColumnDefinitions="40*,60*"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Grid.Column="0"
+                        Text="Select Category:"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        FontSize="Default" />
+                    <Grid
+                        Grid.Column="1">
+                        <Picker
+                            ItemsSource="{Binding SampleText}"
+                            FontSize="Default" />
+                        <Image
+                            Source="down.png"
+                            HorizontalOptions="End"
+                            Margin="5" />
+                    </Grid>
+                </Grid>
+                <Label
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    TextColor="DodgerBlue"
+                    Text="CONFORMITY"
+                    FontAttributes="Bold" />
+                <StackLayout
+                    x:Name="ConformityChartLayout"
+                    VerticalOptions="Start" />
+                <syncfusion:SfDataGrid
+                    x:Name="ConformityGrid"
+                    RowHeight="60"
+                    HeaderRowHeight="30" />
+                <StackLayout
+                    x:Name="NonConformityChartLayout"
+                    VerticalOptions="Start" />
+                <syncfusion:SfDataGrid
+                    x:Name="NonConformityGrid"
+                    RowHeight="60"
+                    HeaderRowHeight="30" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,14 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "LkNtKzew78w1mLyYJmONHC2eZ+fsu1eZlDVSynfZpbvfSwaQSQI3bZlCBIb9MbF51/fMDZWs8MOIb5/QEioFiA==",
+  "dgSpecHash": "1Xec5kBeOcXZATzYPQji0TLgLY1sp9jc/Qbj8nIflPy3JqsDQJrBHzh5d0er+7qqdFjH5PY/8LjWjne8RruF8A==",
   "success": true,
-  "projectFilePath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
+  "projectFilePath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.iOS\\GeraAdvantage.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\mhuzaifa\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\rg.plugins.popup\\2.1.0\\rg.plugins.popup.2.1.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.licensing\\20.1.0.61\\syncfusion.licensing.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.core\\20.1.0.61\\syncfusion.xamarin.core.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\20.1.0.61\\syncfusion.xamarin.gridcommon.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.sfchart\\20.1.0.61\\syncfusion.xamarin.sfchart.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\20.1.0.61\\syncfusion.xamarin.sfcombobox.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid\\20.1.0.61\\syncfusion.xamarin.sfdatagrid.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox\\20.1.0.61\\syncfusion.xamarin.sfnumerictextbox.20.1.0.61.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\xamarin.forms.datagrid\\4.8.0\\xamarin.forms.datagrid.4.8.0.nupkg.sha512"
   ],
   "logs": []
 }

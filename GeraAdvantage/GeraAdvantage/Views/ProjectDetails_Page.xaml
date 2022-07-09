@@ -286,7 +286,7 @@
                         Orientation="Horizontal">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="TapGestureRecognizer_Tapped" />
+                                Tapped="ProjectDashboard_Tapped" />
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="list.png"

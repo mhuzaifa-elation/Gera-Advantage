@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace GeraAdvantage.Utils
 {
@@ -10,6 +11,27 @@ namespace GeraAdvantage.Utils
         public class FilterDetail
         {
             public string Title { get; set; }
+        }
+        public class ConformityPie
+        {
+            public string Title { get; set; }
+            public int Count { get; set; }
+        }
+        public class ReviewQ
+        {
+
+            public string Title { get; set; }
+            public Color BGColor { get; set; }
+            public string BtnText { get; set; }
+        }
+        public class MultileOps
+        {
+            public string Title { get; set; }
+            public bool isfour { get; set; }
+            public bool isthree { get; set; }
+            public bool ConverttoNC { get; set; }
+            public bool AddImage { get; set; }
+            public bool SEComment { get; set; }
         }
         public class SampleChart
         {

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeraAdvantage.Views.ReviewQuestion"
+             Title="Review Question"
+             BackgroundColor="White">
+    
+    <ContentPage.Content>
+        <ListView
+            x:Name="listView"
+            HasUnevenRows="true"
+            SeparatorColor="Gray"
+            SelectionMode="None"
+            ItemTapped="listView_ItemTapped"
+            ItemsSource="{Binding ReviewList}"            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            VerticalOptions="Start"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            HeightRequest="60"
+                            Margin="10,20,10,20">
+                            <Grid
+                                HorizontalOptions="FillAndExpand">
+                            <Label
+                                Text="{Binding Title}"
+                                FontSize="Medium"
+                                VerticalOptions="Center"
+                                HorizontalOptions  ="FillAndExpand"
+                                TextColor="Black" />
+                            <Button
+                                IsEnabled="True"
+                                Text="{Binding BtnText}"
+                                FontSize="13"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                BackgroundColor="{Binding BGColor}"
+                                CornerRadius="30"
+                                WidthRequest="60"
+                                HorizontalOptions="End"
+                                HeightRequest="60"
+                                BorderWidth="5"
+                                BorderColor="Transparent"
+                                />
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

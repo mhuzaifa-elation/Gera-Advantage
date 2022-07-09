@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts"
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
     x:Class="GeraAdvantage.Login_Page"
     BackgroundColor="LightSkyBlue"
     NavigationPage.HasNavigationBar="False">
@@ -54,6 +54,7 @@
                     Margin="10,10,10,0"
                     Clicked="btnlogin_Clicked" />
             </StackLayout>
+            <StackLayout x:Name="ChartLayout"/>
             <StackLayout
                 HorizontalOptions="FillAndExpand"
                 Orientation="Horizontal"

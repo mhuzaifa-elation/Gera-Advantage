@@ -208,7 +208,8 @@
             <StackLayout
                 HorizontalOptions="Center"
                 Orientation="Horizontal"
-                VerticalOptions="End">
+                VerticalOptions="End"
+                Margin="0,10,0,10">
                 <Button
                     Text="View"
                     Clicked="BtnView_Clicked"/>

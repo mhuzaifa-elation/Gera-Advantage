@@ -24,6 +24,7 @@ namespace GeraAdvantage.iOS
         {
             Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
+            Syncfusion.SfDataGrid.XForms.iOS.SfDataGridRenderer.Init();
             LoadApplication(new App());
              return base.FinishedLaunching(app, options);
         }

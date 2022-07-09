@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Syncfusion.SfChart.XForms;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,8 @@ namespace GeraAdvantage
     {
         public Login_Page()
         {
+            string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
             
         }
@@ -23,6 +27,4 @@ namespace GeraAdvantage
             Navigation.PushAsync(new GeraProjects_Page());
         }
     }
-
-
 }
