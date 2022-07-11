@@ -9,8 +9,8 @@
         <ToolbarItem
             Order="Primary"
             IconImageSource="edit.png"
-            Priority="0" 
-            Clicked="EditNCDetails_Clicked"/>
+            Priority="0"
+            Clicked="EditNCDetails_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
@@ -31,11 +31,11 @@
                         <Label
                             Grid.Column="0"
                             Text="NC No"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -44,11 +44,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Checklist No:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -57,11 +57,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Building:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -70,11 +70,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Flat Type:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -83,11 +83,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Floor:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -96,11 +96,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Flat No:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -109,11 +109,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Room:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -122,11 +122,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Category:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -135,11 +135,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Sub-Category:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -148,11 +148,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Root Cause:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -161,11 +161,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Proposed Severity:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -174,11 +174,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Severity:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -187,11 +187,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Created Date:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -200,11 +200,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Deadline Date:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -213,11 +213,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Assigned Contractor:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -226,11 +226,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Created By:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -239,11 +239,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Updated By:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -252,11 +252,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Responsible Engineer:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <StackLayout
                         HeightRequest="1"
@@ -269,11 +269,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Contractor Status:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -282,16 +282,16 @@
                         <Label
                             Grid.Column="0"
                             Text="NC Status:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Button
                         Text="Update"
                         HorizontalOptions="End"
-                        Clicked="BtnUpdate_Clicked"/>
+                        Clicked="BtnUpdate_Clicked" />
                     <StackLayout
                         HeightRequest="1"
                         BackgroundColor="LightGray"
@@ -303,11 +303,11 @@
                         <Label
                             Grid.Column="0"
                             Text="Corrective Action:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*"
@@ -316,41 +316,40 @@
                         <Label
                             Grid.Column="0"
                             Text="Preventive Action:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid>
                         <Label
                             Grid.Column="0"
                             Text="Contractor's Comment:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid>
                         <Label
                             Grid.Column="0"
                             Text="NC Comment:"
-                            TextColor="Gray" />
+                            Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
                             Text="{Binding SampleText}"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Entry
                         Placeholder="Add Comment"
-                        PlaceholderColor="Gray"
-                        TextColor="Black"
+                        Style="{StaticResource CommentEnt}"
                         BackgroundColor="LightGray" />
                     <Button
                         Text="Show History"
                         HorizontalOptions="End"
-                        Clicked="ShowHistory_Clicked"/>
+                        Clicked="ShowHistory_Clicked" />
                     <StackLayout
                         HeightRequest="1"
                         BackgroundColor="LightGray"
@@ -362,8 +361,8 @@
                         Margin="5,5,5,15">
                         <Button
                             Grid.Column="0"
-                            Text="Add Photo" 
-                            Clicked="AddPhoto_Clicked"/>
+                            Text="Add Photo"
+                            Clicked="AddPhoto_Clicked" />
                         <Button
                             Grid.Column="1"
                             Text="Save" />

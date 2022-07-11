@@ -1,44 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GeraAdvantage.Views.UpdateQuestion"
-             Title="Title"
-             BackgroundColor="White">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.UpdateQuestion"
+    Title="Title"
+    BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout
             Margin="10"
             Spacing="0"
             VerticalOptions="Start">
-
             <Label
-                FontSize="Medium"
+                Style="{StaticResource QReviewTitle}"
                 Text="Project Title" />
             <Label
-                FontSize="Small"
+                Style="{StaticResource QReviewLabel}"
                 Text="B-Bldg | Ground | BG02" />
             <Label
-                FontSize="Small"
+                Style="{StaticResource QReviewLabel}"
                 TextColor="DodgerBlue"
                 Text="A/C Installation" />
             <Grid
                 ColumnDefinitions="*,*,*"
                 HeightRequest="100">
-                 <Grid
+                <Grid
                     Grid.Column="2">
-
                     <ImageButton
                         Source="garrow.png"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        BackgroundColor="Transparent" />
+                        Style="{StaticResource BannerStyle}" />
                     <Label
                         Text="Post"
-                        TextColor="Black"
-                        FontSize="Medium"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand" />
+                        Style="{StaticResource BannerLabel}" />
                 </Grid>
             </Grid>
             <StackLayout
@@ -65,47 +57,23 @@
                             x:Name="btnYes"
                             Grid.Column="0"
                             Text="Yes"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Green"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="Start"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                         <Button
                             x:Name="btnNo"
                             Grid.Column="1"
                             Text="No"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Red"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="CenterAndExpand"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                         <Button
                             x:Name="btnNA1"
                             Grid.Column="2"
                             Text="NA"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Purple"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="End"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                     </Grid>
                     <Grid
                         ColumnDefinitions="*,*,*,*"
@@ -117,63 +85,30 @@
                             x:Name="btnA"
                             Grid.Column="0"
                             Text="A"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Green"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="Start"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                         <Button
                             x:Name="btnAWC"
                             Grid.Column="1"
                             Text="AWC"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Orange"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="CenterAndExpand"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                         <Button
                             x:Name="btnR"
                             Grid.Column="2"
                             Text="R"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Red"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="End"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked" />
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                         <Button
                             x:Name="btnNA2"
                             Grid.Column="3"
                             Text="NA"
-                            FontSize="13"
-                            TextColor="White"
-                            FontAttributes="Bold"
                             BackgroundColor="Purple"
-                            CornerRadius="30"
-                            WidthRequest="60"
-                            HorizontalOptions="End"
-                            HeightRequest="60"
-                            BorderWidth="5"
-                            BorderColor="Transparent"
-                            Clicked="Button_Clicked">
-                        </Button>
+                            Clicked="Button_Clicked"
+                            Style="{StaticResource CircularButton}" />
                     </Grid>
                     <StackLayout
                         Orientation="Vertical"
@@ -193,7 +128,6 @@
                             Text="ConverttoNC" />
                     </StackLayout>
                 </StackLayout>
-                
             </StackLayout>
             <Button
                 Text="Save"

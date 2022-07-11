@@ -12,6 +12,9 @@
             <Setter
                 Property="BarTextColor"
                 Value="Color.White" />
+            <Setter
+                Property="BackgroundColor"
+                Value="White" />
         </Style>
         <Style
             TargetType="Button">
@@ -52,6 +55,656 @@
                 Property="TextColor"
                 Value="Black" />
         </Style>
+        <Style
+            x:Key="rightImgStyle"
+            TargetType="Image">
+            <Setter
+                Property="VerticalOptions"
+                Value="CenterAndExpand" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+        </Style>
+        <Style
+            x:Key="checklistImage"
+            TargetType="Image">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="Margin"
+                Value="0,0,10,0" />
+        </Style>
+        <Style
+            x:Key="checklistLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Large" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="StartAndExpand" />
+            <Setter
+                Property="VerticalOptions"
+                Value="CenterAndExpand" />
+            <Setter
+                Property="VerticalTextAlignment"
+                Value="Center" />
+        </Style>
+        <Style
+            x:Key="Chkbox"
+            TargetType="CheckBox">
+            <Setter
+                Property="Color"
+                Value="Gray" />
+        </Style>
+        <Style
+            x:Key="ConformityChkBXLabel"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="ConformityLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Small" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="EditNCLabel"
+            TargetType="Label">
+            <Setter
+                Property="VerticalTextAlignment"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Small" />
+        </Style>
+        <Style
+            x:Key="downImgStyle"
+            TargetType="Image">
+            <Setter
+                Property="Margin"
+                Value="5" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+        </Style>
+        <Style
+            x:Key="ConformityEntry"
+            TargetType="Entry">
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="PlaceholderColor"
+                Value="Gray" />
+        </Style>
+        <Style
+            x:Key="ConformityDashboardTitle"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Start" />
+            <Setter
+                Property="FontSize"
+                Value="Large" />
+            <Setter
+                Property="Margin"
+                Value="15,5,0,5" />
+        </Style>
+        <Style
+            x:Key="CreateChecklistTitle"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Large" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+
+        <Style
+            x:Key="PageTitle"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="20" />
+            <Setter
+                Property="TextColor"
+                Value="White" />
+            <Setter
+                Property="VerticalOptions"
+                Value="CenterAndExpand" />
+            <Setter
+                Property="VerticalTextAlignment"
+                Value="Center" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="StartAndExpand" />
+        </Style>
+        <Style
+            x:Key="BlWTitleBtn"
+            TargetType="Button">
+            <Setter
+                Property="CornerRadius"
+                Value="4" />
+            <Setter
+                Property="TextColor"
+                Value="Blue" />
+            <Setter
+                Property="BackgroundColor"
+                Value="White" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+        </Style>
+        <Style
+            x:Key="BWTitleBtn"
+            TargetType="Button">
+            <Setter
+                Property="CornerRadius"
+                Value="4" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="BackgroundColor"
+                Value="White" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+        </Style>
+        <Style
+            x:Key="BrWTitleBtn"
+            TargetType="Button">
+            <Setter
+                Property="CornerRadius"
+                Value="4" />
+            <Setter
+                Property="TextColor"
+                Value="Brown" />
+            <Setter
+                Property="BackgroundColor"
+                Value="White" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+        </Style>
+        <Style
+            x:Key="FilterLabel"
+            TargetType="Label">
+            <Setter
+                Property="Padding"
+                Value="5,3,5,3" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="FontSize"
+                Value="Default" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="VerticalOptions"
+                Value="CenterAndExpand" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="CenterAndExpand" />
+            <Setter
+                Property="BackgroundColor"
+                Value="Transparent" />
+        </Style>
+        <Style
+            x:Key="ListviewStyle"
+            TargetType="ListView">
+            <Setter
+                Property="HasUnevenRows"
+                Value="True" />
+            <Setter
+                Property="SeparatorColor"
+                Value="SlateGray" />
+            <Setter
+                Property="BackgroundColor"
+                Value="LightGray" />
+        </Style>
+        <Style
+            x:Key="NCDetailsLabel"
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Gray" />
+        </Style>
+        <Style
+            x:Key="NCDetailsTLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="CommentEnt"
+            TargetType="Entry">
+            <Setter
+                Property="PlaceholderColor"
+                Value="Gray" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="NCListTitleLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="TextColor"
+                Value="DodgerBlue" />
+            <Setter
+                Property="Padding"
+                Value="0,0,0,10" />
+        </Style>
+        <Style
+            x:Key="NCListHeaderLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="NCListLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Small" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="TextColor"
+                Value="Gray" />
+        </Style>
+        <Style
+            x:Key="ListIcon"
+            TargetType="Image">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="Margin"
+                Value="0,0,10,0" />
+        </Style>
+        <Style
+            x:Key="ListHeading"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Large" />
+        </Style>
+        <Style
+            x:Key="ProfListSubHeading"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+        </Style>
+        <Style
+            x:Key="ProfListHeading"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="ListSubHeading"
+            TargetType="Label">
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Small" />
+        </Style>
+        <Style
+            x:Key="NCFilterLabel"
+            TargetType="Label">
+            <Setter
+                Property="VerticalTextAlignment"
+                Value="Start" />
+            <Setter
+                Property="HorizontalTextAlignment"
+                Value="Center" />
+            <Setter
+                Property="TextColor"
+                Value="DodgerBlue" />
+        </Style>
+        <Style
+            x:Key="ProfileImage"
+            TargetType="Image">
+            <Setter
+                Property="HeightRequest"
+                Value="150" />
+            <Setter
+                Property="WidthRequest"
+                Value="150" />
+            <Setter
+                Property="Aspect"
+                Value="AspectFit" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Start" />
+        </Style>
+        <Style
+            x:Key="ProfileEntry"
+            TargetType="Entry">
+            <Setter
+                Property="VerticalOptions"
+                Value="End" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="PlaceholderColor"
+                Value="Gray" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="ProfileLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="TextColor"
+                Value="Gray" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="ProfileBLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="PhoneMailIcon"
+            TargetType="ImageButton">
+            <Setter
+                Property="BackgroundColor"
+                Value="DodgerBlue" />
+            <Setter
+                Property="HeightRequest"
+                Value="40" />
+            <Setter
+                Property="WidthRequest"
+                Value="40" />
+            <Setter
+                Property="Aspect"
+                Value="AspectFit" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+            <Setter
+                Property="CornerRadius"
+                Value="15" />
+            <Setter
+                Property="Padding"
+                Value="5" />
+        </Style>
+        <Style
+            x:Key="SeperatorLine"
+            TargetType="StackLayout">
+            <Setter
+                Property="HeightRequest"
+                Value="1" />
+            <Setter
+                Property="BackgroundColor"
+                Value="Gray" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="Margin"
+                Value="0,5,0,5" />
+        </Style>
+        <Style
+            x:Key="DashboardTitle"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Title" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="Center" />
+            <Setter
+                Property="TextColor"
+                Value="DodgerBlue" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="ReviewListTitle"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="CircularButton"
+            TargetType="Button">
+            <Setter
+                Property="FontSize"
+                Value="13" />
+            <Setter
+                Property="TextColor"
+                Value="White" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="BorderWidth"
+                Value="5" />
+            <Setter
+                Property="CornerRadius"
+                Value="30" />
+            <Setter
+                Property="HeightRequest"
+                Value="60" />
+            <Setter
+                Property="WidthRequest"
+                Value="60" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="End" />
+            <Setter
+                Property="BorderColor"
+                Value="Transparent" />
+        </Style>
+        <Style
+            x:Key="CircularButtonS"
+            TargetType="Button">
+            <Setter
+                Property="FontSize"
+                Value="13" />
+            <Setter
+                Property="TextColor"
+                Value="White" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="BorderWidth"
+                Value="5" />
+            <Setter
+                Property="CornerRadius"
+                Value="30" />
+            <Setter
+                Property="HeightRequest"
+                Value="60" />
+            <Setter
+                Property="WidthRequest"
+                Value="60" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="Start" />
+            <Setter
+                Property="BorderColor"
+                Value="Transparent" />
+        </Style>
+        <Style
+            x:Key="HistoryTLabel"
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Gray" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+        </Style>
+        <Style
+            x:Key="HistoryTitleLabel"
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+        </Style>
+        <Style
+            x:Key="HistoryGLabel"
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Gray" />
+        </Style>
+        <Style
+            x:Key="HistoryBLabel"
+            TargetType="Label">
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+        </Style>
+        <Style
+            x:Key="QReviewTitle"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+        </Style>
+        <Style
+            x:Key="QReviewLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Small" />
+        </Style>
+        <Style
+            x:Key="BannerStyle"
+            TargetType="ImageButton">
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="VerticalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="BackgroundColor"
+                Value="Transparent" />
+        </Style>
+        <Style
+            x:Key="BannerLabel"
+            TargetType="Label">
+            <Setter
+                Property="HorizontalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="VerticalOptions"
+                Value="FillAndExpand" />
+            <Setter
+                Property="VerticalTextAlignment"
+                Value="Center" />
+            <Setter
+                Property="HorizontalTextAlignment"
+                Value="Center" />
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+        </Style>
+        
+    
     </Application.Resources>
 </Application>
 

@@ -17,9 +17,8 @@
                     <Label
                         Grid.Column="0"
                         Text="Select Category:"
-                        FontAttributes="Bold"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource ConformityLabel}"
+                        VerticalTextAlignment="Center" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -38,9 +37,8 @@
                     <Label
                         Grid.Column="0"
                         Text="Select Category:"
-                        FontAttributes="Bold"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource ConformityLabel}"
+                        VerticalTextAlignment="Center" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -48,30 +46,31 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
                 <Label
-                    FontSize="Title"
-                    HorizontalOptions="Center"
-                    TextColor="DodgerBlue"
                     Text="CONFORMITY"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource DashboardTitle}" />
                 <StackLayout
                     x:Name="ConformityChartLayout"
                     VerticalOptions="Start" />
                 <syncfusion:SfDataGrid
                     x:Name="ConformityGrid"
-                    RowHeight="60"
-                    HeaderRowHeight="30" />
+                    HorizontalOptions="FillAndExpand"
+                    HeaderRowHeight="30"
+                    ColumnSizer="Star" />
+                <Label
+                    Text="NON CONFORMITY"
+                    Style="{StaticResource DashboardTitle}" />
                 <StackLayout
                     x:Name="NonConformityChartLayout"
                     VerticalOptions="Start" />
                 <syncfusion:SfDataGrid
                     x:Name="NonConformityGrid"
-                    RowHeight="60"
-                    HeaderRowHeight="30" />
+                    HorizontalOptions="FillAndExpand"
+                    HeaderRowHeight="30"
+                    ColumnSizer="Star" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

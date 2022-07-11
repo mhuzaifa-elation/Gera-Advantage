@@ -13,8 +13,8 @@
         <ToolbarItem
             Text="My Profile"
             Order="Secondary"
-            Priority="0" 
-            Clicked="MyProfile_Clicked"/>
+            Priority="0"
+            Clicked="MyProfile_Clicked" />
         <ToolbarItem
             Text="Change Password"
             Order="Secondary"

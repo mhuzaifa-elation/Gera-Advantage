@@ -3,8 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.Checklists_Page"
-    Title="Checklists"
-    BackgroundColor="White">
+    Title="Checklists">
     <ContentPage.Content>
         <StackLayout
             VerticalOptions="FillAndExpand"
@@ -27,18 +26,13 @@
                     </StackLayout.GestureRecognizers>
                     <Image
                         Source="pencil.png"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0" />
+                        Style="{StaticResource checklistImage}" />
                     <Label
                         Text="Create Checklist"
-                        FontSize="Large"
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        VerticalTextAlignment="Center" />
+                        Style="{StaticResource checklistLabel}" />
                     <Image
                         Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
+                        Style="{StaticResource rightImgStyle}" />
                 </StackLayout>
                 <StackLayout
                     Grid.Row="1"
@@ -55,21 +49,14 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="rotate.png"
-                            VerticalOptions="Center"
-                            Margin="0,0,10,0" />
+                            Style="{StaticResource checklistImage}" />
                         <Label
                             Text="Update Checklist"
-                            FontSize="Large"
-                            HorizontalOptions="StartAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            VerticalTextAlignment="Center" />
+                            Style="{StaticResource checklistLabel}" />
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
-
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
-
                 </StackLayout>
                 <StackLayout
                     Grid.Row="2"
@@ -82,22 +69,15 @@
                     </StackLayout.GestureRecognizers>
                     <Image
                         Source="incomplete.png"
-                        VerticalOptions="Center"
-                        Margin="0,0,10,0" />
+                        Style="{StaticResource checklistImage}" />
                     <Label
                         Text="Incomplete Checklist"
-                        FontSize="Large"
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        VerticalTextAlignment="Center" />
+                        Style="{StaticResource checklistLabel}" />
                     <Image
                         Source="right.png"
-                        HorizontalOptions="End"
-                        VerticalOptions="CenterAndExpand" />
+                        Style="{StaticResource rightImgStyle}" />
                 </StackLayout>
-
             </Grid>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

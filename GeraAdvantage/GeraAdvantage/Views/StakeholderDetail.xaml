@@ -35,78 +35,53 @@
                 Margin="10"
                 Spacing="0">
                 <Image
-                    HeightRequest="150"
-                    WidthRequest="150"
-                    Aspect="AspectFit"
                     Source="noperson.png"
-                    VerticalOptions="Start"
-                    HorizontalOptions="StartAndExpand" />
+                    Style="{StaticResource ProfileImage}"
+                    HorizontalOptions="Start" />
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Designation"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
                 <Label
                     Text="Accounts Personal"
-                    FontSize="Medium"
-                    TextColor="Black" />
+                    Style="{StaticResource ProfileBLabel}" />
+
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Comapny Name"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
+
                 <Label
                     Text="GDPL"
-                    FontSize="Medium"
-                    TextColor="Black" />
+                    Style="{StaticResource ProfileBLabel}" />
+
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Project Name"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
+
                 <Label
                     Text="Test - Project"
-                    FontSize="Medium"
-                    TextColor="Black" />
+                    Style="{StaticResource ProfileBLabel}" />
+
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Category"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
+
                 <Label
                     Text="-"
-                    FontSize="Medium"
-                    TextColor="Black" />
+                    Style="{StaticResource ProfileBLabel}" />
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Contact Details"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
+
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
@@ -114,21 +89,13 @@
                     Margin="0,5,0,5">
                     <Label
                         Text="91123456789"
-                        FontSize="Medium"
-                        TextColor="Black"
+                        Style="{StaticResource ProfileBLabel}"
                         HorizontalOptions="StartAndExpand"
                         VerticalOptions="Center"
                         x:Name="lblPhone" />
                     <ImageButton
-                        Aspect="AspectFit"
                         Source="phone.png"
-                        BackgroundColor="DodgerBlue"
-                        WidthRequest="40"
-                        HeightRequest="40"
-                        VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        CornerRadius="15"
-                        Padding="5"
+                        Style="{StaticResource PhoneMailIcon}"
                         Clicked="Phone_Clicked" />
                 </StackLayout>
                 <StackLayout
@@ -138,28 +105,17 @@
                     Margin="0,5,0,5">
                     <Label
                         Text="test@gmail.com"
-                        FontSize="Medium"
-                        TextColor="Black"
+                        Style="{StaticResource ProfileBLabel}"
                         HorizontalOptions="StartAndExpand"
                         VerticalOptions="Center"
                         x:Name="lblMail" />
                     <ImageButton
-                        Aspect="AspectFit"
                         Source="mail.png"
-                        BackgroundColor="DodgerBlue"
-                        WidthRequest="40"
-                        HeightRequest="40"
-                        VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        CornerRadius="15"
-                        Padding="5"
+                        Style="{StaticResource PhoneMailIcon}"
                         Clicked="Mail_Clicked" />
                 </StackLayout>
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

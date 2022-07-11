@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.ConformityDashboard"
     BackgroundColor="White"
     Title="Dashboard">
@@ -21,9 +22,7 @@
             Orientation="Vertical">
             <Label
                 Text="Project Title"
-                VerticalOptions="Start"
-                FontSize="Large"
-                Margin="15,5,0,5" />
+                Style="{StaticResource ConformityDashboardTitle}" />
             <StackLayout
                 HeightRequest="1"
                 BackgroundColor="LightGray"

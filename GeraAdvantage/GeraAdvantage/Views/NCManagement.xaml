@@ -34,8 +34,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="clipboardcross.png"
-                            VerticalOptions="Center"
-                            Margin="0,0,10,0" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -43,17 +42,15 @@
                             Spacing="0">
                             <Label
                                 Text="Non Conformity"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View and update existing NC"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
+
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="1"
@@ -75,17 +72,15 @@
                             Spacing="0">
                             <Label
                                 Text="Conformity"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View and update existing Conformity"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
+
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                 </Grid>
             </ScrollView>

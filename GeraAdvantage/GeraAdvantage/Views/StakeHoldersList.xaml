@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.StakeHoldersList"
     BackgroundColor="White"
     Title="Stakeholders">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Order="Primary"
-            IconImageSource="search.png" 
-            Clicked="Search_Clicked"/>
+            IconImageSource="search.png"
+            Clicked="Search_Clicked" />
         <ToolbarItem
             Order="Primary"
             IconImageSource="home.png" />
@@ -21,8 +22,7 @@
                 PlaceholderColor="Gray"
                 TextColor="Black"
                 IsVisible="false"
-                Margin="10,0,10,0"
-                />
+                Margin="10,0,10,0" />
             <ListView
                 x:Name="listView"
                 HasUnevenRows="true"
@@ -36,9 +36,8 @@
                                 Padding="15,15,5,5"
                                 Orientation="Horizontal">
                                 <Image
-                                    HorizontalOptions="Start"
-                                    VerticalOptions="CenterAndExpand"
-                                    Source="noperson.png" />
+                                    Source="noperson.png"
+                                    Style="{StaticResource ListIcon}" />
                                 <StackLayout
                                     HorizontalOptions="StartAndExpand"
                                     VerticalOptions="CenterAndExpand"
@@ -46,13 +45,10 @@
                                     Spacing="0">
                                     <Label
                                         Text="{Binding Name}"
-                                        FontSize="Medium"
-                                        FontAttributes="Bold"
-                                        VerticalOptions="Center" />
+                                        Style="{StaticResource ProfListHeading}" />
                                     <Label
                                         Text="{Binding Designation}"
-                                        FontSize="Medium"
-                                        VerticalOptions="Center" />
+                                        Style="{StaticResource ProfListSubHeading}" />
                                 </StackLayout>
                                 <StackLayout
                                     Padding="0,15,0,0"
@@ -60,11 +56,8 @@
                                     VerticalOptions="FillAndExpand">
                                     <Image
                                         Source="right.png"
-                                        HorizontalOptions="End"
-                                        VerticalOptions="CenterAndExpand" />
-
+                                        Style="{StaticResource rightImgStyle}" />
                                 </StackLayout>
-
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

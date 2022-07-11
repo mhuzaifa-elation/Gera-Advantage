@@ -30,27 +30,21 @@
                         Orientation="Horizontal">
 
                         <Label
-                            VerticalOptions="Center"
                             Text="Project Title"
-                            FontSize="Large"
-                            FontAttributes="Bold"
-                            TextColor="Black" />
+                            Style="{StaticResource CreateChecklistTitle}" />
                     </StackLayout>
                     <StackLayout
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start">
                         <Label
                             Text="Select Building"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -58,16 +52,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Category"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
-                                ItemsSource="{Binding SampleText }" />
+                                ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -75,16 +66,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Floor"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -92,16 +80,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Flat Type"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -109,16 +94,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Side"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -126,16 +108,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Flat Number"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -143,16 +122,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Room"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -160,16 +136,13 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Structural Member"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -177,9 +150,7 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Structural Member Details"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Entry
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Username"
@@ -190,20 +161,16 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Contractor"
-                            FontSize="Default"
-                            TextColor="Black"
-                            FontAttributes="Bold" />
+                            Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Picker
                                 ItemsSource="{Binding SampleText}" />
                             <Image
                                 Source="down.png"
-                                HorizontalOptions="End"
-                                Margin="5" />
+                                Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
                 </StackLayout>
-
             </ScrollView>
             <StackLayout
                 HorizontalOptions="Center"
@@ -212,7 +179,7 @@
                 Margin="0,10,0,10">
                 <Button
                     Text="View"
-                    Clicked="BtnView_Clicked"/>
+                    Clicked="BtnView_Clicked" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

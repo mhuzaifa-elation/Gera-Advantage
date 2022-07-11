@@ -17,6 +17,7 @@ namespace GeraAdvantage.Views
         public StakeholderDetail()
         {
             InitializeComponent();
+            btnEdit.IsVisible = false;
         }
 
         public StakeholderDetail(string title, bool isMyProfile)

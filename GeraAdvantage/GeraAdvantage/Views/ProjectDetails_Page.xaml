@@ -34,8 +34,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="checklist.png"
-                            VerticalOptions="Center"
-                            Margin="0,0,10,0" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -43,17 +42,14 @@
                             Spacing="0">
                             <Label
                                 Text="Checklist"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="Checklist"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}"/>
                     </StackLayout>
                     <StackLayout
                         Grid.Row="1"
@@ -66,8 +62,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="pencil.png"
-                            VerticalOptions="Center"
-                            Margin="0,0,10,0" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -75,17 +70,14 @@
                             Spacing="0">
                             <Label
                                 Text="Create NC/C"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="Add new NC/C"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="2"
@@ -98,8 +90,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="rotate.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -107,17 +98,14 @@
                             Spacing="0">
                             <Label
                                 Text="NC/C Management"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View and update existing NC/C"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="3"
@@ -130,8 +118,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="dashboard.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -139,17 +126,14 @@
                             Spacing="0">
                             <Label
                                 Text="NC Dashboard"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="As per severity,status,root cause"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="4"
@@ -162,8 +146,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="dashboard.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -171,17 +154,14 @@
                             Spacing="0">
                             <Label
                                 Text="Conformity Dashboard"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="As per status"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="5"
@@ -194,8 +174,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="document.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -203,17 +182,14 @@
                             Spacing="0">
                             <Label
                                 Text="Potential NC Management"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="view and update existing potential NC"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="6"
@@ -226,8 +202,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="list.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -235,17 +210,14 @@
                             Spacing="0">
                             <Label
                                 Text="NC List"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="As per building,category,contractor,creator"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="7"
@@ -256,10 +228,10 @@
                             <TapGestureRecognizer
                                 Tapped="StakeHolders_Tapped" />
                         </StackLayout.GestureRecognizers>
+
                         <Image
                             Source="person.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -267,17 +239,14 @@
                             Spacing="0">
                             <Label
                                 Text="Stake Holders"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View list of project stakeholders"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="8"
@@ -288,10 +257,10 @@
                             <TapGestureRecognizer
                                 Tapped="ProjectDashboard_Tapped" />
                         </StackLayout.GestureRecognizers>
+
                         <Image
                             Source="list.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -299,17 +268,14 @@
                             Spacing="0">
                             <Label
                                 Text="Project Dashboard"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View count of C as per Feedback and NC as per Severity"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
                         Grid.Row="9"
@@ -322,8 +288,7 @@
                         </StackLayout.GestureRecognizers>
                         <Image
                             Source="pdfdoc.png"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource ListIcon}" />
                         <StackLayout
                             HorizontalOptions="StartAndExpand"
                             VerticalOptions="CenterAndExpand"
@@ -331,17 +296,14 @@
                             Spacing="0">
                             <Label
                                 Text="Ready Reckoner"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListHeading}" />
                             <Label
                                 Text="View details of standard procedures"
-                                FontSize="Small"
-                                VerticalTextAlignment="Center" />
+                                Style="{StaticResource ListSubHeading}" />
                         </StackLayout>
                         <Image
                             Source="right.png"
-                            HorizontalOptions="End"
-                            VerticalOptions="CenterAndExpand" />
+                            Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                 </Grid>
             </ScrollView>

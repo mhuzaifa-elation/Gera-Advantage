@@ -10,17 +10,10 @@
             Margin="0,0,10,0">
             <Label
                 Text="My Profile"
-                FontSize="20"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="StartAndExpand" />
+                Style="{StaticResource PageTitle}"/>
             <Button
                 Text="Apply"
-                TextColor="DodgerBlue"
-                BackgroundColor="White"
-                HorizontalOptions="End"
-                CornerRadius="4" />
+                Style="{StaticResource BlWTitleBtn}"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -33,65 +26,37 @@
                     VerticalOptions="Start"
                     Orientation="Horizontal">
                     <Image
-                    HeightRequest="150"
-                    WidthRequest="150"
-                    Aspect="AspectFit"
                     Source="noperson.png"
-                    VerticalOptions="Start"/>
-                    <Entry
-                        VerticalOptions="End"
-                        HorizontalOptions="FillAndExpand"   
+                        Style="{StaticResource ProfileImage}"/>
+                    <Entry 
                         Placeholder="Username"
-                        PlaceholderColor="Gray"
-                        TextColor="Black"/>
+                        Style="{StaticResource ProfileEntry}"
+                        />
                 </StackLayout>
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Comapny Name"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}"/>
                 <Entry
-                    VerticalOptions="End"
-                    HorizontalOptions="FillAndExpand"
                     Placeholder="enter company "
-                    PlaceholderColor="Gray"
-                    TextColor="Black" />
+                    Style="{StaticResource ProfileEntry}" />
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
                 <Label
                     Text="Contact Details"
-                    FontSize="Medium"
-                    TextColor="Gray"
-                    FontAttributes="Bold" />
+                    Style="{StaticResource ProfileLabel}" />
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
                     Orientation="Horizontal"
                     Margin="0,5,0,5">
                     <Entry
-                        VerticalOptions="End"
-                        HorizontalOptions="FillAndExpand"
                         Placeholder="enter phone "
-                        PlaceholderColor="Gray"
-                        TextColor="Black" />
+                        Style="{StaticResource ProfileEntry}" />
                     <ImageButton
-                        Aspect="AspectFit"
                         Source="phone.png"
-                        BackgroundColor="DodgerBlue"
-                        WidthRequest="40"
-                        HeightRequest="40"
-                        VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        CornerRadius="15"
-                        Padding="5" />
+                        Style="{StaticResource PhoneMailIcon}" />
                 </StackLayout>
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
@@ -99,27 +64,14 @@
                     Orientation="Horizontal"
                     Margin="0,5,0,5">
                     <Entry
-                        VerticalOptions="End"
-                        HorizontalOptions="FillAndExpand"
                         Placeholder="enter phone "
-                        PlaceholderColor="Gray"
-                        TextColor="Black" />
+                        Style="{StaticResource ProfileEntry}"  />
                     <ImageButton
-                        Aspect="AspectFit"
                         Source="mail.png"
-                        BackgroundColor="DodgerBlue"
-                        WidthRequest="40"
-                        HeightRequest="40"
-                        VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        CornerRadius="15"
-                        Padding="5" />
+                        Style="{StaticResource PhoneMailIcon}" />
                 </StackLayout>
                 <StackLayout
-                    HeightRequest="1"
-                    BackgroundColor="Gray"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="0,5,0,5" />
+                    Style="{StaticResource SeperatorLine}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

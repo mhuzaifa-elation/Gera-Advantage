@@ -9,8 +9,8 @@
         <ListView
             x:Name="listView"
             HasUnevenRows="true"
-            SeparatorColor="DarkGray"
-            SelectionMode="None"
+            Style="{StaticResource ListviewStyle}"
+            BackgroundColor="White"
             IsEnabled="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -33,13 +33,11 @@
                                             <Label
                                                 Grid.Column="0"
                                                 Text="Status :"
-                                                TextColor="Gray"
-                                                FontSize="Medium" />
+                                                Style="{StaticResource HistoryTLabel}" />
                                             <Label
                                                 Grid.Column="1"
                                                 Text="{Binding Status}"
-                                                FontAttributes="Bold"
-                                                FontSize="Medium" />
+                                                Style="{StaticResource HistoryTitleLabel}" />
                                         </Grid>
                                         <Grid
                                             ColumnDefinitions="40*,60*"
@@ -47,10 +45,11 @@
                                             <Label
                                                 Grid.Column="0"
                                                 Text="Comment :"
-                                                TextColor="Gray" />
+                                                Style="{StaticResource HistoryGLabel}" />
                                             <Label
                                                 Grid.Column="1"
-                                                Text="{Binding Comment}" />
+                                                Text="{Binding Comment}"
+                                                Style="{StaticResource HistoryBLabel}" />
                                         </Grid>
                                         <Grid
                                             ColumnDefinitions="40*,60*"
@@ -58,10 +57,11 @@
                                             <Label
                                                 Grid.Column="0"
                                                 Text="Updated by :"
-                                                TextColor="Gray" />
+                                                Style="{StaticResource HistoryGLabel}" />
                                             <Label
                                                 Grid.Column="1"
-                                                Text="{Binding UpdatedBy}" />
+                                                Text="{Binding UpdatedBy}"
+                                                Style="{StaticResource HistoryBLabel}" />
                                         </Grid>
                                         <Grid
                                             ColumnDefinitions="40*,60*"
@@ -69,10 +69,11 @@
                                             <Label
                                                 Grid.Column="0"
                                                 Text="Updated at :"
-                                                TextColor="Gray" />
+                                                Style="{StaticResource HistoryGLabel}" />
                                             <Label
                                                 Grid.Column="1"
-                                                Text="{Binding UpdatedAt}" />
+                                                Text="{Binding UpdatedAt}"
+                                                Style="{StaticResource HistoryBLabel}" />
                                         </Grid>
                                     </StackLayout>
                                 </Frame>

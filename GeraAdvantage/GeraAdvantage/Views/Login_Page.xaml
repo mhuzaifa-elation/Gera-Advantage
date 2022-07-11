@@ -39,7 +39,6 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
                     Orientation="Horizontal">
-
                     <Image
                         Source="Password.png" />
                     <Entry
@@ -51,19 +50,19 @@
                 <Button
                     Text="LOGIN"
                     TextColor="White"
-                    Margin="10,10,10,0"
+                    Margin="10"
                     Clicked="btnlogin_Clicked" />
             </StackLayout>
-            <StackLayout x:Name="ChartLayout"/>
+            <StackLayout
+                x:Name="ChartLayout" />
             <StackLayout
                 HorizontalOptions="FillAndExpand"
                 Orientation="Horizontal"
                 VerticalOptions="End">
-
                 <Button
                     HorizontalOptions="FillAndExpand"
                     Text="Register"
-                    TextColor="White"
+                    Margin="10"
                     Command="{Binding RegisterCommand}" />
             </StackLayout>
         </StackLayout>

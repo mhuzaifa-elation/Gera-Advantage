@@ -35,14 +35,11 @@
                                         Orientation="Horizontal">
                                         <Label
                                             Text="{Binding Title}"
-                                            FontSize="Medium"
-                                            FontAttributes="Bold"
-                                            HorizontalOptions="StartAndExpand"
-                                            VerticalOptions="Start" />
+                                            Style="{StaticResource NCListHeaderLabel}"
+                                            HorizontalOptions="StartAndExpand" />
                                         <Image
                                             Source="right.png"
-                                            HorizontalOptions="End"
-                                            VerticalOptions="CenterAndExpand" />
+                                            Style="{StaticResource rightImgStyle}" />
                                     </StackLayout>
                                     <StackLayout
                                         HorizontalOptions="FillAndExpand"
@@ -63,15 +60,11 @@
                                                 </StackLayout.GestureRecognizers>
                                                 <Label
                                                     Text="Total NCs"
-                                                    VerticalTextAlignment="Start"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                                 <Label
                                                     Text="{Binding TotalNCCount}"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                             </StackLayout>
-
                                             <StackLayout
                                                 Grid.Column="1"
                                                 Orientation="Vertical"
@@ -84,14 +77,11 @@
                                                 </StackLayout.GestureRecognizers>
                                                 <Label
                                                     Text="Open NCs"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                                 <Label
                                                     Text="{Binding OpenNCCount}"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                             </StackLayout>
-
                                             <StackLayout
                                                 Grid.Column="2"
                                                 Orientation="Vertical"
@@ -104,12 +94,10 @@
                                                 </StackLayout.GestureRecognizers>
                                                 <Label
                                                     Text="Closed NCs"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                                 <Label
                                                     Text="{Binding ClosedNCCount}"
-                                                    HorizontalTextAlignment="Center"
-                                                    TextColor="DodgerBlue" />
+                                                    Style="{StaticResource NCFilterLabel}" />
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>

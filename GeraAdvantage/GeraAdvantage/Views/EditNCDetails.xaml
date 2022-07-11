@@ -10,18 +10,10 @@
             Margin="0,0,10,0">
             <Label
                 Text="Edit NC Details"
-                FontSize="20"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="StartAndExpand" />
+                Style="{StaticResource PageTitle}" />
             <Button
                 Text="Save"
-                TextColor="Black"
-                BackgroundColor="White"
-                HorizontalOptions="End"
-                CornerRadius="4" />
-
+                Style="{StaticResource BWTitleBtn}" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -39,8 +31,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Flat Number:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -48,8 +39,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
                 <Grid
@@ -59,8 +49,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Category:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -68,8 +57,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}"/>
                     </Grid>
                 </Grid>
                 <Grid
@@ -79,8 +67,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Sub-Category:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -88,8 +75,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
                 <Grid
@@ -99,8 +85,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Severity:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -108,8 +93,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
                 <Grid
@@ -119,8 +103,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Responsible Engineer:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -128,8 +111,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
                 <Grid
@@ -139,8 +121,7 @@
                     <Label
                         Grid.Column="0"
                         Text="Assigned Contractor:"
-                        VerticalTextAlignment="Center"
-                        FontSize="Default" />
+                        Style="{StaticResource EditNCLabel}" />
                     <Grid
                         Grid.Column="1">
                         <Picker
@@ -148,8 +129,7 @@
                             FontSize="Default" />
                         <Image
                             Source="down.png"
-                            HorizontalOptions="End"
-                            Margin="5" />
+                            Style="{StaticResource downImgStyle}" />
                     </Grid>
                 </Grid>
             </StackLayout>

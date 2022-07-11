@@ -27,8 +27,8 @@
                 Margin="15,4,0,4" />
             <ListView
                 x:Name="listView"
-                HasUnevenRows="true"
-                SeparatorColor="DarkGray"
+                Style="{StaticResource ListviewStyle}"
+                BackgroundColor="White"
                 SelectionMode="None"
                 ItemTapped="listView_ItemTapped">
                 <ListView.ItemTemplate>
@@ -44,33 +44,26 @@
                                     Spacing="0">
                                     <Label
                                         Text="{Binding Title}"
-                                        FontSize="Medium"
-                                        FontAttributes="Bold"
-                                        VerticalOptions="Center" />
+                                        Style="{StaticResource NCListTitleLabel}" 
+                                        Padding="0"/>
                                     <Label
                                         Text="{Binding Building}"
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        VerticalOptions="Center" />
+                                        Style="{StaticResource NCListHeaderLabel}"/>
                                     <Label
                                         Text="{Binding Floor}"
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        VerticalOptions="Center" />
+                                        Style="{StaticResource NCListHeaderLabel}" />
                                     <StackLayout
                                         HorizontalOptions="StartAndExpand"
                                         VerticalOptions="CenterAndExpand"
                                         Orientation="Horizontal">
                                         <Label
                                             Text="Pre Check: "
+                                            Style="{StaticResource NCListLabel}"
                                             FontSize="Medium"
-                                            TextColor="Gray"
                                             VerticalOptions="Center" />
                                         <Label
                                             Text="{Binding Category}"
-                                            FontSize="Medium"
-                                            FontAttributes="Bold"
-                                            VerticalOptions="Center" />
+                                            Style="{StaticResource NCListHeaderLabel}" />
                                     </StackLayout>
                                     <StackLayout
                                         HorizontalOptions="StartAndExpand"
@@ -78,14 +71,10 @@
                                         Orientation="Horizontal">
                                         <Label
                                             Text="Created By: -"
-                                            FontSize="Small"
-                                            TextColor="Gray"
-                                            VerticalOptions="Center" />
+                                            Style="{StaticResource NCListLabel}" />
                                         <Label
                                             Text="{Binding CreatedBy}"
-                                            TextColor="SlateGray"
-                                            FontSize="Small"
-                                            VerticalOptions="Center" />
+                                            Style="{StaticResource NCListLabel}" />
                                     </StackLayout>
                                     <StackLayout
                                         HorizontalOptions="StartAndExpand"
@@ -93,16 +82,11 @@
                                         Orientation="Horizontal">
                                         <Label
                                             Text="Updated By: -"
-                                            FontSize="Small"
-                                            TextColor="Gray"
-                                            VerticalOptions="Center" />
+                                            Style="{StaticResource NCListLabel}" />
                                         <Label
                                             Text="{Binding UpdatedBy}"
-                                            TextColor="SlateGray"
-                                            FontSize="Small"
-                                            VerticalOptions="Center" />
+                                            Style="{StaticResource NCListLabel}" />
                                     </StackLayout>
-
                                 </StackLayout>
                                 <StackLayout
                                     Padding="0,15,0,0"
@@ -128,11 +112,8 @@
                                     </Label>
                                     <Image
                                         Source="right.png"
-                                        HorizontalOptions="End"
-                                        VerticalOptions="CenterAndExpand" />
-
+                                        Style="{StaticResource rightImgStyle}"/>
                                 </StackLayout>
-
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

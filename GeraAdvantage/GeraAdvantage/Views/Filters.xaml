@@ -11,24 +11,13 @@
             Margin="0,0,10,0">
             <Label
                 Text="Filters"
-                FontSize="20"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="StartAndExpand" />
+                Style="{StaticResource PageTitle}"/>
             <Button
                 Text="Clear All"
-                TextColor="Brown"
-                BackgroundColor="White"
-                HorizontalOptions="End"
-                CornerRadius="4"/>
+                Style="{StaticResource BrWTitleBtn}" />
             <Button
                 Text="Apply"
-                TextColor="DodgerBlue"
-                BackgroundColor="White"
-                HorizontalOptions="End"
-                CornerRadius="4" />
-
+                Style="{StaticResource BlWTitleBtn}" />
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -41,10 +30,8 @@
                 <ListView
                     Grid.Column="0"
                     x:Name="FilterTypeListView"
-                    HasUnevenRows="true"
-                    SeparatorColor="SlateGray"
                     SelectionMode="None"
-                    BackgroundColor="LightGray"
+                    Style="{StaticResource ListviewStyle}"
                     ItemTapped="FilterTypeListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -59,13 +46,7 @@
                                         VerticalOptions="CenterAndExpand">
                                         <Label
                                             Text="{Binding Type}"
-                                            Padding="5,3,5,3"
-                                            TextColor="Black"
-                                            FontSize="Default"
-                                            FontAttributes="Bold"
-                                            VerticalOptions="CenterAndExpand"
-                                            HorizontalOptions="CenterAndExpand"
-                                            BackgroundColor="Transparent">
+                                            Style="{StaticResource FilterLabel}">
                                         </Label>
                                     </StackLayout>
 
@@ -78,9 +59,7 @@
                 <ListView
                     Grid.Column="1"
                     x:Name="CheckBoxListView"
-                    HasUnevenRows="true"
-                    SeparatorColor="SlateGray"
-                    SelectionMode="None"
+                    Style="{StaticResource ListviewStyle}"
                     BackgroundColor="White">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -101,11 +80,9 @@
                                         <Label
                                             Text="{Binding Title}"
                                             Padding="5,3,5,3"
-                                            TextColor="Black"
+                                            Style="{StaticResource FilterLabel}"
                                             FontSize="Small"
-                                            VerticalOptions="CenterAndExpand"
-                                            HorizontalOptions="StartAndExpand"
-                                            BackgroundColor="Transparent">
+                                            FontAttributes="None">
                                         </Label>
                                     </StackLayout>
 
