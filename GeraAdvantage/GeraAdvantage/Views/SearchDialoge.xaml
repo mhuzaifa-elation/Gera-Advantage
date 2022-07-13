@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="GeraAdvantage.Views.SearchDialoge">
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White"
+        Margin="30,0,30,0">
+        <StackLayout
+            HeightRequest="30"
+            BackgroundColor="DodgerBlue">
+            <Label
+                Margin="5,0,0,0"
+                Text="Select Option"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            <Entry
+                Placeholder="enter search text."
+                HorizontalOptions="FillAndExpand"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+            <Image
+                Source="pencil.png"
+                HorizontalOptions="End" />
+        </StackLayout>
+        <ListView
+            x:Name="listView"
+            Style="{StaticResource ListviewStyle}"
+            BackgroundColor="White"
+            SelectionMode="None"
+            VerticalOptions="Start"
+            HeightRequest="200"
+            ItemTapped="listView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label
+                            Text="{Binding Title}"
+                            Padding="5,3,5,3"
+                            TextColor="Black"
+                            VerticalOptions="Start">
+                        </Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</pages:PopupPage>

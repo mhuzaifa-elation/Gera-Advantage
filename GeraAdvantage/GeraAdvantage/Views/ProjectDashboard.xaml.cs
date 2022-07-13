@@ -17,6 +17,12 @@ namespace GeraAdvantage.Views
     {
         private ObservableCollection<ConformityPie> PieData1, PieData2;
         private SfChart ConfortmityChart, NonConfotmityChart;
+
+        private void Picker_Focused(object sender, FocusEventArgs e)
+        {
+
+        }
+
         public ProjectDashboard()
         {
             InitializeComponent();

@@ -25,7 +25,6 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\CreateChecklist_Page.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\GeraProjects_Page.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\Login_Page.xaml.g.cs
-D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ProjectDetails_Page.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\GeraAdvantage.AssemblyInfoInputs.cache
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\GeraAdvantage.AssemblyInfo.cs
@@ -98,3 +97,7 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ReviewQuestion.xaml.g.cs
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\UpdateQuestion.xaml.g.cs
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ProjectDashboard.xaml.g.cs
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ProjectDashboard.xaml.g.cs
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ReviewQuestion.xaml.g.cs
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\SearchDialoge.xaml.g.cs
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\UpdateQuestion.xaml.g.cs

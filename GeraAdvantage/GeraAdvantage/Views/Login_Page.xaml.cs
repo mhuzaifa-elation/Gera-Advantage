@@ -1,4 +1,6 @@
-﻿using Syncfusion.SfChart.XForms;
+﻿using GeraAdvantage.Views;
+using Rg.Plugins.Popup.Services;
+using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,9 +24,9 @@ namespace GeraAdvantage
             InitializeComponent();
             
         }
-        private void btnlogin_Clicked(object sender, EventArgs e)
+        private async void btnlogin_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GeraProjects_Page());
+           Navigation.PushAsync(new GeraProjects_Page());
         }
     }
 }
