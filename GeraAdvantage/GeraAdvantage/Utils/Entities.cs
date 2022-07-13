@@ -32,6 +32,12 @@ namespace GeraAdvantage.Utils
             public bool ConverttoNC { get; set; }
             public bool AddImage { get; set; }
             public bool SEComment { get; set; }
+            public bool btnyes { get;  set; }
+            public bool btnNo { get;  set; }
+            public bool btnNA { get;  set; }
+            public bool btnA { get;  set; }
+            public bool btnAWC { get;  set; }
+            public bool btnR { get; set; }
         }
         public class SampleChart
         {

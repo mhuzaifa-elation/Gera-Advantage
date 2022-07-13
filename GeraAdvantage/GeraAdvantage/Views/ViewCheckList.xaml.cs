@@ -45,12 +45,13 @@ namespace GeraAdvantage.Views
         private void InitializeDummyData()
         {
             _opsList = new List<MultileOps>();
-            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false });
-            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false });
-            _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false });
-            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false });
-            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false });
-            _opsList.Add(new MultileOps() { Title = "6- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false });
+            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "6- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "7- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
         }
         private async void BtnOK_Clicked(object sender, EventArgs e)
         {

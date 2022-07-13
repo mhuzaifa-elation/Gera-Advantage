@@ -40,11 +40,19 @@
                             Text="Select Building"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand" 
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked"/>
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
+                            <!--<Picker
+                                ItemsSource="{Binding SampleText}" />-->
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
+                            
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -54,8 +62,13 @@
                             Text="Select Category"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -68,8 +81,13 @@
                             Text="Select Floor"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -82,8 +100,13 @@
                             Text="Select Flat Type"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -96,8 +119,13 @@
                             Text="Select Side"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -110,8 +138,13 @@
                             Text="Select Flat Number"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -124,8 +157,13 @@
                             Text="Select Room"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -138,8 +176,13 @@
                             Text="Structural Member"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -163,8 +206,13 @@
                             Text="Select Contractor"
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
-                            <Picker
-                                ItemsSource="{Binding SampleText}" />
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="Transparent"
+                                Clicked="Button_Clicked" />
+                            <Entry
+                                TextColor="Black"
+                                IsReadOnly="True" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

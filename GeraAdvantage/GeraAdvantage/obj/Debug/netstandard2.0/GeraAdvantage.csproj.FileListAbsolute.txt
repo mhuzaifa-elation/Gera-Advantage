@@ -101,3 +101,4 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\ReviewQuestion.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\SearchDialoge.xaml.g.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\UpdateQuestion.xaml.g.cs
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage\obj\Debug\netstandard2.0\Views\SearchDialoge.xaml.g.cs

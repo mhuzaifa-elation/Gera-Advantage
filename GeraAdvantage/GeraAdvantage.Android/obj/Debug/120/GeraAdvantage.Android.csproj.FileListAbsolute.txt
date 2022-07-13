@@ -2064,7 +2064,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\lp\111\jl\files.cache
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Microsoft.CSharp.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Microsoft.CSharp.pdb
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Syncfusion.Data.Portable.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Syncfusion.GridCommon.Portable.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Syncfusion.SfComboBox.XForms.Android.dll
@@ -2076,8 +2075,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Syncfusion.SfNumericTextBox.XForms.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.ObjectModel.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Threading.dll
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\81a81ea0-df06-493f-afca-0c689ca7a0df.jar
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\03aed2b8-d60c-48fd-a197-de09b8530763.cfg
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc642fed3152aaceafc3\CloseButtonView.java
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc642fed3152aaceafc3\ItemAdapter.java
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc642fed3152aaceafc3\MultiSelectLayout.java
@@ -2252,3 +2249,5 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc64eeb36180fe6023e2\SfEffectsViewRenderer.java
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc64f606ab658bf2774f\SfShimmerRenderer.java
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc64f606ab658bf2774f\ShimmerViewRenderer.java
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\9e1899c6-d0f3-4431-a5fc-90dd6244a5b9.jar
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\0333ea50-67f5-47cf-8408-83b4b1490100.cfg

@@ -585,9 +585,6 @@
             <Setter
                 Property="HorizontalOptions"
                 Value="End" />
-            <Setter
-                Property="BorderColor"
-                Value="Transparent" />
         </Style>
         <Style
             x:Key="CircularButtonS"

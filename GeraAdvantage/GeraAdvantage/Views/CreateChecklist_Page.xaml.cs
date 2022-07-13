@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,18 +33,22 @@ namespace GeraAdvantage.Views
         {
             InitializeComponent();
             BindingContext = this;
-            SampleText = new List<string>()  
+            SampleText = new List<string>()
             {
                         "New York",
                         "London",
                         "Mumbai",
-                        "Chicago"                    
+                        "Chicago"
             };
         }
-
         private async void BtnView_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ViewCheckList());
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge());
         }
     }
 }
