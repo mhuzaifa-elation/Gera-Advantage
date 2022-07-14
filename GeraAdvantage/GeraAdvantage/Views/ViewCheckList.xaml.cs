@@ -13,7 +13,7 @@ using static GeraAdvantage.Utils.Entities;
 namespace GeraAdvantage.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ViewCheckList : ContentPage,INotifyPropertyChanged, INotifyCollectionChanged
+    public partial class ViewCheckList : ContentPage, INotifyPropertyChanged, INotifyCollectionChanged
     {
         private List<MultileOps> List;
 
@@ -45,13 +45,13 @@ namespace GeraAdvantage.Views
         private void InitializeDummyData()
         {
             _opsList = new List<MultileOps>();
-            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "6- This is sample", isfour = true, isthree = false, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
-            _opsList.Add(new MultileOps() { Title = "7- This is sample", isfour = false, isthree = true, ConverttoNC = false , SEComment = false , AddImage = false,btnyes=false,btnNo=false,btnNA=false,btnA=false,btnAWC=false,btnR=false });
+            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "6- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "7- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
         }
         private async void BtnOK_Clicked(object sender, EventArgs e)
         {
@@ -59,28 +59,92 @@ namespace GeraAdvantage.Views
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            var Btn = (Button)sender;
-            Btn.BorderColor = Color.DodgerBlue;
-            if (SeletedItem==null)
-                return;
-                
-            switch (Btn.Text)
-            {
+            var button = (Button)sender;
+            var item = (MultileOps)button.BindingContext;
+            var index = _opsList.IndexOf(item);
 
+            switch (button.Text)
+            {
+                case "Yes":
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+                    _opsList[index].btnAWC = false;
+                    _opsList[index].btnA = false;
+                    _opsList[index].btnNA = false;
+                    _opsList[index].btnNo = false;
+                    _opsList[index].btnR = false;
+                    _opsList[index].btnYes = true;
+                    break;
+                case "No":
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+                    _opsList[index].btnAWC = false;
+                    _opsList[index].btnA = false;
+                    _opsList[index].btnNA = false;
+                    _opsList[index].btnNo = true;
+                    _opsList[index].btnR = false;
+                    _opsList[index].btnYes = false;
+                    break;
+                case "NA":
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+                    _opsList[index].btnAWC = false;
+                    _opsList[index].btnA = false;
+                    _opsList[index].btnNA = true;
+                    _opsList[index].btnNo = false;
+                    _opsList[index].btnR = false;
+                    _opsList[index].btnYes = false;
+                    break;
+                case "A":
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+                    _opsList[index].btnAWC = false;
+                    _opsList[index].btnA = true;
+                    _opsList[index].btnNA = false;
+                    _opsList[index].btnNo = false;
+                    _opsList[index].btnR = false;
+                    _opsList[index].btnYes = false;
+                    break;
                 case "AWC":
-                   _opsList[_opsList.IndexOf(SeletedItem)].ConverttoNC = false;
-                   _opsList[_opsList.IndexOf(SeletedItem)].SEComment = true;
-                   _opsList[_opsList.IndexOf(SeletedItem)].AddImage = false;
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = true;
+                    _opsList[index].AddImage = false;
+
+
+                    _opsList[index].btnAWC = true;
+                    _opsList[index].btnA = false;
+                    _opsList[index].btnNA = false;
+                    _opsList[index].btnNo = false;
+                    _opsList[index].btnR = false;
+                    _opsList[index].btnYes = false;
+
                     break;
                 case "R":
-                   _opsList[_opsList.IndexOf(SeletedItem)].ConverttoNC = true;
-                   _opsList[_opsList.IndexOf(SeletedItem)].SEComment = false;
-                   _opsList[_opsList.IndexOf(SeletedItem)].AddImage = false;
+                    _opsList[index].ConverttoNC = true;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+                    _opsList[index].btnAWC = false;
+                    _opsList[index].btnA = false;
+                    _opsList[index].btnNA = false;
+                    _opsList[index].btnNo = false;
+                    _opsList[index].btnR = true;
+                    _opsList[index].btnYes = false;
                     break;
-                 default:
-                    _opsList[_opsList.IndexOf(SeletedItem)].ConverttoNC = false;
-                    _opsList[_opsList.IndexOf(SeletedItem)].SEComment = false;
-                    _opsList[_opsList.IndexOf(SeletedItem)].AddImage = false;
+                default:
+                    _opsList[index].ConverttoNC = false;
+                    _opsList[index].SEComment = false;
+                    _opsList[index].AddImage = false;
+
+
                     break;
 
 

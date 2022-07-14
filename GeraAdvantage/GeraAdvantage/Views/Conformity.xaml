@@ -228,7 +228,8 @@
                 Spacing="10">
                 <Button
                     Text="Add Photo"
-                    HorizontalOptions="FillAndExpand" />
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked_1"/>
                 <Button
                     HorizontalOptions="FillAndExpand"
                     Text="Save" />

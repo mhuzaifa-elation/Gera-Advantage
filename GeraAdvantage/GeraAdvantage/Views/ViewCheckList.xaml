@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.ViewCheckList"
+    xmlns:local="clr-namespace:GeraAdvantage.Views"
     Title="Create Checklist"
     BackgroundColor="White">
     <NavigationPage.TitleView>
@@ -33,7 +34,7 @@
             <StackLayout
                 Margin="10"
                 Spacing="0">
-                
+
                 <Label
                     Style="{StaticResource QReviewTitle}"
                     Text="Project Title" />
@@ -123,9 +124,25 @@
                                                 Text="Yes"
                                                 BackgroundColor="Green"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}"
-                                                >
-                                                
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnYes}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnYes}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
                                             </Button>
 
                                             <Button
@@ -134,7 +151,26 @@
                                                 Text="No"
                                                 BackgroundColor="Red"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNo}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNo}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
 
                                             <Button
                                                 x:Name="btnNA1"
@@ -142,7 +178,26 @@
                                                 Text="NA"
                                                 BackgroundColor="Purple"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNA}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNA}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
 
                                         </Grid>
                                         <Grid
@@ -157,7 +212,26 @@
                                                 Text="A"
                                                 BackgroundColor="Green"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnA}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnA}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
 
                                             <Button
                                                 x:Name="btnAWC"
@@ -165,7 +239,26 @@
                                                 Text="AWC"
                                                 BackgroundColor="Orange"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnAWC}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnAWC}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
 
                                             <Button
                                                 x:Name="btnR"
@@ -173,7 +266,26 @@
                                                 Text="R"
                                                 BackgroundColor="Red"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnR}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnR}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
 
                                             <Button
                                                 x:Name="btnNA2"
@@ -181,15 +293,35 @@
                                                 Text="NA"
                                                 BackgroundColor="Purple"
                                                 Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}" />
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNA}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNA}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
                                         </Grid>
                                         <StackLayout
                                             Orientation="Vertical"
                                             IsVisible="{Binding SEComment}">
                                             <Label
                                                 Text="SE Comment"
-                                                TextColor="Black"/>
-                                            <Entry TextColor="Black"/>
+                                                TextColor="Black" />
+                                            <Entry
+                                                TextColor="Black" />
                                         </StackLayout>
                                         <StackLayout
                                             Orientation="Vertical"
@@ -209,7 +341,7 @@
                     WidthRequest="180"
                     CornerRadius="20"
                     Margin="10"
-                    Clicked="BtnOK_Clicked"/>
+                    Clicked="BtnOK_Clicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
