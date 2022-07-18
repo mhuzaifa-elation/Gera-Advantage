@@ -238,4 +238,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\garrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bsearch.png" />
+  </ItemGroup>
 </Project>

@@ -51,57 +51,38 @@ namespace GeraAdvantage
                     productIndex += 1;
                     var GridCellLayout = new StackLayout
                     {
-
-                        HeightRequest = 240,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Orientation = StackOrientation.Vertical,
+                        Style = (Style)Application.Current.Resources["ProjectCellLayout"]
                     };
                     var frame = new StackLayout
                     {
-                        HeightRequest = 130,
-                        VerticalOptions = LayoutOptions.StartAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand
+                        Style = (Style)Application.Current.Resources["ProjectframeLayout"]
                     };
                     var image = new Image
                     {
                         Source = "noimage.png",
-                        Aspect = Aspect.AspectFit,
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Opacity = 0.5
-                    };
+                        Style = (Style)Application.Current.Resources["ProjectImage"]
 
+                    };
                     var innerlayout = new StackLayout
                     {
-                        HeightRequest = 70,
-                        Padding = new Thickness(0, 5, 0, 5),
-                        VerticalOptions = LayoutOptions.StartAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.Gray
+                        Style = (Style)Application.Current.Resources["ProjectInnerLayout"]
                     };
                     var Titlelabel = new Label
                     {
                         Text = product.Title,
-                        TextColor = Color.White,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.Gray
+                        Style = (Style)Application.Current.Resources["ProjectLabel"]
                     };
                     var TotalNClabel = new Label
                     {
-                        Text = product.TotalNCCount.ToString(),
-                        TextColor = Color.White,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.Gray
+                        Text = "Total NCs: " + product.TotalNCCount.ToString(),
+                        Style = (Style)Application.Current.Resources["ProjectLabel"]
+
                     };
                     var OpenNClabel = new Label
                     {
-                        Text = product.OpenNCCount.ToString(),
-                        TextColor = Color.White,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.Gray
+                        Text = "Open NCs: " + product.OpenNCCount.ToString(),
+                        Style = (Style)Application.Current.Resources["ProjectLabel"]
+
                     };
                     innerlayout.Children.Add(Titlelabel);
                     innerlayout.Children.Add(TotalNClabel);
@@ -128,7 +109,7 @@ namespace GeraAdvantage
 
         private async void MyProfile_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StakeholderDetail("My Profile",true));
+            await Navigation.PushAsync(new StakeholderDetail("My Profile", true));
         }
     }
 }

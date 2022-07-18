@@ -5,7 +5,7 @@
     xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
     x:Class="GeraAdvantage.Views.ProjectDashboard"
     Title="Project Dashboard"
-    BackgroundColor="White">
+    Style="{StaticResource ContentPageStyle}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout

@@ -3,8 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.GeraProjects_Page"
-    BackgroundColor="White"
-    Title="Gera Projects">
+    Title="Gera Projects"
+    Style="{StaticResource ContentPageStyle}">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Order="Primary"

@@ -4,11 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.CreateNC"
     xmlns:local="clr-namespace:GeraAdvantage.Views"
-    SelectedTabColor="White"
-    UnselectedTabColor="DarkSlateGray"
-    BackgroundColor="DodgerBlue"
-    BarBackgroundColor="DodgerBlue"
-    Title="Project Title">
+    Title="Project Title"
+    Style="{StaticResource TabbedPageStyle}">
     <!--Pages can be added as references or inline-->
     <local:NonConformity
         TabIndex="1"

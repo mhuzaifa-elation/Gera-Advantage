@@ -22,5 +22,9 @@ namespace GeraAdvantage.Views
         {
             await PopupNavigation.Instance.PushAsync(new SearchDialoge());
         }
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new UploadImageDialoge());
+        }
     }
 }

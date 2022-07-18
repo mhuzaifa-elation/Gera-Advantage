@@ -5,21 +5,12 @@
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     x:Class="GeraAdvantage.Views.UploadImageDialoge">
     <StackLayout
-        BackgroundColor="DodgerBlue"
-        VerticalOptions="Center"
-        HorizontalOptions="FillAndExpand"
-        Margin="30,0,30,0">
+        Style="{StaticResource UDialogePage}">
         <StackLayout
-            HeightRequest="50"
-            BackgroundColor="White">
+            Style="{StaticResource UDialogeLayout}">
             <Label
-                Margin="5,0,0,0"
                 Text="Upload Image"
-                FontSize="20"
-                TextColor="DodgerBlue"
-                VerticalOptions="FillAndExpand"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="CenterAndExpand" />
+                Style="{StaticResource UDialogeTitle}" />
         </StackLayout>
         <StackLayout
             HeightRequest="100"
@@ -33,31 +24,22 @@
                     HorizontalOptions="FillAndExpand"
                     Orientation="Vertical">
                     <Image
-                        HeightRequest="50"
-                        Aspect="AspectFit"
-                        BackgroundColor="Transparent"
-                        Source="gallery.png" 
-                        />
+                        Source="gallery.png"
+                        Style="{StaticResource UDialogeImage}" />
                     <Label
                         Text="Gallery"
-                        TextColor="White"
-                        FontSize="Medium"
-                        HorizontalTextAlignment="Center" />
+                        Style="{StaticResource UDialogeLabel}" />
                 </StackLayout>
                 <StackLayout
                     Grid.Column="1"
                     HorizontalOptions="FillAndExpand"
                     Orientation="Vertical">
                     <Image
-                        HeightRequest="50"
-                        Aspect="AspectFit"
-                        BackgroundColor="Transparent"
-                        Source="camera.png" />
+                        Source="camera.png"
+                        Style="{StaticResource UDialogeImage}" />
                     <Label
                         Text="Camera"
-                        TextColor="White"
-                        FontSize="Medium"
-                        HorizontalTextAlignment="Center" />
+                        Style="{StaticResource UDialogeLabel}" />
                 </StackLayout>
             </Grid>
         </StackLayout>

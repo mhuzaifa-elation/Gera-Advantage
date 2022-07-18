@@ -48,82 +48,48 @@ namespace GeraAdvantage.Views
                     productIndex += 1;
                     var GridCellLayout = new StackLayout
                     {
-                        VerticalOptions = LayoutOptions.Start,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Orientation = StackOrientation.Vertical,
-                        Spacing=0,
+                        Style = (Style)Application.Current.Resources["ConformityCellLayout"]
                     };
                     var TotalCountView = new StackLayout
                     {
-                        HeightRequest = 60,
-                        VerticalOptions = LayoutOptions.StartAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.DarkGray,
-                        Orientation = StackOrientation.Vertical,
-                        Spacing=0
+                        Style = (Style)Application.Current.Resources["ConformityTotalCount"]
                     };
                     var OpenCloseCountView = new StackLayout
                     {
-                        HeightRequest = 60,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.LightGray,
-                        Orientation = StackOrientation.Vertical,
-                        Spacing=0
+                        Style = (Style)Application.Current.Resources["ConformityTotalCount"]
                     };
                     var StatusView = new StackLayout
                     {
-                        HeightRequest = 35,
-                        Padding = new Thickness(0, 5, 0, 5),
-                        VerticalOptions = LayoutOptions.CenterAndExpand,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        BackgroundColor = Color.DodgerBlue,
-                        Spacing=0
+                        Style = (Style)Application.Current.Resources["ConformityStatusView"]
+
                     };
                     var lbTC = new Label
                     {
-                        Text = "Total Count",
-                        TextColor = Color.Black,
-                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Style = (Style)Application.Current.Resources["ConformityDashboardTLabel"]
                     };
                     var lbTotalCount = new Label
                     {
                         Text = product.TotalNCCount.ToString(),
-                        TextColor = Color.Black,
-                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                        FontAttributes= FontAttributes.Bold,
-                        VerticalOptions = LayoutOptions.Center,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Style = (Style)Application.Current.Resources["ConformityDashboardSLabel"]
+
                     };
                     var lbOpenNC = new Label
                     {
                         Text = "Open NCs:"+product.OpenNCCount,
-                        TextColor = Color.Gray,
-                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                        VerticalTextAlignment = TextAlignment.Center,
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Style = (Style)Application.Current.Resources["ConformityDashboardSLabel"]
+
                     };
                     var lbClosedNC = new Label
                     {
                         Text = "Closed NCs:"+product.ClosedNCCount,
-                        TextColor = Color.Gray,
-                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                        VerticalTextAlignment = TextAlignment.Center,
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Style = (Style)Application.Current.Resources["ConformityDashboardSLabel"]
+
                     };
                    
                     var lbStatus = new Label
                     {
                         Text = product.Severity,
-                        TextColor = Color.White,
-                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                        VerticalTextAlignment = TextAlignment.Center,
-                        VerticalOptions = LayoutOptions.CenterAndExpand,
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Style = (Style)Application.Current.Resources["ConformityDashboardSLabel"]
                     };
                    
                    TotalCountView.Children.Add(lbTC);

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.Conformity"
     Title="Conformity"
-    BackgroundColor="White">
+    Style="{StaticResource ContentPageStyle}">
     <ContentPage.Padding>
         <OnPlatform
             x:TypeArguments="Thickness">
@@ -42,12 +42,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -58,16 +56,15 @@
                         VerticalOptions="Start">
                         <Label
                             Text="Select Floor"
+                             
                             Style="{StaticResource ConformityLabel}" />
 
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -82,12 +79,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -101,12 +96,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -121,12 +114,10 @@
 
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -140,12 +131,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -159,12 +148,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -178,12 +165,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -197,12 +182,10 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Grid>
                             <Button
-                                HorizontalOptions="FillAndExpand"
-                                BackgroundColor="Transparent"
+                                Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                TextColor="Black"
-                                IsReadOnly="True" />
+                                Style="{StaticResource TEntry}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

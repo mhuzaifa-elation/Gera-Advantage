@@ -2,7 +2,6 @@
 <pages:PopupPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     x:Class="GeraAdvantage.Views.SearchDialoge">
     <StackLayout
@@ -11,29 +10,20 @@
         BackgroundColor="White"
         Margin="30,0,30,0">
         <StackLayout
-            HeightRequest="30"
-            BackgroundColor="DodgerBlue">
+            Style="{StaticResource DialogePage}">
             <Label
-                Margin="5,0,0,0"
                 Text="Select Option"
-                FontSize="20"
-                TextColor="White"
-                VerticalOptions="Center"
-                VerticalTextAlignment="Center"
-                HorizontalOptions="CenterAndExpand" />
-
+                Style="{StaticResource DialogeTitle}" />
         </StackLayout>
         <StackLayout
             Orientation="Horizontal"
             HorizontalOptions="FillAndExpand">
             <Entry
                 Placeholder="enter search text."
-                HorizontalOptions="FillAndExpand"
-                PlaceholderColor="Gray"
-                TextColor="Black" />
+                Style="{StaticResource DialogeEntry}" />
             <Image
-                Source="pencil.png"
-                HorizontalOptions="End" />
+                Source="bsearch.png"
+                Style="{StaticResource DialogeImage}" />
         </StackLayout>
         <ListView
             x:Name="listView"
@@ -45,13 +35,11 @@
             ItemTapped="listView_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell
+                        Height="50">
                         <Label
                             Text="{Binding Title}"
-                            Padding="5,3,5,3"
-                            TextColor="Black"
-                            VerticalOptions="Start">
-                        </Label>
+                            Style="{StaticResource DialogeListLabel}" />
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

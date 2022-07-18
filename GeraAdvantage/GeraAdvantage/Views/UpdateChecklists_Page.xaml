@@ -3,8 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GeraAdvantage.Views.UpdateChecklists_Page"
-    BackgroundColor="White"
-    Title="Checklist">
+    Title="Checklist"
+    Style="{StaticResource ContentPageStyle}">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Order="Primary"

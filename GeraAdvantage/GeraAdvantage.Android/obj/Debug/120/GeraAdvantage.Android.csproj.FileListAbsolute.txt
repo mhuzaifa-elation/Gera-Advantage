@@ -1570,7 +1570,6 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.Abstractions.dll
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.Abstractions.pdb
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.dll
-D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.dll.mdb
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Rg.Plugins.Popup.dll
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Rg.Plugins.Popup.pdb
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Syncfusion.Core.XForms.Android.dll
@@ -2252,3 +2251,5 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
+D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\res\drawable\bsearch.png
