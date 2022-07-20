@@ -44,13 +44,14 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <!--<Picker
                                 ItemsSource="{Binding SampleText}" />-->
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
-                            
+
                         </Grid>
                     </StackLayout>
                     <StackLayout
@@ -64,7 +65,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -81,7 +83,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -98,7 +101,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -115,7 +119,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -132,7 +137,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -149,7 +155,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -166,7 +173,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -180,8 +188,9 @@
                             Style="{StaticResource ConformityLabel}" />
                         <Entry
                             HorizontalOptions="FillAndExpand"
-                            Placeholder="Username"
-                            Text="{Binding UsernameB}" />
+                            Text="{Binding SamplePick}"
+                            Style="{StaticResource CommentEnt}" />
+
                     </StackLayout>
                     <StackLayout
                         HorizontalOptions="FillAndExpand"
@@ -194,7 +203,8 @@
                                 Style="{StaticResource TButton}"
                                 Clicked="Button_Clicked" />
                             <Entry
-                                Style="{StaticResource TEntry}" />
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SamplePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

@@ -19,11 +19,14 @@
             Orientation="Horizontal"
             HorizontalOptions="FillAndExpand">
             <Entry
+                x:Name="EntSearch"
                 Placeholder="enter search text."
-                Style="{StaticResource DialogeEntry}" />
-            <Image
+                Style="{StaticResource DialogeEntry}"
+                ClearButtonVisibility="WhileEditing"/>
+            <ImageButton
                 Source="bsearch.png"
-                Style="{StaticResource DialogeImage}" />
+                Style="{StaticResource DialogeImage}"
+                Clicked="Search_Clicked"/>
         </StackLayout>
         <ListView
             x:Name="listView"

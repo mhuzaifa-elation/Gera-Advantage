@@ -1,6 +1,7 @@
 ﻿using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,11 @@ using Xamarin.Forms.Xaml;
 namespace GeraAdvantage.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CreateChecklist_Page : ContentPage
+    public partial class CreateChecklist_Page : ContentPage, INotifyPropertyChanged
     {
-        private List<string> _sampleText;
+        private string  _sampleText;
 
-        public List<string> SampleText
+        public string SamplePick
         {
             get => _sampleText;
             set
@@ -25,7 +26,7 @@ namespace GeraAdvantage.Views
                     return;
                 }
                 _sampleText = value;
-                OnPropertyChanged(nameof(SampleText));
+                OnPropertyChanged(nameof(SamplePick));
             }
         }
 
@@ -33,13 +34,7 @@ namespace GeraAdvantage.Views
         {
             InitializeComponent();
             BindingContext = this;
-            SampleText = new List<string>()
-            {
-                        "New York",
-                        "London",
-                        "Mumbai",
-                        "Chicago"
-            };
+           
         }
         private async void BtnView_Clicked(object sender, EventArgs e)
         {
@@ -49,6 +44,11 @@ namespace GeraAdvantage.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new SearchDialoge());
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    SamplePick= value;
+                                });
         }
     }
 }

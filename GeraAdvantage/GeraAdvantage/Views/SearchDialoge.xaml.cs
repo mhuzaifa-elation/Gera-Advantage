@@ -36,7 +36,32 @@ namespace GeraAdvantage.Views
 
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await  PopupNavigation.Instance.PopAsync();
+            var SelectedItem = (FilterDetail)e.Item;
+            MessagingCenter.Send<string>(SelectedItem.Title, "SelectedOption");
+            await PopupNavigation.Instance.PopAsync();
+        }
+
+        private void Search_Clicked(object sender, EventArgs e)
+        {
+            if (EntSearch.Text.Length>0)
+            {
+                var SearchedList = SampleList.FindAll(x => x.Title.ToLower().Contains(EntSearch.Text.ToLower()));
+                if (SearchedList.Count>0)
+                {
+                    listView.ItemsSource = null;
+                    listView.ItemsSource = SearchedList;
+                }
+                else
+                {
+                    listView.ItemsSource = null;
+                    listView.ItemsSource = SampleList;
+                }
+            }
+            else
+            {
+                listView.ItemsSource = null;
+                listView.ItemsSource = SampleList;
+            }
         }
     }
 }

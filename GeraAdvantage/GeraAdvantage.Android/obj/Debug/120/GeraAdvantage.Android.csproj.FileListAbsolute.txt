@@ -1444,8 +1444,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc649bfc1964ebae3690\SfNumericTextBoxRenderer.java
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc64dcd40d47c3d274ae\MaterialSfComboBoxRenderer.java
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\src\crc64dcd40d47c3d274ae\SfComboBoxRenderer.java
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\9e1899c6-d0f3-4431-a5fc-90dd6244a5b9.jar
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\0333ea50-67f5-47cf-8408-83b4b1490100.cfg
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\MonoAndroid,Version=v12.0.AssemblyAttributes.cs
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\build.props
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\adb.props
@@ -2253,3 +2251,7 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\res\drawable\bsearch.png
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\res\drawable\bsearch.png
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\9ad99ba8-97e1-410f-a525-973f8b4a6fbd.jar
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\5ebb94ad-ac67-49d1-b210-937984f45cd5.cfg
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
