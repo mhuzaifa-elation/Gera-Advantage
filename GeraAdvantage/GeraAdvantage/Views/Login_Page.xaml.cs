@@ -1,4 +1,5 @@
-﻿using GeraAdvantage.Views;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Views;
 using Rg.Plugins.Popup.Services;
 using Syncfusion.SfChart.XForms;
 using System;
@@ -22,11 +23,12 @@ namespace GeraAdvantage
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
-            
+
         }
         private async void btnlogin_Clicked(object sender, EventArgs e)
         {
-           Navigation.PushAsync(new GeraProjects_Page());
+            SQLConfig sql_SC = new SQLConfig();
+            await Navigation.PushAsync(new GeraProjects_Page());
         }
     }
 }

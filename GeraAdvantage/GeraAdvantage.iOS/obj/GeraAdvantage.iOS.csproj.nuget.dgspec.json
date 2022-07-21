@@ -62,6 +62,10 @@
             "Xamarin.Forms.DataGrid": {
               "target": "Package",
               "version": "[4.8.0, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           }
         }
@@ -148,6 +152,10 @@
             "Xamarin.Forms.DataGrid": {
               "target": "Package",
               "version": "[4.8.0, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeraAdvantage.SQLServices;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,6 +7,18 @@ namespace GeraAdvantage
 {
     public partial class App : Application
     {
+        private static SQLiteService sQLiteService;
+        public static SQLiteService SQLiteService
+        {
+            get
+            {
+                if (sQLiteService == null)
+                {
+                    sQLiteService = new SQLiteService();
+                }
+                return sQLiteService;
+            }
+        }
         public App()
         {
             InitializeComponent();
