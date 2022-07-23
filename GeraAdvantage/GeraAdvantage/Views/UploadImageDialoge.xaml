@@ -29,6 +29,10 @@
                     <Label
                         Text="Gallery"
                         Style="{StaticResource UDialogeLabel}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Gallery_Tapped" />
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
                 <StackLayout
                     Grid.Column="1"
@@ -40,8 +44,16 @@
                     <Label
                         Text="Camera"
                         Style="{StaticResource UDialogeLabel}" />
+
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Camera_Tapped" />
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Grid>
         </StackLayout>
+        <Image
+            Aspect="AspectFit"
+            x:Name="tempImage" />
     </StackLayout>
 </pages:PopupPage>

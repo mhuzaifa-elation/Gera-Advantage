@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,31 @@ namespace GeraAdvantage.Views
         public UploadImageDialoge()
         {
             InitializeComponent();
+        }
+
+        private async void Camera_Tapped(object sender, EventArgs e)
+        {
+            var result = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions()
+            {
+                Title = "Please Select an Image."
+            });
+            if (result != null)
+            {
+                var stream = await result.OpenReadAsync();
+                tempImage.Source = ImageSource.FromStream(() => stream);
+            }
+        }
+        private async void Gallery_Tapped(object sender, EventArgs e)
+        {
+            var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions()
+            {
+                Title = "Please Select an Image."
+            });
+            if (result != null)
+            {
+                var stream = await result.OpenReadAsync();
+                tempImage.Source = ImageSource.FromStream(() => stream);
+            }
         }
     }
 }

@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static GeraAdvantage.Utils.Entities;
@@ -45,7 +44,7 @@ namespace GeraAdvantage.Views
         private void InitializeDummyData()
         {
             _opsList = new List<MultileOps>();
-            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false ,Images= new List<ImageSource>()});
             _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
             _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
             _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
@@ -57,8 +56,26 @@ namespace GeraAdvantage.Views
         {
             await Navigation.PushAsync(new ReviewQuestion());
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void PictureButton_Clicked(object sender, EventArgs e)
         {
+
+            var frame = new StackLayout
+            {
+                Style = (Style)Application.Current.Resources["ProjectframeLayout"]
+            };
+            var image = new Image
+            {
+                Source = "noimage.png",
+                Style = (Style)Application.Current.Resources["ProjectImage"]
+
+            };
+
+        } private void Button_Clicked(object sender, EventArgs e)
+        {
+
+            
+
+
             var button = (Button)sender;
             var item = (MultileOps)button.BindingContext;
             var index = _opsList.IndexOf(item);

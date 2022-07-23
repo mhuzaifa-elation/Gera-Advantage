@@ -39,6 +39,7 @@ namespace GeraAdvantage.Utils
             public bool btnA { get; set; }
             public bool btnAWC { get; set; }
             public bool btnR { get; set; }
+           public List<ImageSource> Images { get; set; }
         }
         public class SampleChart
         {

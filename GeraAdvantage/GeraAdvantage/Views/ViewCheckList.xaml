@@ -34,7 +34,6 @@
             <StackLayout
                 Margin="10"
                 Spacing="0">
-
                 <Label
                     Style="{StaticResource QReviewTitle}"
                     Text="Project Title" />
@@ -259,7 +258,6 @@
                                                     </DataTrigger>
                                                 </Button.Triggers>
                                             </Button>
-
                                             <Button
                                                 x:Name="btnR"
                                                 Grid.Column="2"
@@ -286,7 +284,6 @@
                                                     </DataTrigger>
                                                 </Button.Triggers>
                                             </Button>
-
                                             <Button
                                                 x:Name="btnNA2"
                                                 Grid.Column="3"
@@ -314,6 +311,16 @@
                                                 </Button.Triggers>
                                             </Button>
                                         </Grid>
+                                        <StackLayout>
+                                            <ImageButton
+                                                Source="camera.png"
+                                                Style="{StaticResource PhoneMailIcon}" />
+                                            <ListView
+                                                VerticalOptions="StartAndExpand"
+                                                HorizontalOptions="FillAndExpand"
+                                                x:Name="PicsGrid"
+                                                />
+                                        </StackLayout>
                                         <StackLayout
                                             Orientation="Vertical"
                                             IsVisible="{Binding SEComment}">
@@ -335,6 +342,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
                 <Button
                     Text="Save And Next"
                     HorizontalOptions="End"

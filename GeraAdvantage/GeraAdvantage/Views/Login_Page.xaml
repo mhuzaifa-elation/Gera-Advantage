@@ -52,6 +52,9 @@
                     TextColor="White"
                     Margin="10"
                     Clicked="btnlogin_Clicked" />
+                
+            </StackLayout>
+            <StackLayout>
             </StackLayout>
             <StackLayout
                 x:Name="ChartLayout" />

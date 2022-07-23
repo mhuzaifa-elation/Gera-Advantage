@@ -2248,8 +2248,6 @@ D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Buffers.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Memory.dll
 D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\9d510cb2-0c32-4a43-a669-545664af2248.jar
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\955841b2-a097-41c6-97d6-183f438c1980.cfg
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\bin\Debug\GeraAdvDB.sqlite
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\lp\8\jl\files.cache
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\lp\63\jl\files.cache
@@ -2271,3 +2269,6 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\87d82bf8-dee7-4c49-aec1-082a5d65aac3.jar
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\00bf3d90-f988-4d8f-8e76-3a01e610e154.cfg
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\d06bd54b-5a51-44bf-a5a4-4e7688796e12.jar
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\a6262b69-f17d-40ca-a0c9-8aed1212080d.cfg
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
