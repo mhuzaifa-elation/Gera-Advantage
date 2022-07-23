@@ -28,6 +28,7 @@ namespace GeraAdvantage
         private async void btnlogin_Clicked(object sender, EventArgs e)
         {
             SQLConfig sql_SC = new SQLConfig();
+            sql_SC.DeleteAll<UserRole>();
             await Navigation.PushAsync(new GeraProjects_Page());
         }
     }
