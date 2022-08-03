@@ -18,13 +18,41 @@
             Orientation="Vertical">
             <ScrollView>
                 <Grid
-                    RowDefinitions="*,*,*,*,*,*,*,*,*,*"
+                    RowDefinitions="*,*,*,*,*,*,*,*,*,*,*"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
                     Margin="10,0,5,0"
                     RowSpacing="0">
                     <StackLayout
                         Grid.Row="0"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="BtnSnaglist_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image
+                            Source="checklist.png"
+                            Style="{StaticResource ListIcon}" />
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Text="Snaglist"
+                                Style="{StaticResource ListHeading}" />
+                            <Label
+                                Text="Snaglist"
+                                Style="{StaticResource ListSubHeading}" />
+                        </StackLayout>
+                        <Image
+                            Source="right.png"
+                            Style="{StaticResource rightImgStyle}" />
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Row="1"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -52,7 +80,7 @@
                             Style="{StaticResource rightImgStyle}"/>
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="1"
+                        Grid.Row="2"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -80,7 +108,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="2"
+                        Grid.Row="3"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -108,7 +136,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="3"
+                        Grid.Row="4"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -136,7 +164,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="4"
+                        Grid.Row="5"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -164,7 +192,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="5"
+                        Grid.Row="6"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -192,7 +220,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="6"
+                        Grid.Row="7"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -220,7 +248,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="7"
+                        Grid.Row="8"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -249,7 +277,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="8"
+                        Grid.Row="9"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">
@@ -278,7 +306,7 @@
                             Style="{StaticResource rightImgStyle}" />
                     </StackLayout>
                     <StackLayout
-                        Grid.Row="9"
+                        Grid.Row="10"
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         Orientation="Horizontal">

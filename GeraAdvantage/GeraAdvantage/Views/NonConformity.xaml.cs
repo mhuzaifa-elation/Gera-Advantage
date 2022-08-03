@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace GeraAdvantage.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NonConformity : ContentPage,INotifyPropertyChanged
+    public partial class NonConformity : ContentPage, INotifyPropertyChanged
     {
         private string _sampleText;
 
@@ -42,12 +42,13 @@ namespace GeraAdvantage.Views
                                         (value) =>
                                         {
                                             SamplePick = value;
+                                            MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                         });
         }
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new UploadImageDialoge());
-            
+
         }
     }
 }

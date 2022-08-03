@@ -32,6 +32,18 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
 i:{00000000-0000-0000-0000-000000000000}:GeraAdvantage
+++Rg.Plugins.Popup
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++sqlite-net-pcl
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++Syncfusion.Xamarin.SfChart
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++Syncfusion.Xamarin.SfDataGrid
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
 ++System
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
@@ -45,6 +57,15 @@ i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
 ++System.Xml
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++Xamarin.Essentials
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++Xamarin.Forms
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
+i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
+++Xamarin.Forms.DataGrid
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:
 ++Xamarin.iOS
@@ -235,405 +256,58 @@ i:{756619b9-7c68-45d9-b469-fd594932aaa6}:d:\projects\git\gera-advantage\geraadva
 ++styles.xml
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.android\resources\values\styles.xml
 ++Dependencies
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>551
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>553
 ++Imports
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>223
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>224
 ++bin
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\
-++obj
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\
-++SQLServices
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\
-++SQLConfig.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\sqlconfig.cs
-++SQLiteService.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\sqliteservice.cs
-++Utils
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\
-++Views
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\
-++Checklists_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\checklists_page.xaml
-++Conformity.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformity.xaml
-++ConformityDashboard.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydashboard.xaml
-++ConformityDetails.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydetails.xaml
-++CreateChecklist_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createchecklist_page.xaml
-++CreateNC.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createnc.xaml
-++EditNCDetails.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\editncdetails.xaml
-++Filters.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\filters.xaml
-++GeraProjects_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml
-++Login_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml
-++Login_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml.cs
-++NCDashboard.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml
-++NCDetails.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdetails.xaml
-++NCList.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nclist.xaml
-++NCManagement.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncmanagement.xaml
-++NonConformity.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformity.xaml
-++NonConformityFiltersTemplate.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformityfilterstemplate.xaml
-++ProfileEditor.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml
-++ProjectDashboard.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml
-++ProjectDetails_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml
-++ReviewQuestion.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml
-++SearchDialoge.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchdialoge.xaml
-++ShowNCHistory.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\shownchistory.xaml
-++StakeholderDetail.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderdetail.xaml
-++StakeHoldersList.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderslist.xaml
-++UpdateChecklists_Page.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatechecklists_page.xaml
-++UpdateQuestion.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatequestion.xaml
-++UploadImageDialoge.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\uploadimagedialoge.xaml
-++ViewCheckList.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewchecklist.xaml
-++App.xaml
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml
-++GeraAdvDB.sqlite
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\geraadvdb.sqlite
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\geraadvdb.sqlite
-++Packages
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:packages
-++Sdk.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\sdk\sdk.props
-++Sdk.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.targets
 ++Debug
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\
-++Release
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\
-++GeraAdvantage.csproj.nuget.dgspec.json
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.dgspec.json
-++GeraAdvantage.csproj.nuget.g.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.props
-++GeraAdvantage.csproj.nuget.g.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.targets
-++project.assets.json
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\project.assets.json
-++project.nuget.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\project.nuget.cache
-++Entities.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\entities.cs
-++Checklists_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\checklists_page.xaml.cs
-++Conformity.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformity.xaml.cs
-++ConformityDashboard.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydashboard.xaml.cs
-++ConformityDetails.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydetails.xaml.cs
-++CreateChecklist_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createchecklist_page.xaml.cs
-++CreateNC.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createnc.xaml.cs
-++EditNCDetails.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\editncdetails.xaml.cs
-++Filters.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\filters.xaml.cs
-++GeraProjects_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml.cs
-++NCDashboard.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml.cs
-++NCDetails.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdetails.xaml.cs
-++NCList.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nclist.xaml.cs
-++NCManagement.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncmanagement.xaml.cs
-++NonConformity.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformity.xaml.cs
-++NonConformityFiltersTemplate.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformityfilterstemplate.xaml.cs
-++ProfileEditor.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml.cs
-++ProjectDashboard.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml.cs
-++ProjectDetails_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml.cs
-++ReviewQuestion.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml.cs
-++SearchDialoge.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchdialoge.xaml.cs
-++ShowNCHistory.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\shownchistory.xaml.cs
-++StakeholderDetail.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderdetail.xaml.cs
-++StakeHoldersList.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderslist.xaml.cs
-++UpdateChecklists_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatechecklists_page.xaml.cs
-++UpdateQuestion.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatequestion.xaml.cs
-++UploadImageDialoge.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\uploadimagedialoge.xaml.cs
-++ViewCheckList.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewchecklist.xaml.cs
-++App.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml.cs
-++NETStandard.Library (2.0.3)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>557
-++Rg.Plugins.Popup (2.1.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>560
-++sqlite-net-pcl (1.8.116)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>555
-++Syncfusion.Xamarin.SfChart (20.1.0.61)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>558
-++Syncfusion.Xamarin.SfDataGrid (20.1.0.61)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>559
-++Xam.Plugins.Messaging (5.2.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>553
-++Xamarin.Essentials (1.7.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>556
-++Xamarin.Forms (5.0.0.2196)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>561
-++Xamarin.Forms.DataGrid (4.8.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>554
-++Microsoft.Common.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.props
-++Microsoft.NET.Sdk.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
-++Microsoft.NET.Sdk.BeforeCommon.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
-++Microsoft.CSharp.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.targets
-++Microsoft.NET.Sdk.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
-++Microsoft.NET.Compatibility.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
-++NuGet.Build.Tasks.Pack.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
 ++netstandard2.0
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\netstandard2.0\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\
-++Microsoft.LiveUnitTesting.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.liveunittesting.props
-++Microsoft.NuGet.ImportBefore.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
-++NuGet.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.props
-++Microsoft.NET.Sdk.DefaultItems.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
-++Microsoft.NET.Sdk.ImportWorkloads.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
-++Microsoft.NET.SupportedTargetFrameworks.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
-++Microsoft.NET.SupportedPlatforms.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
-++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
-++Microsoft.NET.Sdk.CSharp.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
-++Microsoft.NET.ILLink.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
-++Microsoft.NET.Compatibility.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
-++Microsoft.NET.PackTool.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
-++Microsoft.NET.PackProjectTool.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
-++Microsoft.NET.Sdk.WindowsDesktop.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
-++Microsoft.NET.Windows.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
-++Microsoft.NET.DefaultAssemblyInfo.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
-++Microsoft.NET.DefaultOutputPaths.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
-++Microsoft.NET.Sdk.ImportPublishProfile.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
-++Microsoft.NET.TargetFrameworkInference.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
-++Microsoft.NET.Sdk.ImportWorkloads.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
-++Microsoft.NET.RuntimeIdentifierInference.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
-++Microsoft.NET.EolTargetFrameworks.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
-++Microsoft.NET.NuGetOfflineCache.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
-++Microsoft.Managed.Before.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.before.targets
-++Microsoft.CSharp.CurrentVersion.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
-++Microsoft.Managed.After.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.after.targets
-++Microsoft.NET.Sdk.Common.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
-++Microsoft.PackageDependencyResolution.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
-++Microsoft.NET.Sdk.DefaultItems.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
-++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
-++Microsoft.NET.Sdk.Shared.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
-++Microsoft.NET.DisableStandardFrameworkResolution.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
-++Microsoft.NET.DesignerSupport.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
-++Microsoft.NET.GenerateAssemblyInfo.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
-++Microsoft.NET.GenerateGlobalUsings.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
-++Microsoft.NET.GenerateSupportedRuntime.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
-++Microsoft.NET.ComposeStore.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
-++Microsoft.NET.CrossGen.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
-++Microsoft.NET.ObsoleteReferences.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
-++Microsoft.NET.Publish.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
-++Microsoft.NET.PackTool.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
-++Microsoft.NET.PackProjectTool.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
-++Microsoft.NET.PreserveCompilationContext.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
-++Microsoft.NET.ConflictResolution.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
-++Microsoft.NET.Sdk.CSharp.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
-++Microsoft.NET.ILLink.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
-++Microsoft.NET.Sdk.Analyzers.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
-++Microsoft.NET.Windows.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windows.targets
-++Microsoft.NET.Compatibility.Common.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
 ++GeraAdvantage.deps.json
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\geraadvantage.deps.json
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\netstandard2.0\geraadvantage.deps.json
 ++GeraAdvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\geraadvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\netstandard2.0\geraadvantage.dll
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.dll
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\ref\geraadvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\refint\geraadvantage.dll
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\ref\geraadvantage.dll
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\refint\geraadvantage.dll
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.dll
 ++GeraAdvantage.pdb
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\geraadvantage.pdb
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\netstandard2.0\geraadvantage.pdb
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.pdb
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.pdb
+++GeraAdvDB.sqlite
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\debug\netstandard2.0\geraadvdb.sqlite
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\geraadvdb.sqlite
+++Release
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\bin\release\
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\
+++obj
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\
 ++ref
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\ref\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\ref\
 ++refint
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\refint\
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\refint\
-++.NETStandard,Version=v2.0.AssemblyAttributes.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\.netstandard,version=v2.0.assemblyattributes.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\.netstandard,version=v2.0.assemblyattributes.cs
-++_IsIncrementalBuild
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\_isincrementalbuild
+++Views
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\
 ++App.xaml.g.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\app.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\app.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\app.xaml.g.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\app.xaml.g.cs
-++GeraAdvantage.AssemblyInfo.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assemblyinfo.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assemblyinfo.cs
-++GeraAdvantage.AssemblyInfoInputs.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assemblyinfoinputs.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assemblyinfoinputs.cache
-++GeraAdvantage.assets.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assets.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assets.cache
-++GeraAdvantage.csproj.AssemblyReference.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.assemblyreference.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.assemblyreference.cache
-++GeraAdvantage.csproj.BuildWithSkipAnalyzers
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.buildwithskipanalyzers
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.buildwithskipanalyzers
-++GeraAdvantage.csproj.CoreCompileInputs.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.corecompileinputs.cache
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.corecompileinputs.cache
-++GeraAdvantage.csproj.FileListAbsolute.txt
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.filelistabsolute.txt
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.filelistabsolute.txt
-++GeraAdvantage.GeneratedMSBuildEditorConfig.editorconfig
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.generatedmsbuildeditorconfig.editorconfig
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.generatedmsbuildeditorconfig.editorconfig
-++XamlC.stamp
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\xamlc.stamp
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\xamlc.stamp
-++Xamarin.Forms.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.props
-++Microsoft.NuGet.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
-++Microsoft.NETCoreSdk.BundledVersions.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledversions.props
-++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
-++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
-++Microsoft.CSharp.Core.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
-++Microsoft.CSharp.DesignTime.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
-++Microsoft.Common.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.targets
-++Microsoft.NET.Sdk.DefaultItems.Shared.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
-++Microsoft.NETCoreSdk.BundledCliTools.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledclitools.props
-++Microsoft.NET.DefaultPackageConflictOverrides.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
-++Microsoft.CodeAnalysis.NetAnalyzers.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
 ++Checklists_Page.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\checklists_page.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\checklists_page.xaml.g.cs
@@ -654,6 +328,8 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 ++CreateNC.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\createnc.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\createnc.xaml.g.cs
+++CreateSnaglist.xaml.g.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\createsnaglist.xaml.g.cs
 ++EditNCDetails.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\editncdetails.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\editncdetails.xaml.g.cs
@@ -720,20 +396,143 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 ++ViewCheckList.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\viewchecklist.xaml.g.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\views\viewchecklist.xaml.g.cs
-++Xamarin.Forms.DefaultItems.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.defaultitems.props
-++Microsoft.NET.ILLink.Tasks.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
-++System.Windows.Forms.Analyzers.props
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
-++Microsoft.Managed.Core.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.targets
-++Microsoft.Managed.DesignTime.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++.NETStandard,Version=v2.0.AssemblyAttributes.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\.netstandard,version=v2.0.assemblyattributes.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\.netstandard,version=v2.0.assemblyattributes.cs
+++_IsIncrementalBuild
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\_isincrementalbuild
+++GeraAdvantage.AssemblyInfo.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assemblyinfo.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assemblyinfo.cs
+++GeraAdvantage.AssemblyInfoInputs.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assemblyinfoinputs.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assemblyinfoinputs.cache
+++GeraAdvantage.assets.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.assets.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.assets.cache
+++GeraAdvantage.csproj.AssemblyReference.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.assemblyreference.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.assemblyreference.cache
+++GeraAdvantage.csproj.BuildWithSkipAnalyzers
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.buildwithskipanalyzers
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.buildwithskipanalyzers
+++GeraAdvantage.csproj.CoreCompileInputs.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.corecompileinputs.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.corecompileinputs.cache
+++GeraAdvantage.csproj.FileListAbsolute.txt
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.csproj.filelistabsolute.txt
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.csproj.filelistabsolute.txt
+++GeraAdvantage.GeneratedMSBuildEditorConfig.editorconfig
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\geraadvantage.generatedmsbuildeditorconfig.editorconfig
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\geraadvantage.generatedmsbuildeditorconfig.editorconfig
+++XamlC.stamp
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\xamlc.stamp
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\release\netstandard2.0\xamlc.stamp
+++GeraAdvantage.csproj.nuget.dgspec.json
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.dgspec.json
+++GeraAdvantage.csproj.nuget.g.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.props
+++GeraAdvantage.csproj.nuget.g.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\geraadvantage.csproj.nuget.g.targets
+++project.assets.json
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\project.assets.json
+++project.nuget.cache
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\project.nuget.cache
+++SQLServices
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\
+++Utils
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\
+++Checklists_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\checklists_page.xaml
+++Conformity.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformity.xaml
+++ConformityDashboard.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydashboard.xaml
+++ConformityDetails.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydetails.xaml
+++CreateChecklist_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createchecklist_page.xaml
+++CreateNC.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createnc.xaml
+++CreateSnaglist.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createsnaglist.xaml
+++CreateSnaglist.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createsnaglist.xaml.cs
+++EditNCDetails.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\editncdetails.xaml
+++Filters.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\filters.xaml
+++GeraProjects_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml
+++GeraProjects_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml.cs
+++Login_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml
+++NCDashboard.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml
+++NCDetails.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdetails.xaml
+++NCList.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nclist.xaml
+++NCManagement.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncmanagement.xaml
+++NonConformity.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformity.xaml
+++NonConformityFiltersTemplate.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformityfilterstemplate.xaml
+++ProfileEditor.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml
+++ProjectDashboard.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml
+++ProjectDetails_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml
+++ReviewQuestion.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml
+++SearchDialoge.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchdialoge.xaml
+++ShowNCHistory.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\shownchistory.xaml
+++StakeholderDetail.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderdetail.xaml
+++StakeHoldersList.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderslist.xaml
+++UpdateChecklists_Page.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatechecklists_page.xaml
+++UpdateQuestion.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatequestion.xaml
+++UploadImageDialoge.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\uploadimagedialoge.xaml
+++UploadImageDialoge.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\uploadimagedialoge.xaml.cs
+++ViewCheckList.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewchecklist.xaml
+++App.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml
+++Packages
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:packages
+++Sdk.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.Managed.Before.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.CSharp.Core.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.targets
 ++Microsoft.Common.CurrentVersion.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
-++Microsoft.Managed.Core.CurrentVersions.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
 ++Microsoft.LiveUnitTesting.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importbefore\microsoft.liveunittesting.targets
 ++GeraAdvantage.csproj.user
@@ -761,17 +560,251 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studi
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
 ++Xamarin.Common.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\xamarin.common.targets
-++Xamarin.Forms.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.targets
-++NETStandard.Library.targets
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\netstandard.library\2.0.3\build\netstandard2.0\netstandard.library.targets
+++Microsoft.Managed.After.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++SQLConfig.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\sqlconfig.cs
+++SQLiteService.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\sqliteservice.cs
+++Entities.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\entities.cs
+++UtilServices.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\utilservices.cs
+++Checklists_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\checklists_page.xaml.cs
+++Conformity.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformity.xaml.cs
+++ConformityDashboard.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydashboard.xaml.cs
+++ConformityDetails.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\conformitydetails.xaml.cs
+++CreateChecklist_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createchecklist_page.xaml.cs
+++CreateNC.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\createnc.xaml.cs
+++EditNCDetails.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\editncdetails.xaml.cs
+++Filters.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\filters.xaml.cs
+++Login_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml.cs
+++NCDashboard.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml.cs
+++NCDetails.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdetails.xaml.cs
+++NCList.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nclist.xaml.cs
+++NCManagement.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncmanagement.xaml.cs
+++NonConformity.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformity.xaml.cs
+++NonConformityFiltersTemplate.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformityfilterstemplate.xaml.cs
+++ProfileEditor.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml.cs
+++ProjectDashboard.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml.cs
+++ProjectDetails_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml.cs
+++ReviewQuestion.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml.cs
+++SearchDialoge.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchdialoge.xaml.cs
+++ShowNCHistory.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\shownchistory.xaml.cs
+++StakeholderDetail.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderdetail.xaml.cs
+++StakeHoldersList.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\stakeholderslist.xaml.cs
+++UpdateChecklists_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatechecklists_page.xaml.cs
+++UpdateQuestion.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\updatequestion.xaml.cs
+++ViewCheckList.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewchecklist.xaml.cs
+++App.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml.cs
+++NETStandard.Library (2.0.3)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>559
+++Rg.Plugins.Popup (2.1.0)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>562
+++sqlite-net-pcl (1.8.116)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>557
+++Syncfusion.Xamarin.SfChart (20.1.0.61)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>560
+++Syncfusion.Xamarin.SfDataGrid (20.1.0.61)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>561
+++Xam.Plugins.Messaging (5.2.0)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>555
+++Xamarin.Essentials (1.7.0)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>558
+++Xamarin.Forms (5.0.0.2196)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>563
+++Xamarin.Forms.DataGrid (4.8.0)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>556
+++Microsoft.Common.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Core.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
 ++Microsoft.Docker.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
 ++Microsoft.QualityTools.Testing.Fakes.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\fakes\microsoft.qualitytools.testing.fakes.targets
 ++Microsoft.VisualStudio.Azure.Fabric.ServiceProject.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\service fabric tools\microsoft.visualstudio.azure.fabric.serviceproject.targets
+++Xamarin.Forms.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.targets
+++NETStandard.Library.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\netstandard.library\2.0.3\build\netstandard2.0\netstandard.library.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Windows.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windows.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.LiveUnitTesting.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.liveunittesting.props
+++Microsoft.NuGet.ImportBefore.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
 ++Xamarin.Forms.DefaultItems.targets
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.defaultitems.targets
-++UtilServices.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\utilservices.cs
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++Xamarin.Forms.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.props
+++Microsoft.NuGet.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++Xamarin.Forms.DefaultItems.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\users\huzaifa awan\.nuget\packages\xamarin.forms\5.0.0.2196\buildtransitive\xamarin.forms.defaultitems.props
+++Microsoft.NET.ILLink.Tasks.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++SearchMultipleDialoge.xaml
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchmultipledialoge.xaml
+++SearchMultipleDialoge.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\searchmultipledialoge.xaml.cs
+++SearchMultipleDialoge.xaml.g.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\obj\debug\netstandard2.0\views\searchmultipledialoge.xaml.g.cs

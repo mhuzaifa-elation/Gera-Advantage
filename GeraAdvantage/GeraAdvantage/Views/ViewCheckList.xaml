@@ -311,16 +311,6 @@
                                                 </Button.Triggers>
                                             </Button>
                                         </Grid>
-                                        <StackLayout>
-                                            <ImageButton
-                                                Source="camera.png"
-                                                Style="{StaticResource PhoneMailIcon}" />
-                                            <ListView
-                                                VerticalOptions="StartAndExpand"
-                                                HorizontalOptions="FillAndExpand"
-                                                x:Name="PicsGrid"
-                                                />
-                                        </StackLayout>
                                         <StackLayout
                                             Orientation="Vertical"
                                             IsVisible="{Binding SEComment}">
@@ -335,6 +325,16 @@
                                             IsVisible="{Binding ConverttoNC}">
                                             <Button
                                                 Text="ConverttoNC" />
+                                        </StackLayout>
+                                        <StackLayout
+                                            Orientation="Vertical">
+                                            <ImageButton
+                                                Source="camera.png"
+                                                Style="{StaticResource PhoneMailIcon}" />
+                                            <ListView
+                                                VerticalOptions="StartAndExpand"
+                                                HorizontalOptions="FillAndExpand"
+                                                x:Name="PicsGrid" />
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>

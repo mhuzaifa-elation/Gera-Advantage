@@ -48,6 +48,7 @@ namespace GeraAdvantage.Views
                                 (value) =>
                                 {
                                     SamplePick= value;
+                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
     }

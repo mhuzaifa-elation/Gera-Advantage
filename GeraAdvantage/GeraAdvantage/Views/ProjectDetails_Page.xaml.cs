@@ -49,6 +49,10 @@ namespace GeraAdvantage
         {
             await Navigation.PushAsync(new Checklists_Page());
         }
+        private async void BtnSnaglist_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CreateSnaglist());
+        }
         private async void ProjectDashboard_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProjectDashboard());

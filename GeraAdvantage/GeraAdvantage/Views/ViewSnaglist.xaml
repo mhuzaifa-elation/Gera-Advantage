@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GeraAdvantage.Views.ViewSnaglist"
+    Title="Create Checklist"
+    Style="{StaticResource ContentPageStyle}">
+    <NavigationPage.TitleView>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="CenterAndExpand"
+            Margin="0,0,10,0">
+            <Label
+                Text="Create Checklist"
+                FontSize="20"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="StartAndExpand" />
+            <Button
+                x:Name="LCount"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                WidthRequest="40"
+                CornerRadius="20"
+                BorderColor="White"
+                BorderWidth="2" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Margin="10"
+                Spacing="0">
+                <Label
+                    Style="{StaticResource QReviewTitle}"
+                    Text="Project Title" />
+                <Label
+                    Style="{StaticResource QReviewLabel}"
+                    Text="B-Bldg | Ground | BG02" />
+                <Label
+                    Style="{StaticResource QReviewLabel}"
+                    TextColor="DodgerBlue"
+                    Text="A/C Installation" />
+                <Label
+                    Style="{StaticResource QReviewLabel}"
+                    Text="Not Applicable |" />
+                <Label
+                    Style="{StaticResource QReviewTitle}"
+                    Text="Type" />
+                <Label
+                    Style="{StaticResource QReviewLabel}"
+                    Text="Sub-type" />
+                <ListView
+                    x:Name="listView"
+                    HasUnevenRows="true"
+                    SeparatorColor="DarkGray"
+                    SelectionMode="None"
+                    ItemTapped="listView_ItemTapped"
+                    ItemsSource="{Binding _opsList}">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Padding="15,15,5,5"
+                                    Orientation="Horizontal"
+                                    HeightRequest="200"
+                                    VerticalOptions="FillAndExpand">
+                                    <StackLayout
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        Orientation="Vertical">
+                                        <Label
+                                            Text="{Binding Title}"
+                                            FontSize="Medium"
+                                            VerticalOptions="Start"
+                                            TextColor="Black" />
+                                        <Grid
+                                            ColumnDefinitions="*,*"
+                                            HeightRequest="60"
+                                            VerticalOptions="CenterAndExpand"
+                                            HorizontalOptions="FillAndExpand"
+                                            IsVisible="{Binding Key.isthree}">
+                                            <Button
+                                                x:Name="btnOk"
+                                                Grid.Column="0"
+                                                Text="OK"
+                                                BackgroundColor="Green"
+                                                Clicked="Button_Clicked"
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnYes}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnYes}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
+                                            <Button
+                                                x:Name="btnNotOk"
+                                                Grid.Column="1"
+                                                Text="Not OK"
+                                                BackgroundColor="Red"
+                                                Clicked="Button_Clicked"
+                                                Style="{StaticResource CircularButton}">
+                                                <Button.Triggers>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNo}"
+                                                        Value="True">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="DodgerBlue" />
+                                                    </DataTrigger>
+                                                    <DataTrigger
+                                                        TargetType="Button"
+                                                        Binding="{Binding btnNo}"
+                                                        Value="False">
+                                                        <Setter
+                                                            Property="BorderColor"
+                                                            Value="Transparent" />
+                                                    </DataTrigger>
+                                                </Button.Triggers>
+                                            </Button>
+
+                                        </Grid>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    Orientation="Horizontal">
+                                    <CheckBox
+                                        Style="{StaticResource Chkbox}"
+                                        IsChecked="{Binding IsChecked}"
+                                        IsEnabled="False" />
+                                    <Label
+                                        Text="{Binding Title}"
+                                        Style="{StaticResource DialogeListLabel}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button
+                    Text="Save And Next"
+                    HorizontalOptions="End"
+                    WidthRequest="180"
+                    CornerRadius="20"
+                    Margin="10"
+                    Clicked="BtnOK_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

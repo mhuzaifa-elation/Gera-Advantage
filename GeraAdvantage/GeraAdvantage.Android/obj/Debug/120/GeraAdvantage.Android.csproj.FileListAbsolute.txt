@@ -2269,6 +2269,5 @@ D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\87d82bf8-dee7-4c49-aec1-082a5d65aac3.jar
 D:\HUZAIFA\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\00bf3d90-f988-4d8f-8e76-3a01e610e154.cfg
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\d06bd54b-5a51-44bf-a5a4-4e7688796e12.jar
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\a6262b69-f17d-40ca-a0c9-8aed1212080d.cfg
-D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\android\assets\Plugin.Messaging.pdb
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\jl\05ad1349-6add-4147-9ffa-e7f9dda7bc37.jar
+D:\Projects\GIT\Gera-Advantage\GeraAdvantage\GeraAdvantage.Android\obj\Debug\120\androidx\proguard\05d73b00-7277-4fdb-966b-02cda8fc36c5.cfg

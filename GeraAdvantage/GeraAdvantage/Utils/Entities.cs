@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
 
@@ -9,9 +10,21 @@ namespace GeraAdvantage.Utils
     internal class Entities
     {
         public enum Status { Pending, Sent_To_QA, Approved, Pending_For_NC_Closure };
+        public class Grouping<K, T> : ObservableCollection<T>
+        {
+            public K Key { get; private set; }
+
+            public Grouping(K key, IEnumerable<T> items)
+            {
+                Key = key;
+                foreach (var item in items)
+                    this.Items.Add(item);
+            }
+        }
         public class FilterDetail
         {
             public string Title { get; set; }
+            public bool IsChecked { get; set; }
         }
         public class ConformityPie
         {
@@ -40,6 +53,12 @@ namespace GeraAdvantage.Utils
             public bool btnAWC { get; set; }
             public bool btnR { get; set; }
            public List<ImageSource> Images { get; set; }
+           public List<PlaceType> Places { get; set; }
+        }
+        public class PlaceType
+        {
+            public string Title { get; set; }
+            public bool IsChecked { get; set; }
         }
         public class SampleChart
         {
