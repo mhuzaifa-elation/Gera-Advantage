@@ -15,21 +15,83 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchDialoge
     {
+        string paramtr;
         private List<FilterDetail> SampleList;
-        public SearchDialoge()
+        public SearchDialoge(string parameter)
         {
             BindingContext = this;
             InitializeComponent();
-            DummyDataInitialization();
+            this.paramtr = parameter;
+            DummyDataInitialization(parameter);
+
             listView.ItemsSource = SampleList;
         }
 
-        private void DummyDataInitialization()
+        private void DummyDataInitialization(string paramter)
         {
-            SampleList = new List<FilterDetail>();
-            for (int i = 1; i <= 15; i++)
+            if(paramter== "Building")
             {
-                SampleList.Add(new FilterDetail() { Title = "Option " + i });
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
+                }
+            }
+           else if (paramter == "Floor")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Floor " + i });
+                }
+            }
+           else if (paramter == "Flat")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Flat " + i });
+                }
+            }
+           else if (paramter == "Side")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Side " + i });
+                }
+            }
+           else if (paramter == "Room")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Room " + i });
+                }
+            }
+            else if (paramter == "Category")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Category " + i });
+                }
+            }
+           else if (paramter == "Contractor")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
+                }
+            }
+           else if (paramter == "Resposible")
+            {
+                SampleList = new List<FilterDetail>();
+                for (int i = 1; i <= 15; i++)
+                {
+                    SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
+                }
             }
             
         }
@@ -37,7 +99,7 @@ namespace GeraAdvantage.Views
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var SelectedItem = (FilterDetail)e.Item;
-            MessagingCenter.Send<string>(SelectedItem.Title, "SelectedOption");
+            MessagingCenter.Send<string>(SelectedItem.Title, paramtr);
             await PopupNavigation.Instance.PopAsync();
         }
 

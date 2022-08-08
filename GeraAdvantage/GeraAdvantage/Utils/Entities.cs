@@ -107,6 +107,34 @@ namespace GeraAdvantage.Utils
         }
     }
 
+    public class NC
+    {
+        public string Id { get; set; }
+        public string NCCode { get; set; }
+        public long ProjectId { get; set; }
+        public bool IsPotential { get; set; }
+        public long BuildingId { get; set; }
+        public long FloorId { get; set; }
+        public long UnitTypeId { get; set; }
+        public long UnitId { get; set; }
+        public long RoomTypeId { get; set; }
+        public long CategoryId { get; set; }
+        public long SubCategoryId { get; set; }
+        public long RootCauseId { get; set; }
+        public long SeverityId { get; set; }
+        public long ContractorId { get; set; }
+        public long EngineerId { get; set; }
+        public DateTime DeadlineDate { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime UpdatedOn { get; set; }
+        public long StatusId { get; set; }
+        public bool IsChecklistLinked { get; set; }
+        public string CorrectiveAction { get; set; }
+        public string PrevenctiveAction { get; set; }
+        public string Image { get; set; }
+    }
     public class Building
     {
         [PrimaryKey, AutoIncrement] 

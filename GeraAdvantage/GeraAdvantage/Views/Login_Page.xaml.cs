@@ -1,4 +1,5 @@
 ﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
 using GeraAdvantage.Views;
 using Rg.Plugins.Popup.Services;
 using Syncfusion.SfChart.XForms;
@@ -27,8 +28,6 @@ namespace GeraAdvantage
         }
         private async void btnlogin_Clicked(object sender, EventArgs e)
         {
-            SQLConfig sql_SC = new SQLConfig();
-            sql_SC.DeleteAll<UserRole>();
             await Navigation.PushAsync(new GeraProjects_Page());
         }
     }

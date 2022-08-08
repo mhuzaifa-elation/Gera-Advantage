@@ -22,6 +22,7 @@ namespace GeraAdvantage
         public App()
         {
             InitializeComponent();
+            DependencyService.Get<ISQLite>().GetConnectionWithCreateDatabase();
             MainPage = new NavigationPage(new Login_Page());
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,10 @@ namespace GeraAdvantage.Views
             if (result != null)
             {
                 var stream = await result.OpenReadAsync();
-                tempImage.Source = ImageSource.FromStream(() => stream);
+                //tempImage.Source = ImageSource.FromStream(() => stream);
+                MessagingCenter.Send<FileResult>(result, "ImageDialoge");
+            await PopupNavigation.Instance.PopAsync();
+
             }
         }
         private async void Gallery_Tapped(object sender, EventArgs e)
@@ -38,7 +42,10 @@ namespace GeraAdvantage.Views
             if (result != null)
             {
                 var stream = await result.OpenReadAsync();
-                tempImage.Source = ImageSource.FromStream(() => stream);
+                //tempImage.Source = ImageSource.FromStream(() => stream);
+                MessagingCenter.Send<FileResult>(result, "ImageDialoge");
+                await PopupNavigation.Instance.PopAsync();
+
             }
         }
     }

@@ -29,7 +29,8 @@
                         VerticalOptions="Start"
                         Orientation="Horizontal">
                         <CheckBox
-                            Style="{StaticResource Chkbox}" />
+                            Style="{StaticResource Chkbox}"
+                            x:Name="IsPotentialChkBx"/>
                         <Label
                             Text="Potential NC"
                             Style="{StaticResource ConformityChkBXLabel}" />
@@ -43,10 +44,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Building_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding BuildingPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -61,10 +62,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Floor_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding FloorPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -79,10 +80,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Flat_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding FlatTypePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -97,10 +98,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Flat_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding FlatTypePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -115,10 +116,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Room_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding RoomPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -133,10 +134,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Category_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding CategoryPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -151,10 +152,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Category_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding CategoryPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -173,7 +174,7 @@
                                 Clicked="Button_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding RootPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -192,7 +193,7 @@
                                 Clicked="Button_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding SeverityPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -227,10 +228,10 @@
 
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Contractor_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding ContractorPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -246,10 +247,10 @@
 
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Resposible_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding ResponsiblePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -274,6 +275,7 @@
                             Text="NC Comment"
                             Style="{StaticResource ConformityLabel}" />
                         <Entry
+                            x:Name="CommentEnt"
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Add comment if any"
                             Style="{StaticResource ConformityEntry}" />
@@ -288,6 +290,7 @@
                             Style="{StaticResource ConformityLabel}" />
 
                         <Entry
+                            x:Name="CorrectiveActionEnt"
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Add Corrective Action if any"
                             Style="{StaticResource ConformityEntry}" />
@@ -301,10 +304,18 @@
                             Style="{StaticResource ConformityLabel}" />
 
                         <Entry
+                            x:Name="PreventiceActionEnt"
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Add Preventice Action if any"
                             Style="{StaticResource ConformityEntry}" />
 
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="Fill"
+                        VerticalOptions="End">
+                        <Image
+                            Aspect="AspectFit"
+                            x:Name="SelectedImage" />
                     </StackLayout>
                 </StackLayout>
 
@@ -321,7 +332,8 @@
                     Clicked="Button_Clicked_1" />
                 <Button
                     HorizontalOptions="FillAndExpand"
-                    Text="Save" />
+                    Text="Save"
+                    Clicked="Save_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

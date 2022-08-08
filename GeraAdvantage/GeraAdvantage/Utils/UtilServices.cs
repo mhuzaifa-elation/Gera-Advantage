@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace GeraAdvantage.Utils
@@ -18,11 +20,13 @@ namespace GeraAdvantage.Utils
 
 
         // Converting Base 64 string to Image format
-        public static string ConvertImagetoBase64Text(Stream stream)
+        public static async Task<string> ConvertImagetoBase64Text(FileResult photo)
         {
+            
+           var ImageStream = await photo.OpenReadAsync();
             byte[] data;
             var ImgMemoryStream = new MemoryStream();
-            stream.CopyTo(ImgMemoryStream);
+            ImageStream.CopyTo(ImgMemoryStream);
             data = ImgMemoryStream.ToArray();
             return Convert.ToBase64String(data);
         }

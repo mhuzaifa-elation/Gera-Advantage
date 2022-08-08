@@ -43,7 +43,8 @@ namespace GeraAdvantage.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge());
+            string parameter = "Building";
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
