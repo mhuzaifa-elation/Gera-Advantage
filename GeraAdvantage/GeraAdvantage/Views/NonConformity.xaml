@@ -171,10 +171,10 @@
 
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="RootCause_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding RootPick}" />
+                                Text="{Binding RootCausePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -190,10 +190,10 @@
 
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="ProposedSeverity_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SeverityPick}" />
+                                Text="{Binding ProposedSeverityPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -209,10 +209,10 @@
 
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Severity_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding SeverityPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

@@ -90,6 +90,7 @@ namespace GeraAdvantage.SQLServices
             }
         }
 
+
         public int DeleteItem<T>(int id)
         {
             lock (locker)
@@ -98,11 +99,14 @@ namespace GeraAdvantage.SQLServices
             }
         }
 
-        public int DeleteAll<T>()
+        public int DeleteAll<T>(string ClassName)
         {
             lock (locker)
             {
-                return connection.DeleteAll<T>();
+                var ret = connection.DeleteAll<T>();
+                string Query = string.Format("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='{0}'; ", ClassName);
+                connection.Execute(Query, new List<object>().ToArray());
+                return ret;
             }
         }
 

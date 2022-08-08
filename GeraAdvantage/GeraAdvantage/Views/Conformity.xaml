@@ -90,7 +90,7 @@
                                 Style="{StaticResource downImgStyle}" />
                         </Grid>
                     </StackLayout>
-                    <StackLayout
+                    <!--<StackLayout
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start">
                         <Label
@@ -107,7 +107,7 @@
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
                         </Grid>
-                    </StackLayout>
+                    </StackLayout>-->
                     <StackLayout
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start">

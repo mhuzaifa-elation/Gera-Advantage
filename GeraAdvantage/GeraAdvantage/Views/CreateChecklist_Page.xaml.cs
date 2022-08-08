@@ -1,4 +1,6 @@
-﻿using Rg.Plugins.Popup.Services;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,13 +45,18 @@ namespace GeraAdvantage.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Building";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Building>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
-                                    SamplePick= value;
-                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        SamplePick = Option.Title;
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
                                 });
         }
     }

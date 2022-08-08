@@ -1,41 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
+    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
   },
   "projects": {
-    "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
+    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "projectUniqueName": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
         "projectName": "GeraAdvantage.Android",
-        "projectPath": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
-        "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-        "outputPath": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
+        "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid12.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/HvX2vJIFTaoeJSEMs5p3bb9sb7Mq7HkFv2N8bE5TdH4w53Hj6K/api": {}
         },
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
-                "projectPath": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
+              "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+                "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
               }
             }
           }
@@ -76,32 +71,26 @@
         }
       }
     },
-    "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+    "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "projectUniqueName": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
         "projectName": "GeraAdvantage",
-        "projectPath": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
-        "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-        "outputPath": "D:\\HUZAIFA\\Gera\\Gera-Advantage-main\\GeraAdvantage\\GeraAdvantage\\obj\\",
+        "projectPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "packagesPath": "C:\\Users\\Huzaifa Awan\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mhuzaifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Huzaifa Awan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/HvX2vJIFTaoeJSEMs5p3bb9sb7Mq7HkFv2N8bE5TdH4w53Hj6K/api": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -168,7 +157,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -23,7 +23,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.ViewPager.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"FormsViewGroup.dll",
-		"GeraAdvantage.dll",
 		"Plugin.Messaging.Abstractions.dll",
 		"Plugin.Messaging.dll",
 		"Rg.Plugins.Popup.dll",
@@ -55,6 +54,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"GeraAdvantage.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

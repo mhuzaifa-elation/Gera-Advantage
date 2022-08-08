@@ -33,8 +33,8 @@
                             Text="NC No"
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
+                            x:Name="NCNoEnt"
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -47,7 +47,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="ChecklistNoEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -60,7 +60,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="BuildingEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -73,7 +73,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="FlatTypeEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -86,7 +86,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="FloorEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -99,7 +99,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="FlatNoEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -112,7 +112,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="RoomEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -125,7 +125,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="CategoryEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -138,7 +138,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="SubCategoryEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -151,7 +151,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="RootCauseEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -164,7 +164,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="ProposedSeverityEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -177,7 +177,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="SeverityEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -190,7 +190,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="CreatedDateEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -203,7 +203,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="DeadlineDateEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -216,7 +216,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="ContractorEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -229,7 +229,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="CreatedByEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -242,7 +242,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="UpdatedByEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -255,7 +255,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="EngineerEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <StackLayout
@@ -285,7 +285,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="NCStatusEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Button
@@ -306,7 +306,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="CorrectiveActionEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid
@@ -319,7 +319,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="PreventiveActionEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Grid>
@@ -339,7 +339,7 @@
                             Style="{StaticResource NCDetailsLabel}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SampleText}"
+                            x:Name="NCCommentEnt"
                             Style="{StaticResource NCDetailsTLabel}" />
                     </Grid>
                     <Entry

@@ -15,91 +15,94 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchDialoge
     {
-        string paramtr;
         private List<FilterDetail> SampleList;
-        public SearchDialoge(string parameter)
+        public SearchDialoge(List<string> _OptionsList)
         {
             BindingContext = this;
             InitializeComponent();
-            this.paramtr = parameter;
-            DummyDataInitialization(parameter);
+            DataInitialization(_OptionsList);
 
             listView.ItemsSource = SampleList;
         }
 
-        private void DummyDataInitialization(string paramter)
+        private void DataInitialization(List<string> _Options)
         {
-            if(paramter== "Building")
+            SampleList = new List<FilterDetail>();
+            foreach (var item in _Options)
             {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
-                }
+                SampleList.Add( new FilterDetail() { Title = item });
             }
-           else if (paramter == "Floor")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Floor " + i });
-                }
-            }
-           else if (paramter == "Flat")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Flat " + i });
-                }
-            }
-           else if (paramter == "Side")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Side " + i });
-                }
-            }
-           else if (paramter == "Room")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Room " + i });
-                }
-            }
-            else if (paramter == "Category")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Category " + i });
-                }
-            }
-           else if (paramter == "Contractor")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
-                }
-            }
-           else if (paramter == "Resposible")
-            {
-                SampleList = new List<FilterDetail>();
-                for (int i = 1; i <= 15; i++)
-                {
-                    SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
-                }
-            }
+           // if(paramter== "Building")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
+           //     }
+           // }
+           //else if (paramter == "Floor")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Floor " + i });
+           //     }
+           // }
+           //else if (paramter == "Flat")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Flat " + i });
+           //     }
+           // }
+           //else if (paramter == "Side")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Side " + i });
+           //     }
+           // }
+           //else if (paramter == "Room")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Room " + i });
+           //     }
+           // }
+           // else if (paramter == "Category")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Category " + i });
+           //     }
+           // }
+           //else if (paramter == "Contractor")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
+           //     }
+           // }
+           //else if (paramter == "Resposible")
+           // {
+           //     SampleList = new List<FilterDetail>();
+           //     for (int i = 1; i <= 15; i++)
+           //     {
+           //         SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
+           //     }
+           // }
             
         }
 
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var SelectedItem = (FilterDetail)e.Item;
-            MessagingCenter.Send<string>(SelectedItem.Title, paramtr);
+            MessagingCenter.Send<string>(SelectedItem.Title, "SelectedOption");
             await PopupNavigation.Instance.PopAsync();
         }
 

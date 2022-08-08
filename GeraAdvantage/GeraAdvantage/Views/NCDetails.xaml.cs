@@ -1,4 +1,6 @@
-﻿using Rg.Plugins.Popup.Services;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,7 @@ namespace GeraAdvantage.Views
     public partial class NCDetails : ContentPage
     {
         private string _sampleText;
+        private NC NCDetail;
 
         public string SampleText
         {
@@ -28,11 +31,57 @@ namespace GeraAdvantage.Views
                 OnPropertyChanged(nameof(SampleText));
             }
         }
-        public NCDetails()
+        public NCDetails(string Id)
         {
             BindingContext = this;
             InitializeComponent();
+            NCServices ncServices = new NCServices();
+            NCDetail = ncServices.GetNCbyId(Id);
+            PopulateData();
             SampleText = "This is Sample Text.";
+        }
+
+        private void PopulateData()
+        {
+            try
+            {
+                GlobalSQLServices sQLServices = new GlobalSQLServices();
+                if (NCDetail!=null)
+                {
+
+                    NCNoEnt.Text = NCDetail.Id;
+                    if (NCDetail.IsChecklistLinked)
+                        ChecklistNoEnt.Text =  "Checklist No";
+                    else
+                        ChecklistNoEnt.Text = "N/A";
+                    BuildingEnt.Text = sQLServices.GetBuilding(NCDetail.BuildingId.ToString()).Title;
+                    FlatTypeEnt.Text = sQLServices.GetUnit(NCDetail.UnitId.ToString()).Title;
+                    FloorEnt.Text = sQLServices.GetFloor(NCDetail.FloorId.ToString()).Title;
+                    FlatNoEnt.Text = sQLServices.GetUnit(NCDetail.UnitId.ToString()).Title;
+                    RoomEnt.Text = sQLServices.GetRoom(NCDetail.RoomTypeId.ToString()).Title;
+                    CategoryEnt.Text = sQLServices.GetCategory(NCDetail.CategoryId.ToString()).Title;
+                    SubCategoryEnt.Text = sQLServices.GetCategory(NCDetail.SubCategoryId.ToString()).Title;
+                    RootCauseEnt.Text = sQLServices.GetRootCause(NCDetail.RootCauseId.ToString()).Title;
+                    ProposedSeverityEnt.Text = sQLServices.GetSeverity(NCDetail.SeverityId.ToString()).Title;
+                    SeverityEnt.Text = sQLServices.GetSeverity(NCDetail.SeverityId.ToString()).Title;
+                    CreatedDateEnt.Text = NCDetail.CreatedOn.ToString();
+                    DeadlineDateEnt.Text = NCDetail.DeadlineDate.ToShortDateString();
+                    ContractorEnt.Text = sQLServices.GetUser(NCDetail.ContractorId.ToString()).Title;
+                    CreatedByEnt.Text = sQLServices.GetUser(NCDetail.CreatedBy.ToString()).Title;
+                    UpdatedByEnt.Text = sQLServices.GetUser(NCDetail.UpdatedBy.ToString()).Title;
+                    EngineerEnt.Text = sQLServices.GetUser(NCDetail.EngineerId.ToString()).Title;
+                    NCStatusEnt.Text = sQLServices.GetNCStatus(NCDetail.StatusId.ToString()).Title;
+
+
+                    CorrectiveActionEnt.Text = NCDetail.CorrectiveAction;
+                    PreventiveActionEnt.Text = NCDetail.PrevenctiveAction;
+                    NCCommentEnt.Text = "N/A";
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
         private async void ShowHistory_Clicked(object sender, EventArgs e)

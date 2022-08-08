@@ -24,7 +24,7 @@ namespace GeraAdvantage.Views
         private string AvailableImage;
 
         public long SamplePickIndex, BuildingPickIndex, FloorPickIndex, FlatTypePickIndex, SidePickIndex,
-                    RoomPickIndex, CategoryPickIndex, ContractorPickIndex, ResposiblePickIndex;
+                    RoomPickIndex, CategoryPickIndex, ContractorPickIndex, ResposiblePickIndex, RootCausePickIndex, ProposedSeverityPickIndex, SeverityPickIndex;
         public string SamplePick
         {
             get => _sampleText;
@@ -83,19 +83,49 @@ namespace GeraAdvantage.Views
                 OnPropertyChanged(nameof(FlatTypePick));
             }
         }
-        private string _SidePick;
+        private string _rootCause;
 
-        public string SidePick
+        public string RootCausePick
         {
-            get => _SidePick;
+            get => _rootCause;
             set
             {
-                if (value == _SidePick)
+                if (value == _rootCause)
                 {
                     return;
                 }
-                _SidePick = value;
-                OnPropertyChanged(nameof(SidePick));
+                _rootCause = value;
+                OnPropertyChanged(nameof(RootCausePick));
+            }
+        }
+        private string _severityPick;
+
+        public string SeverityPick
+        {
+            get => _severityPick;
+            set
+            {
+                if (value == _severityPick)
+                {
+                    return;
+                }
+                _severityPick = value;
+                OnPropertyChanged(nameof(SeverityPick));
+            }
+        }
+        private string _proposedseverityPick;
+
+        public string ProposedSeverityPick
+        {
+            get => _proposedseverityPick;
+            set
+            {
+                if (value == _proposedseverityPick)
+                {
+                    return;
+                }
+                _proposedseverityPick = value;
+                OnPropertyChanged(nameof(ProposedSeverityPick));
             }
         }
         private string _RoomPick;
@@ -166,18 +196,22 @@ namespace GeraAdvantage.Views
             model = new NC();
             BindingContext = this;
         }
-
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Building";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Building>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
-                                        (value) =>
-                                        {
-                                            SamplePick = value;
-                                            SamplePickIndex = Convert.ToInt64(SamplePick.Split(spearator)[1]);
-                                            MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
-                                        });
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        SamplePick = Option.Title;
+                                        SamplePickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
         }
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
@@ -185,7 +219,7 @@ namespace GeraAdvantage.Views
             MessagingCenter.Subscribe<FileResult>(this, "ImageDialoge",
                                                     async (value) =>
                                                     {
-                                                        AvailableImage = UtilServices.ConvertImagetoBase64Text(value).Result ;
+                                                        AvailableImage = UtilServices.ConvertImagetoBase64Text(value).Result;
                                                         MessagingCenter.Unsubscribe<FileResult>(this, "ImageDialoge");
                                                         var Stream = await value.OpenReadAsync();
                                                         SelectedImage.Source = ImageSource.FromStream(() => Stream);
@@ -193,29 +227,32 @@ namespace GeraAdvantage.Views
         }
         private async void Save_Clicked(object sender, EventArgs e)
         {
-            model.BuildingId = SamplePickIndex;
+            model.NCCode = "NC";
+            model.BuildingId = BuildingPickIndex;
             model.FloorId = FloorPickIndex;
             model.UnitTypeId = FlatTypePickIndex;
-            model.UnitId = SidePickIndex;
+            model.UnitId = FlatTypePickIndex;
             model.RoomTypeId = RoomPickIndex;
             model.CategoryId = CategoryPickIndex;
-            model.ContractorId = ContractorPickIndex;
             model.EngineerId = ResposiblePickIndex;
-            model.NCCode = "NC";
+            model.SeverityId = SeverityPickIndex;
+            model.RootCauseId = RootCausePickIndex;
             model.IsPotential = IsPotentialChkBx.IsChecked;
-            model.ProjectId = 0;
-            model.SubCategoryId = 0;
+            model.ProjectId = 1;
+            model.SubCategoryId = CategoryPickIndex;
+            model.ContractorId = ContractorPickIndex;
             model.Image = AvailableImage;
             model.CorrectiveAction = CorrectiveActionEnt.Text;
             model.PrevenctiveAction = PreventiceActionEnt.Text;
-            model.CreatedBy = "Test User";
+            model.CreatedBy = ResposiblePickIndex;
             model.CreatedOn = DateTime.Now;
-            model.UpdatedBy = "Test User";
+            model.UpdatedBy = ResposiblePickIndex;
             model.UpdatedOn = DateTime.Now;
-            model.DeadlineDate= DateTime.Now.AddDays(10);
+            model.StatusId = 1;
+            model.DeadlineDate = DateTime.Now.AddDays(10);
 
             NCServices ncServices = new NCServices();
-            
+
             //bool res = DependencyService.Get<ISQLite>().SaveNCAndC(model);
             //bool res =true;
             if (ncServices.SaveNC(model))
@@ -236,114 +273,208 @@ namespace GeraAdvantage.Views
             FlatTypePick = String.Empty;
             RoomPick = String.Empty;
             CategoryPick = String.Empty;
-           ContractorPick  = String.Empty;
+            ContractorPick = String.Empty;
             ResponsiblePick = String.Empty;
             AvailableImage = String.Empty;
-            SelectedImage.Source =null;
+            RootCausePick = String.Empty;
+            ProposedSeverityPick = String.Empty;
+            SeverityPick = String.Empty;
+            AvailableImage = String.Empty;
+            SelectedImage.Source = null;
+            CorrectiveActionEnt.Text = String.Empty;
+            PreventiceActionEnt.Text = String.Empty;
         }
 
         private async void Building_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Building";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Building",
-                                             (value) =>
-                                             {
-                                                 BuildingPick = value;
-                                                 BuildingPickIndex = Convert.ToInt64(BuildingPick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Building");
-                                             });
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Building>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        BuildingPick = Option.Title;
+                                        BuildingPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
 
         }
         private async void Floor_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Floor";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Floor",
-                                             (value) =>
-                                             {
-                                                 FloorPick = value;
-                                                 FloorPickIndex = Convert.ToInt64(FloorPick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Floor");
-                                             });
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Floor>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        FloorPick = Option.Title;
+                                        FloorPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
 
         }
         private async void Flat_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Flat";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Flat",
-                                             (value) =>
-                                             {
-                                                 FlatTypePick = value;
-                                                 FlatTypePickIndex = Convert.ToInt64(FlatTypePick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Flat");
-                                             });
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<UnitType>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        FlatTypePick = Option.Title;
+                                        FlatTypePickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
 
         }
-        private async void Side_Clicked(object sender, EventArgs e)
-        {
-            string parameter = "Side";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Side",
-                                             (value) =>
-                                             {
-                                                 SidePick = value;
-                                                 SidePickIndex = Convert.ToInt64(SidePick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Side");
-                                             });
+        //private async void Side_Clicked(object sender, EventArgs e)
+        //{
+        //    string parameter = "Side";
+        //    await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
+        //    MessagingCenter.Subscribe<string>(this, "Side",
+        //                                     (value) =>
+        //                                     {
+        //                                         SidePick = value;
+        //                                         SidePickIndex = Convert.ToInt64(SidePick.Split(spearator)[1]);
+        //                                         MessagingCenter.Unsubscribe<string>(this, "Side");
+        //                                     });
 
-        }
+        //}
         private async void Room_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Room";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Room",
-                                             (value) =>
-                                             {
-                                                 RoomPick = value;
-                                                 RoomPickIndex = Convert.ToInt64(RoomPick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Room");
-                                             });
-
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<RoomType>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        RoomPick = Option.Title;
+                                        RoomPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
         }
         private async void Category_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Category";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Category",
-                                             (value) =>
-                                             {
-                                                 CategoryPick = value;
-                                                 CategoryPickIndex = Convert.ToInt64(CategoryPick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Category");
-                                             });
 
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Category>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        CategoryPick = Option.Title;
+                                        CategoryPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
         }
         private async void Contractor_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Contractor";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Contractor",
-                                             (value) =>
-                                             {
-                                                 ContractorPick = value;
-                                                 ContractorPickIndex = Convert.ToInt64(ContractorPick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Contractor");
-                                             });
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<User>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        ContractorPick = Option.Title;
+                                        ContractorPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
 
         }
         private async void Resposible_Clicked(object sender, EventArgs e)
         {
-            string parameter = "Resposible";
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(parameter));
-            MessagingCenter.Subscribe<string>(this, "Resposible",
-                                             (value) =>
-                                             {
-                                                 ResponsiblePick = value;
-                                                 ResposiblePickIndex = Convert.ToInt64(ResponsiblePick.Split(spearator)[1]);
-                                                 MessagingCenter.Unsubscribe<string>(this, "Resposible");
-                                             });
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<User>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        ResponsiblePick = Option.Title;
+                                        ResposiblePickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
+
+        }
+        private async void RootCause_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<RootCause>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        RootCausePick = Option.Title;
+                                        RootCausePickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
+
+        }
+        private async void ProposedSeverity_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Severity>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        ProposedSeverityPick = Option.Title;
+                                        ProposedSeverityPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
+
+        }
+        private async void Severity_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Severity>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        SeverityPick = Option.Title;
+                                        SeverityPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
 
         }
     }

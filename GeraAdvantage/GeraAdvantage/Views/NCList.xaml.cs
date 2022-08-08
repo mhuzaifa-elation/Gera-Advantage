@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,36 +16,46 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NCList : ContentPage
     {
-        private  List<Checklist> _checkList;
+        private  List<NC> _NCsList;
+        private  List<NCDisplayModel> _NCsDisplayList= new List<NCDisplayModel>();
 
         public NCList()
         {
             BindingContext = this;
             InitializeComponent();
-            DummyDataInitialization();
-            listView.ItemsSource = _checkList;
+            GetNCsFromSQL();
+            listView.ItemsSource = _NCsDisplayList;
         }
 
-        private void DummyDataInitialization()
+        private void GetNCsFromSQL()
         {
-            _checkList = new List<Checklist>();
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Pending, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(-2).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Approved, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(8).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Approved, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(4).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Approved, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(2).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Approved, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(3).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Approved, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(-2).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Sent_To_QA, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(2).ToShortDateString() });
-            _checkList.Add(new Checklist { Title = "Mocca", Building = "B-Bld -as - 0.1", Floor = "BG02 | Ground", Category = "A/C Installation", CreatedBy = "Test User 27/06/2022", UpdatedBy = "Test User 28/06/2022", Cstatus = Status.Pending_For_NC_Closure, ProjDate = DateTime.Now.ToString(), Deadline = DateTime.Today.AddDays(-5).ToShortDateString() });
-            foreach (var item in _checkList)
+            NCServices ncServices = new NCServices();
+            GlobalSQLServices sQLServices = new GlobalSQLServices();
+            _NCsList = ncServices.GetNCs();
+
+            foreach (var item in _NCsList)
             {
-                item.IsPast = Convert.ToDateTime(item.Deadline) < DateTime.Today;
+                var DisplayNC = new NCDisplayModel();
+                DisplayNC.Id=item.Id;
+
+                DisplayNC.Title = sQLServices.GetProject(item.ProjectId.ToString()).Name;
+                DisplayNC.Building = sQLServices.GetBuilding(item.BuildingId.ToString()).Title;
+                DisplayNC.Floor = sQLServices.GetFloor(item.FloorId.ToString()).Title;
+                DisplayNC.Category = sQLServices.GetCategory(item.CategoryId.ToString()).Title;
+                DisplayNC.CreatedBy = sQLServices.GetUser(item.CreatedBy.ToString()).Title+" "+item.CreatedOn.ToShortDateString();
+                DisplayNC.UpdatedBy = sQLServices.GetUser(item.UpdatedBy.ToString()).Title+ " " + item.UpdatedOn.ToShortDateString();
+                DisplayNC.Cstatus = sQLServices.GetNCStatus(item.StatusId.ToString()).Title;
+                DisplayNC.ProjDate = item.DeadlineDate.ToString();
+                DisplayNC.Deadline = item.DeadlineDate.ToShortDateString();
+                DisplayNC.IsPast=Convert.ToDateTime(item.DeadlineDate) < DateTime.Today;
+                _NCsDisplayList.Add(DisplayNC);
             }
         }
 
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new NCDetails());
+            var SelectedItem = (NCDisplayModel)e.Item;
+            await Navigation.PushAsync(new NCDetails(SelectedItem.Id));
         }
 
     }
