@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -29,6 +30,13 @@ namespace GeraAdvantage.Utils
             ImageStream.CopyTo(ImgMemoryStream);
             data = ImgMemoryStream.ToArray();
             return Convert.ToBase64String(data);
+        }
+        public static HttpClient GetHttpClient()
+        {
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            HttpClient client = new HttpClient(handler);
+            return client;
         }
     }
 }

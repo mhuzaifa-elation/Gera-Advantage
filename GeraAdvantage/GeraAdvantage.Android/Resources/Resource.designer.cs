@@ -14,7 +14,7 @@ namespace GeraAdvantage.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.2.4.160")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
 	public partial class Resource
 	{
 		
@@ -25,6 +25,7 @@ namespace GeraAdvantage.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::ModernHttpClient.Resource.String.library_name = global::GeraAdvantage.Droid.Resource.String.library_name;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::GeraAdvantage.Droid.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::GeraAdvantage.Droid.Resource.Animation.abc_fade_out;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::GeraAdvantage.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;

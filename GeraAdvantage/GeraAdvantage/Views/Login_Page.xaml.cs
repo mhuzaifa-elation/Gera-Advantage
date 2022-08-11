@@ -1,12 +1,17 @@
 ﻿using GeraAdvantage.SQLServices;
 using GeraAdvantage.Utils;
 using GeraAdvantage.Views;
+using ModernHttpClient;
+using Newtonsoft.Json;
 using Rg.Plugins.Popup.Services;
 using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,11 +32,42 @@ namespace GeraAdvantage
             InitializeComponent();
             InitializeTempSQLData();
         }
+        public async Task<List<RootCause>> GetRootCauseAsync()
+        {
+            List<RootCause> rootCauseList = new List<RootCause>();
+            HttpClient client = UtilServices.GetHttpClient();
 
+            Uri uri = new Uri(URLManager.GetRootCauseURL());
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                rootCauseList= JsonConvert.DeserializeObject<List<RootCause>>(content);
+                return rootCauseList;
+            }
+            else
+            {
+                return new List<RootCause>();
+            }
+
+
+            //HEADER COMMENT
+
+            //string parameters = string.Format("BilletCount={0}&BilletGrade={4}&Date={1}&MeltCount={2}&Tonage={3}");
+            //                                     //, BiletNum, date.ToString("yyyy-MM-dd HH:MM:ss"), MeltCount, Tonage, BilletGrade);
+            //var request = new HttpRequestMessage(HttpMethod.Post, new Uri("URL"));
+            //if (parameters != null)
+            //    request.Content = new StringContent(parameters, Encoding.UTF8, "application/json");
+            //var responsse = client.SendAsync(request);
+
+        }
         private void InitializeTempSQLData()
         {
             try
             {
+
+
+                var RootcauseStr = GetRootCauseAsync().Result;
                 SQLConfig config = new SQLConfig();
                 if (!config.GetItems<UserRole>().Any())
                 {
