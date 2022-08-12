@@ -17,6 +17,7 @@ namespace GeraAdvantage.Views
     public partial class NCList : ContentPage
     {
         private  List<NC> _NCsList;
+        private  List<NC> CsList;
         private  List<NCDisplayModel> _NCsDisplayList= new List<NCDisplayModel>();
 
         public NCList()
@@ -32,7 +33,7 @@ namespace GeraAdvantage.Views
             NCServices ncServices = new NCServices();
             GlobalSQLServices sQLServices = new GlobalSQLServices();
             _NCsList = ncServices.GetNCs();
-
+            
             foreach (var item in _NCsList)
             {
                 var DisplayNC = new NCDisplayModel();

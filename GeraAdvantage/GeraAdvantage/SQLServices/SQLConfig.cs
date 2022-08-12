@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using GeraAdvantage.Utils;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -109,6 +110,111 @@ namespace GeraAdvantage.SQLServices
                 return ret;
             }
         }
+        public void DeleteAllData()
+        {
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<BuildingUnit>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='BuildingUnit'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+               var ret = connection.DeleteAll<BuildingFloor>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='BuildingFloor'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<Building>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='Building'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<UnitTypeRoom>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='UnitTypeRoom'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<UnitType>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='UnitType'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<StructuralMember>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='StructuralMember'; ", new List<object>().ToArray());
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<RootCause>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='RootCause'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<Severity>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='Severity'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<Category>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='Category'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<NCStatusRole>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='NCStatusRole'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<NCStatus>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='NCStatus'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<StatusGroup>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='StatusGroup'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<RoomType>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='RoomType'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<Floor>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='Floor'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<Project>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='Project'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<City>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='City'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<UserRole>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='UserRole'; ", new List<object>().ToArray());
+
+            }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<User>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='User'; ", new List<object>().ToArray());
+            }
+
+        }
 
         public bool Insert<T>(T item)
         {
@@ -124,6 +230,6 @@ namespace GeraAdvantage.SQLServices
 
         }
 
-       
+
     }
 }

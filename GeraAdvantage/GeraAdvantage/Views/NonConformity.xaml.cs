@@ -241,7 +241,7 @@ namespace GeraAdvantage.Views
             model.ProjectId = 1;
             model.SubCategoryId = CategoryPickIndex;
             model.ContractorId = ContractorPickIndex;
-            model.Image = AvailableImage;
+            //model.Image = AvailableImage; TBD
             model.CorrectiveAction = CorrectiveActionEnt.Text;
             model.PrevenctiveAction = PreventiceActionEnt.Text;
             model.CreatedBy = ResposiblePickIndex;

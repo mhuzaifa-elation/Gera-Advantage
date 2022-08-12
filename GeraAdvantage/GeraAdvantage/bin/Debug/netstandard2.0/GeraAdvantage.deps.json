@@ -14,6 +14,7 @@
           "Rg.Plugins.Popup": "2.1.0",
           "Syncfusion.Xamarin.SfChart": "20.1.0.61",
           "Syncfusion.Xamarin.SfDataGrid": "20.1.0.61",
+          "Syncfusion.Xamarin.SfPopupLayout": "20.1.0.61",
           "Xam.Plugins.Messaging": "5.2.0",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
@@ -183,6 +184,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {
+            "assemblyVersion": "20.1451.0.61",
+            "fileVersion": "20.1451.0.61"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.1.0.61",
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll": {
             "assemblyVersion": "20.1451.0.61",
             "fileVersion": "20.1451.0.61"
           }
@@ -404,6 +417,13 @@
       "sha512": "sha512-fVY4OhAJLtgd0/FnnRvhVxbXc24/iUrUouAVOeGKrLGYvEbd9GpRLxDssYDBE1cyBPIwMNoggdDfZ3obCa7k4A==",
       "path": "syncfusion.xamarin.sfnumerictextbox/20.1.0.61",
       "hashPath": "syncfusion.xamarin.sfnumerictextbox.20.1.0.61.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DRlMF6dyq+oHvdEUkEpo1QUG7q3GVCQhbvoNorFqx4BU5qj2f0OTJcjFTbMY7eqrxEo7XV6HBkLLKF02YwUqVA==",
+      "path": "syncfusion.xamarin.sfpopuplayout/20.1.0.61",
+      "hashPath": "syncfusion.xamarin.sfpopuplayout.20.1.0.61.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",

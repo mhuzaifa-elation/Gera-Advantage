@@ -257,6 +257,19 @@
           "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.1.0.61",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll": {}
+        }
+      },
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
@@ -920,6 +933,39 @@
         "syncfusion_logo.png"
       ]
     },
+    "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+      "sha512": "DRlMF6dyq+oHvdEUkEpo1QUG7q3GVCQhbvoNorFqx4BU5qj2f0OTJcjFTbMY7eqrxEo7XV6HBkLLKF02YwUqVA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpopuplayout/20.1.0.61",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Properties/Syncfusion.SfPopupLayout.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_dark_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_light_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_uwp_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "syncfusion.xamarin.sfpopuplayout.20.1.0.61.nupkg.sha512",
+        "syncfusion.xamarin.sfpopuplayout.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
     "System.Buffers/4.4.0": {
       "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
       "type": "package",
@@ -1358,6 +1404,7 @@
       "Rg.Plugins.Popup >= 2.1.0",
       "Syncfusion.Xamarin.SfChart >= 20.1.0.61",
       "Syncfusion.Xamarin.SfDataGrid >= 20.1.0.61",
+      "Syncfusion.Xamarin.SfPopupLayout >= 20.1.0.61",
       "Xam.Plugins.Messaging >= 5.2.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196",
@@ -1375,11 +1422,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+      "projectUniqueName": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
       "projectName": "GeraAdvantage",
-      "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+      "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
       "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-      "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
+      "outputPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1434,6 +1481,10 @@
             "version": "[20.1.0.61, )"
           },
           "Syncfusion.Xamarin.SfDataGrid": {
+            "target": "Package",
+            "version": "[20.1.0.61, )"
+          },
+          "Syncfusion.Xamarin.SfPopupLayout": {
             "target": "Package",
             "version": "[20.1.0.61, )"
           },

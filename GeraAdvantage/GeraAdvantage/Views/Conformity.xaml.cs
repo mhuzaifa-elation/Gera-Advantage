@@ -208,7 +208,7 @@ namespace GeraAdvantage.Views
             model.NCCode = "C";
             model.ProjectId = 0;
             model.SubCategoryId = 0;
-            model.Image = AvailableImage;
+            //model.Image = AvailableImage; TBD
             model.CorrectiveAction = CommentEnt.Text;
             model.CreatedBy = ResposiblePickIndex;
             model.CreatedOn = DateTime.Now;

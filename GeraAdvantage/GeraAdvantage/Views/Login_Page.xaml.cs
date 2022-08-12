@@ -1,6 +1,7 @@
 ﻿using GeraAdvantage.SQLServices;
 using GeraAdvantage.Utils;
 using GeraAdvantage.Views;
+using GeraAdvantage.WebServices;
 using ModernHttpClient;
 using Newtonsoft.Json;
 using Rg.Plugins.Popup.Services;
@@ -13,6 +14,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -30,168 +32,170 @@ namespace GeraAdvantage
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
+            //InitializeComponentAPIData();
             InitializeTempSQLData();
         }
-        public async Task<List<RootCause>> GetRootCauseAsync()
-        {
-            List<RootCause> rootCauseList = new List<RootCause>();
-            HttpClient client = UtilServices.GetHttpClient();
 
-            Uri uri = new Uri(URLManager.GetRootCauseURL());
-            var response = await client.GetAsync(uri).ConfigureAwait(false);
-            if (response.IsSuccessStatusCode)
-            {
-                string content = await response.Content.ReadAsStringAsync();
-                rootCauseList= JsonConvert.DeserializeObject<List<RootCause>>(content);
-                return rootCauseList;
-            }
-            else
-            {
-                return new List<RootCause>();
-            }
-
-
-            //HEADER COMMENT
-
-            //string parameters = string.Format("BilletCount={0}&BilletGrade={4}&Date={1}&MeltCount={2}&Tonage={3}");
-            //                                     //, BiletNum, date.ToString("yyyy-MM-dd HH:MM:ss"), MeltCount, Tonage, BilletGrade);
-            //var request = new HttpRequestMessage(HttpMethod.Post, new Uri("URL"));
-            //if (parameters != null)
-            //    request.Content = new StringContent(parameters, Encoding.UTF8, "application/json");
-            //var responsse = client.SendAsync(request);
-
-        }
-        private void InitializeTempSQLData()
+        private async void InitializeComponentAPIData()
         {
             try
             {
+                GlobalWebServices webServices = new GlobalWebServices();
+                var RCs = await webServices.GetRootCauseAsync();
+                popupLayoutRefresh.Show();
+                //await Task.Run(async () =>
+                //{
+                //    await Device.InvokeOnMainThreadAsync(() =>
+                //    {
+                //        popupLayoutRefresh.IsVisible=true;
+                //    });
+                //});
 
 
-                var RootcauseStr = GetRootCauseAsync().Result;
-                SQLConfig config = new SQLConfig();
-                if (!config.GetItems<UserRole>().Any())
+
+
+                popupLayoutRefresh.IsOpen = false;
+            }
+            catch (Exception ex)
+            {
+                popupLayoutRefresh.IsOpen = false;
+                DisplayAlert("ERROR", ex.Message, "OK");
+            }
+
+        }
+
+        private async void InitializeTempSQLData()
+
+        {
+            try
+            {
+                SQLConfig sqlConfig = new SQLConfig();
+                sqlConfig.DeleteAll<UserRole>("UserRole");
+
+                if (!sqlConfig.GetItems<UserRole>().Any())
                 {
-                    config.DeleteAll<User>("User");
-                    config.Insert(new User() { Id = "1", Title = "Test User" });
-                    config.Insert(new User() { Id = "2", Title = "Test Contractor" });
+                    sqlConfig.DeleteAllData();
+                    sqlConfig.DeleteAll<User>("User");
+                    sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
+                    sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
 
-                    config.DeleteAll<UserRole>("UserRole");
-                    config.Insert(new UserRole() { Id = "1", Title = "Site Engineer" });
-                    config.Insert(new UserRole() { Id = "2", Title = "QA" });
-                    config.Insert(new UserRole() { Id = "3", Title = "Contractor" });
-
-
-                    config.DeleteAll<City>("City");
-                    config.Insert(new City() { Id = "1", Name = "Pune" });
-                    config.Insert(new City() { Id = "2", Name = "Goa" });
-                    config.Insert(new City() { Id = "3", Name = "Mumbai" });
+                    sqlConfig.DeleteAll<UserRole>("UserRole");
+                    sqlConfig.Insert(new UserRole() { Id = "1", Title = "Site Engineer" });
+                    sqlConfig.Insert(new UserRole() { Id = "2", Title = "QA" });
+                    sqlConfig.Insert(new UserRole() { Id = "3", Title = "Contractor" });
 
 
-                    config.DeleteAll<Project>("Project");
-                    config.Insert(new Project() { Id = "1", Name = "Osis", CityId = 1, Address = "Shivaji Nagar, Pune" });
-                    config.Insert(new Project() { Id = "2", Name = "EmerLand", CityId = 1, Address = "Chinchvar, Pune" });
+                    sqlConfig.DeleteAll<City>("City");
+                    sqlConfig.Insert(new City() { Id = "1", Name = "Pune" });
+                    sqlConfig.Insert(new City() { Id = "2", Name = "Goa" });
+                    sqlConfig.Insert(new City() { Id = "3", Name = "Mumbai" });
+
+
+                    sqlConfig.DeleteAll<Project>("Project");
+                    sqlConfig.Insert(new Project() { Id = "1", Name = "Osis", CityId = 1, Address = "Shivaji Nagar, Pune" });
+                    sqlConfig.Insert(new Project() { Id = "2", Name = "EmerLand", CityId = 1, Address = "Chinchvar, Pune" });
 
 
 
-                    config.DeleteAll<Floor>("Floor");
-                    config.Insert(new Floor() { Id = "1", Title = "First Floor", FloorNo = 1 });
-                    config.Insert(new Floor() { Id = "2", Title = "Second Floor", FloorNo = 2 });
-                    config.Insert(new Floor() { Id = "3", Title = "Basement", FloorNo = -1 });
-                    config.Insert(new Floor() { Id = "4", Title = "Ground Floor", FloorNo = 0 });
+                    sqlConfig.DeleteAll<Floor>("Floor");
+                    sqlConfig.Insert(new Floor() { Id = "1", Title = "First Floor", FloorNo = 1 });
+                    sqlConfig.Insert(new Floor() { Id = "2", Title = "Second Floor", FloorNo = 2 });
+                    sqlConfig.Insert(new Floor() { Id = "3", Title = "Basement", FloorNo = -1 });
+                    sqlConfig.Insert(new Floor() { Id = "4", Title = "Ground Floor", FloorNo = 0 });
 
 
-                    config.DeleteAll<RoomType>("RoomType");
-                    config.Insert(new RoomType() { Id = "1", Title = "Bedroom" });
-                    config.Insert(new RoomType() { Id = "2", Title = "Hall" });
-                    config.Insert(new RoomType() { Id = "3", Title = "Bedroom Balcony" });
-                    config.Insert(new RoomType() { Id = "4", Title = "Lift Room" });
-                    config.Insert(new RoomType() { Id = "5", Title = "Toilet" });
+                    sqlConfig.DeleteAll<RoomType>("RoomType");
+                    sqlConfig.Insert(new RoomType() { Id = "1", Title = "Bedroom" });
+                    sqlConfig.Insert(new RoomType() { Id = "2", Title = "Hall" });
+                    sqlConfig.Insert(new RoomType() { Id = "3", Title = "Bedroom Balcony" });
+                    sqlConfig.Insert(new RoomType() { Id = "4", Title = "Lift Room" });
+                    sqlConfig.Insert(new RoomType() { Id = "5", Title = "Toilet" });
 
-                    config.DeleteAll<StatusGroup>("StatusGroup");
-                    config.Insert(new StatusGroup() { Id = "1", Title = "Open" });
-                    config.Insert(new StatusGroup() { Id = "2", Title = "In Progress" });
-                    config.Insert(new StatusGroup() { Id = "3", Title = "Completed" });
-                    config.Insert(new StatusGroup() { Id = "4", Title = "Rejected" });
-                    config.Insert(new StatusGroup() { Id = "5", Title = "Cancelled" });
+                    sqlConfig.DeleteAll<StatusGroup>("StatusGroup");
+                    sqlConfig.Insert(new StatusGroup() { Id = "1", Title = "Open" });
+                    sqlConfig.Insert(new StatusGroup() { Id = "2", Title = "In Progress" });
+                    sqlConfig.Insert(new StatusGroup() { Id = "3", Title = "Completed" });
+                    sqlConfig.Insert(new StatusGroup() { Id = "4", Title = "Rejected" });
+                    sqlConfig.Insert(new StatusGroup() { Id = "5", Title = "Cancelled" });
 
-                    config.DeleteAll<NCStatus>("NCStatus");
-                    config.Insert(new NCStatus() { Id = "1", Title = "Open", StatusGroupId = 1 });
-                    config.Insert(new NCStatus() { Id = "2", Title = "In Progress", StatusGroupId = 2 });
-                    config.Insert(new NCStatus() { Id = "3", Title = "Completed", StatusGroupId = 3 });
-                    config.Insert(new NCStatus() { Id = "4", Title = "Cancelled", StatusGroupId = 5 });
-                    config.Insert(new NCStatus() { Id = "5", Title = "Completed by Other Contractor", StatusGroupId = 3 });
-                    config.Insert(new NCStatus() { Id = "6", Title = "Work Done", StatusGroupId = 2 });
+                    sqlConfig.DeleteAll<NCStatus>("NCStatus");
+                    sqlConfig.Insert(new NCStatus() { Id = "1", Title = "Open", StatusGroupId = 1 });
+                    sqlConfig.Insert(new NCStatus() { Id = "2", Title = "In Progress", StatusGroupId = 2 });
+                    sqlConfig.Insert(new NCStatus() { Id = "3", Title = "Completed", StatusGroupId = 3 });
+                    sqlConfig.Insert(new NCStatus() { Id = "4", Title = "Cancelled", StatusGroupId = 5 });
+                    sqlConfig.Insert(new NCStatus() { Id = "5", Title = "Completed by Other Contractor", StatusGroupId = 3 });
+                    sqlConfig.Insert(new NCStatus() { Id = "6", Title = "Work Done", StatusGroupId = 2 });
 
-                    config.DeleteAll<NCStatusRole>("NCStatusRole");
-                    config.Insert(new NCStatusRole() { Id = "1", NCStatusId = 1, UserRoleId = 1 });
-                    config.Insert(new NCStatusRole() { Id = "2", NCStatusId = 2, UserRoleId = 3 });
-                    config.Insert(new NCStatusRole() { Id = "3", NCStatusId = 3, UserRoleId = 1 });
-                    config.Insert(new NCStatusRole() { Id = "4", NCStatusId = 3, UserRoleId = 2 });
+                    sqlConfig.DeleteAll<NCStatusRole>("NCStatusRole");
+                    sqlConfig.Insert(new NCStatusRole() { Id = "1", NCStatusId = 1, UserRoleId = 1 });
+                    sqlConfig.Insert(new NCStatusRole() { Id = "2", NCStatusId = 2, UserRoleId = 3 });
+                    sqlConfig.Insert(new NCStatusRole() { Id = "3", NCStatusId = 3, UserRoleId = 1 });
+                    sqlConfig.Insert(new NCStatusRole() { Id = "4", NCStatusId = 3, UserRoleId = 2 });
 
-                    config.DeleteAll<Category>("Category");
-                    config.Insert(new Category() { Id = "0", Title = " ", ParentCategoryId = 0 });
-                    config.Insert(new Category() { Id = "1", Title = "Terra Wall", ParentCategoryId = 0 });
-                    config.Insert(new Category() { Id = "2", Title = "Structural Glazing", ParentCategoryId = 0 });
-                    config.Insert(new Category() { Id = "3", Title = "Safety", ParentCategoryId = 0 });
-                    config.Insert(new Category() { Id = "4", Title = "Damage/Impact to others work", ParentCategoryId = 1 });
-                    config.Insert(new Category() { Id = "5", Title = "Face Stone not proper", ParentCategoryId = 1 });
-                    config.Insert(new Category() { Id = "6", Title = "Safety Helmet Color Identity not Followed", ParentCategoryId = 3 });
-                    config.Insert(new Category() { Id = "7", Title = "Safety net for height work", ParentCategoryId = 3 });
+                    sqlConfig.DeleteAll<Category>("Category");
+                    sqlConfig.Insert(new Category() { Id = "0", Title = " ", ParentCategoryId = 0 });
+                    sqlConfig.Insert(new Category() { Id = "1", Title = "Terra Wall", ParentCategoryId = 0 });
+                    sqlConfig.Insert(new Category() { Id = "2", Title = "Structural Glazing", ParentCategoryId = 0 });
+                    sqlConfig.Insert(new Category() { Id = "3", Title = "Safety", ParentCategoryId = 0 });
+                    sqlConfig.Insert(new Category() { Id = "4", Title = "Damage/Impact to others work", ParentCategoryId = 1 });
+                    sqlConfig.Insert(new Category() { Id = "5", Title = "Face Stone not proper", ParentCategoryId = 1 });
+                    sqlConfig.Insert(new Category() { Id = "6", Title = "Safety Helmet Color Identity not Followed", ParentCategoryId = 3 });
+                    sqlConfig.Insert(new Category() { Id = "7", Title = "Safety net for height work", ParentCategoryId = 3 });
 
-                    config.DeleteAll<Severity>("Severity");
-                    config.Insert(new Severity() { Id = "1", Title = "Medium" });
-                    config.Insert(new Severity() { Id = "2", Title = "Mild" });
-                    config.Insert(new Severity() { Id = "3", Title = "Severe" });
-                    config.Insert(new Severity() { Id = "4", Title = "Aesthetically Severe" });
-                    config.Insert(new Severity() { Id = "5", Title = "Functional Severe" });
+                    sqlConfig.DeleteAll<Severity>("Severity");
+                    sqlConfig.Insert(new Severity() { Id = "1", Title = "Medium" });
+                    sqlConfig.Insert(new Severity() { Id = "2", Title = "Mild" });
+                    sqlConfig.Insert(new Severity() { Id = "3", Title = "Severe" });
+                    sqlConfig.Insert(new Severity() { Id = "4", Title = "Aesthetically Severe" });
+                    sqlConfig.Insert(new Severity() { Id = "5", Title = "Functional Severe" });
 
-                    config.DeleteAll<RootCause>("RootCause");
-                    config.Insert(new RootCause() { Id = "1", Title = "Did not supervise" });
-                    config.Insert(new RootCause() { Id = "2", Title = "Allowed Bad material" });
-                    config.Insert(new RootCause() { Id = "3", Title = "Lack of knowledge" });
-                    config.Insert(new RootCause() { Id = "4", Title = "Improper supporting system" });
-                    config.Insert(new RootCause() { Id = "5", Title = "Checklist not implemented" });
+                    sqlConfig.DeleteAll<RootCause>("RootCause");
+                    sqlConfig.Insert(new RootCause() { Id = "1", Title = "Did not supervise" });
+                    sqlConfig.Insert(new RootCause() { Id = "2", Title = "Allowed Bad material" });
+                    sqlConfig.Insert(new RootCause() { Id = "3", Title = "Lack of knowledge" });
+                    sqlConfig.Insert(new RootCause() { Id = "4", Title = "Improper supporting system" });
+                    sqlConfig.Insert(new RootCause() { Id = "5", Title = "Checklist not implemented" });
 
-                    config.DeleteAll<StructuralMember>("StructuralMember");
-                    config.Insert(new StructuralMember() { Id = "1", Title = "Tie beam" });
-                    config.Insert(new StructuralMember() { Id = "2", Title = "Starecase" });
-                    config.Insert(new StructuralMember() { Id = "3", Title = "Stub Column" });
-                    config.Insert(new StructuralMember() { Id = "4", Title = "Column" });
+                    sqlConfig.DeleteAll<StructuralMember>("StructuralMember");
+                    sqlConfig.Insert(new StructuralMember() { Id = "1", Title = "Tie beam" });
+                    sqlConfig.Insert(new StructuralMember() { Id = "2", Title = "Starecase" });
+                    sqlConfig.Insert(new StructuralMember() { Id = "3", Title = "Stub Column" });
+                    sqlConfig.Insert(new StructuralMember() { Id = "4", Title = "Column" });
 
-                    config.DeleteAll<UnitType>("UnitType");
-                    config.Insert(new UnitType() { Id = "1", Title = "Shop", ParentUnitTypeId = 0 });
-                    config.Insert(new UnitType() { Id = "2", Title = "Flate", ParentUnitTypeId = 0 });
-                    config.Insert(new UnitType() { Id = "3", Title = "Office", ParentUnitTypeId = 0 });
-                    config.Insert(new UnitType() { Id = "4", Title = "Parking", ParentUnitTypeId = 0 });
-                    config.Insert(new UnitType() { Id = "5", Title = "2 BHK", ParentUnitTypeId = 2 });
-                    config.Insert(new UnitType() { Id = "6", Title = "3 BHK", ParentUnitTypeId = 2 });
-                    config.Insert(new UnitType() { Id = "7", Title = "Entrance Lobby", ParentUnitTypeId = 0 });
+                    sqlConfig.DeleteAll<UnitType>("UnitType");
+                    sqlConfig.Insert(new UnitType() { Id = "1", Title = "Shop", ParentUnitTypeId = 0 });
+                    sqlConfig.Insert(new UnitType() { Id = "2", Title = "Flate", ParentUnitTypeId = 0 });
+                    sqlConfig.Insert(new UnitType() { Id = "3", Title = "Office", ParentUnitTypeId = 0 });
+                    sqlConfig.Insert(new UnitType() { Id = "4", Title = "Parking", ParentUnitTypeId = 0 });
+                    sqlConfig.Insert(new UnitType() { Id = "5", Title = "2 BHK", ParentUnitTypeId = 2 });
+                    sqlConfig.Insert(new UnitType() { Id = "6", Title = "3 BHK", ParentUnitTypeId = 2 });
+                    sqlConfig.Insert(new UnitType() { Id = "7", Title = "Entrance Lobby", ParentUnitTypeId = 0 });
 
-                    config.DeleteAll<UnitTypeRoom>("UnitTypeRoom");
-                    config.Insert(new UnitTypeRoom() { Id = "1", UnitTypeId = 5, RoomTypeId = 1 });
-                    config.Insert(new UnitTypeRoom() { Id = "2", UnitTypeId = 5, RoomTypeId = 2 });
-                    config.Insert(new UnitTypeRoom() { Id = "3", UnitTypeId = 3, RoomTypeId = 5 });
-                    config.Insert(new UnitTypeRoom() { Id = "4", UnitTypeId = 7, RoomTypeId = 5 });
+                    sqlConfig.DeleteAll<UnitTypeRoom>("UnitTypeRoom");
+                    sqlConfig.Insert(new UnitTypeRoom() { Id = "1", UnitTypeId = 5, RoomTypeId = 1 });
+                    sqlConfig.Insert(new UnitTypeRoom() { Id = "2", UnitTypeId = 5, RoomTypeId = 2 });
+                    sqlConfig.Insert(new UnitTypeRoom() { Id = "3", UnitTypeId = 3, RoomTypeId = 5 });
+                    sqlConfig.Insert(new UnitTypeRoom() { Id = "4", UnitTypeId = 7, RoomTypeId = 5 });
 
-                    config.DeleteAll<Building>("Building");
-                    config.Insert(new Building() { Id = "1", Title = "B-Building", ProjectId = 1 });
-                    config.Insert(new Building() { Id = "2", Title = "A-Building", ProjectId = 1 });
-                    config.Insert(new Building() { Id = "3", Title = "Parijat", ProjectId = 2 });
-                    config.Insert(new Building() { Id = "4", Title = "Gulmohar", ProjectId = 2 });
+                    sqlConfig.DeleteAll<Building>("Building");
+                    sqlConfig.Insert(new Building() { Id = "1", Title = "B-Building", ProjectId = 1 });
+                    sqlConfig.Insert(new Building() { Id = "2", Title = "A-Building", ProjectId = 1 });
+                    sqlConfig.Insert(new Building() { Id = "3", Title = "Parijat", ProjectId = 2 });
+                    sqlConfig.Insert(new Building() { Id = "4", Title = "Gulmohar", ProjectId = 2 });
 
-                    config.DeleteAll<BuildingFloor>("BuildingFloor");
-                    config.Insert(new BuildingFloor() { Id = "1", BuildingId = 1, FloorId = 1 });
-                    config.Insert(new BuildingFloor() { Id = "2", BuildingId = 1, FloorId = 2 });
-                    config.Insert(new BuildingFloor() { Id = "3", BuildingId = 1, FloorId = 3 });
-                    config.Insert(new BuildingFloor() { Id = "4", BuildingId = 2, FloorId = 1 });
-                    config.Insert(new BuildingFloor() { Id = "5", BuildingId = 2, FloorId = 2 });
+                    sqlConfig.DeleteAll<BuildingFloor>("BuildingFloor");
+                    sqlConfig.Insert(new BuildingFloor() { Id = "1", BuildingId = 1, FloorId = 1 });
+                    sqlConfig.Insert(new BuildingFloor() { Id = "2", BuildingId = 1, FloorId = 2 });
+                    sqlConfig.Insert(new BuildingFloor() { Id = "3", BuildingId = 1, FloorId = 3 });
+                    sqlConfig.Insert(new BuildingFloor() { Id = "4", BuildingId = 2, FloorId = 1 });
+                    sqlConfig.Insert(new BuildingFloor() { Id = "5", BuildingId = 2, FloorId = 2 });
 
-                    config.DeleteAll<BuildingUnit>("BuildingUnit");
-                    config.Insert(new BuildingUnit() { Id = "1", BuildingFloorId = 1, Title = "B01", UnitTypeId = 6 });
-                    config.Insert(new BuildingUnit() { Id = "2", BuildingFloorId = 1, Title = "B02", UnitTypeId = 5 });
-                    config.Insert(new BuildingUnit() { Id = "3", BuildingFloorId = 1, Title = "B03", UnitTypeId = 5 });
-                    config.Insert(new BuildingUnit() { Id = "4", BuildingFloorId = 2, Title = "A01", UnitTypeId = 6 });
-                    config.Insert(new BuildingUnit() { Id = "5", BuildingFloorId = 2, Title = "A02", UnitTypeId = 5 });
+                    sqlConfig.DeleteAll<BuildingUnit>("BuildingUnit");
+                    sqlConfig.Insert(new BuildingUnit() { Id = "1", BuildingFloorId = 1, Title = "B01", UnitTypeId = 6 });
+                    sqlConfig.Insert(new BuildingUnit() { Id = "2", BuildingFloorId = 1, Title = "B02", UnitTypeId = 5 });
+                    sqlConfig.Insert(new BuildingUnit() { Id = "3", BuildingFloorId = 1, Title = "B03", UnitTypeId = 5 });
+                    sqlConfig.Insert(new BuildingUnit() { Id = "4", BuildingFloorId = 2, Title = "A01", UnitTypeId = 6 });
+                    sqlConfig.Insert(new BuildingUnit() { Id = "5", BuildingFloorId = 2, Title = "A02", UnitTypeId = 5 });
                 }
             }
             catch (Exception ex)

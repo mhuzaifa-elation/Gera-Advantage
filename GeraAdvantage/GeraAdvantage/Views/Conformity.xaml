@@ -193,7 +193,7 @@
                                 Clicked="Resposible_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding ResposiblePick}" />
+                                Text="{Binding ResponsiblePick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

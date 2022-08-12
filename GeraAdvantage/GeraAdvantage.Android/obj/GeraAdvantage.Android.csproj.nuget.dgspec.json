@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
+    "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {}
   },
   "projects": {
-    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
+    "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "projectUniqueName": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
         "projectName": "GeraAdvantage.Android",
-        "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+        "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
         "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-        "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
+        "outputPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
-                "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
+              "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+                "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+    "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "projectUniqueName": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
         "projectName": "GeraAdvantage",
-        "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
+        "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj",
         "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-        "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\obj\\",
+        "outputPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -138,6 +138,10 @@
               "version": "[20.1.0.61, )"
             },
             "Syncfusion.Xamarin.SfDataGrid": {
+              "target": "Package",
+              "version": "[20.1.0.61, )"
+            },
+            "Syncfusion.Xamarin.SfPopupLayout": {
               "target": "Package",
               "version": "[20.1.0.61, )"
             },

@@ -199,6 +199,21 @@
           "lib/MonoAndroid10.0/Syncfusion.SfNumericTextBox.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.1.0.61",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.dll": {}
+        }
+      },
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
@@ -1892,6 +1907,7 @@
           "Rg.Plugins.Popup": "2.1.0",
           "Syncfusion.Xamarin.SfChart": "20.1.0.61",
           "Syncfusion.Xamarin.SfDataGrid": "20.1.0.61",
+          "Syncfusion.Xamarin.SfPopupLayout": "20.1.0.61",
           "Xam.Plugins.Messaging": "5.2.0",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
@@ -2307,6 +2323,39 @@
         "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.xml",
         "syncfusion.xamarin.sfnumerictextbox.20.1.0.61.nupkg.sha512",
         "syncfusion.xamarin.sfnumerictextbox.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+      "sha512": "DRlMF6dyq+oHvdEUkEpo1QUG7q3GVCQhbvoNorFqx4BU5qj2f0OTJcjFTbMY7eqrxEo7XV6HBkLLKF02YwUqVA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpopuplayout/20.1.0.61",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Properties/Syncfusion.SfPopupLayout.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_dark_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_light_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_uwp_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "syncfusion.xamarin.sfpopuplayout.20.1.0.61.nupkg.sha512",
+        "syncfusion.xamarin.sfpopuplayout.nuspec",
         "syncfusion_logo.png"
       ]
     },
@@ -4147,11 +4196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+      "projectUniqueName": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
       "projectName": "GeraAdvantage.Android",
-      "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
+      "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\GeraAdvantage.Android.csproj",
       "packagesPath": "C:\\Users\\mhuzaifa\\.nuget\\packages\\",
-      "outputPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
+      "outputPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4174,8 +4223,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
-              "projectPath": "D:\\HUZAIFA\\GIT\\Gera-Advantage\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
+            "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj": {
+              "projectPath": "D:\\AhmedV\\GIT\\Gera\\GeraAdvantage\\GeraAdvantage\\GeraAdvantage.csproj"
             }
           }
         }

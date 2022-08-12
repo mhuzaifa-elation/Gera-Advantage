@@ -23,6 +23,10 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.ViewPager.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"FormsViewGroup.dll",
+		"GeraAdvantage.dll",
+		"ModernHttpClient.dll",
+		"Newtonsoft.Json.dll",
+		"OkHttp.dll",
 		"Plugin.Messaging.Abstractions.dll",
 		"Plugin.Messaging.dll",
 		"Rg.Plugins.Popup.dll",
@@ -45,6 +49,8 @@ public class MonoPackageManager_Resources {
 		"Syncfusion.SfNumericTextBox.Android.dll",
 		"Syncfusion.SfNumericTextBox.XForms.Android.dll",
 		"Syncfusion.SfNumericTextBox.XForms.dll",
+		"Syncfusion.SfPopupLayout.XForms.Android.dll",
+		"Syncfusion.SfPopupLayout.XForms.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.SavedState.dll",
 		"Xamarin.Essentials.dll",
@@ -54,7 +60,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
-		"GeraAdvantage.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

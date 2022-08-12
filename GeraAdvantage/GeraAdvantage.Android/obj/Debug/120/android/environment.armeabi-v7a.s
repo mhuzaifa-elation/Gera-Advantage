@@ -585,6 +585,14 @@ app_system_properties:
 .L.env.buf.131:
 	.zero	63
 	.size	.L.env.buf.131, 63
+	.type	.L.env.buf.132, %object
+.L.env.buf.132:
+	.zero	63
+	.size	.L.env.buf.132, 63
+	.type	.L.env.buf.133, %object
+.L.env.buf.133:
+	.zero	63
+	.size	.L.env.buf.133, 63
 	@ Bundled assemblies data
 
 	.type	bundled_assemblies, %object
@@ -1517,7 +1525,21 @@ bundled_assemblies:
 	.long	0x0	@ name_length
 	.long	.L.env.buf.131	@ name
 
-	.size	bundled_assemblies, 3168
+	.long	0xffffffff	@ apk_fd
+	.long	0x0	@ data_offset
+	.long	0x0	@ data_size
+	.long	0x0	@ data
+	.long	0x0	@ name_length
+	.long	.L.env.buf.132	@ name
+
+	.long	0xffffffff	@ apk_fd
+	.long	0x0	@ data_offset
+	.long	0x0	@ data_size
+	.long	0x0	@ data
+	.long	0x0	@ name_length
+	.long	.L.env.buf.133	@ name
+
+	.size	bundled_assemblies, 3216
 	@ Assembly store individual assembly data
 	.type	assembly_store_bundled_assemblies, %object
 	.global	assembly_store_bundled_assemblies
@@ -1816,7 +1838,7 @@ application_config:
 	.long	0x3	@ package_naming_policy
 	.long	0xc	@ environment_variable_count
 	.long	0x0	@ system_property_count
-	.long	0x84	@ number_of_assemblies_in_apk
+	.long	0x86	@ number_of_assemblies_in_apk
 	.long	0x3f	@ bundled_assembly_name_width
 	.long	0x2	@ number_of_assembly_store_files
 	.long	0x20	@ number_of_dso_cache_entries
@@ -1858,7 +1880,7 @@ application_config:
 
 	.type	.L.autostr.6, %object
 .L.autostr.6:
-	.asciz	"8d24156d-6010-484f-ad6a-e4433e743f43"
+	.asciz	"e67a6367-187e-4619-b9d7-3dd0c5285a8b"
 	.size	.L.autostr.6, 37
 
 	.type	.L.autostr.7, %object

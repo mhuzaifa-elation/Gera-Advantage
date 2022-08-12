@@ -121,7 +121,18 @@ namespace GeraAdvantage.Utils
 
         }
     }
-
+    public class NCPhotos
+    {
+        [PrimaryKey, AutoIncrement]
+        public long Id { get; set; }
+        public long NCId { get; set; }
+        public long UploadedBy { get; set; }
+        public DateTime UploadedOn { get; set; }
+        public string Filename { get; set; }
+        public long StatusId { get; set; }
+        public string CommentId { get; set; }
+        public string FileId { get; set; }
+    }
     public class NC
     {
         [PrimaryKey, AutoIncrement]
@@ -149,7 +160,6 @@ namespace GeraAdvantage.Utils
         public bool IsChecklistLinked { get; set; }
         public string CorrectiveAction { get; set; }
         public string PrevenctiveAction { get; set; }
-        public string Image { get; set; }
     }
     public class User
     {
@@ -185,6 +195,41 @@ namespace GeraAdvantage.Utils
         public long UnitTypeId { get; set; }
 
        
+    }
+
+    public class CheckListStatusUserRoles
+    {
+    
+    } 
+    public class CheckListStages
+    {
+    
+    } 
+    public class CheckList
+    {
+    
+    }  
+    public class ApprovalCycle
+    {
+    
+    } 
+    public class CheckListPointStatus
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public long DisplayText { get; set; }
+        public long ShowNCButton { get; set; }
+        public long ButtonImage { get; set; }
+        public long ButtonImageSelected { get; set; }
+        public long ButtonColour { get; set; }
+    }
+    public class CheckListType
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public long Checklist { get; set; }
+        public long NoOfStages { get; set; }
+        public long AllowMultipleSelection { get; set; }
     }
     public class Category
     {

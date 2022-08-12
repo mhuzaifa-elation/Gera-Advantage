@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+    xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
     x:Class="GeraAdvantage.Login_Page"
     BackgroundColor="LightSkyBlue"
     NavigationPage.HasNavigationBar="False">
@@ -20,6 +21,39 @@
         <StackLayout
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
+            <sfPopup:SfPopupLayout
+                x:Name="popupLayoutRefresh"
+                IsVisible="false">
+                <sfPopup:SfPopupLayout.PopupView>
+                    <sfPopup:PopupView
+                        AppearanceMode="OneButton"
+                        ShowFooter="false"
+                        ShowHeader="false"
+                        HeightRequest="100"
+                        WidthRequest="100">
+
+                        <sfPopup:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <ActivityIndicator
+                                        x:Name="activityIndicator"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="Fill"
+                                        IsRunning="true"
+                                        HeightRequest="90"
+                                        Color="#7a6fbe" />
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </sfPopup:PopupView.ContentTemplate>
+                    </sfPopup:PopupView>
+                </sfPopup:SfPopupLayout.PopupView>
+
+                <sfPopup:SfPopupLayout.Content>
+                    <Label
+                        Text="Loading"></Label>
+                </sfPopup:SfPopupLayout.Content>
+            </sfPopup:SfPopupLayout>
             <StackLayout
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="StartAndExpand"

@@ -1,4 +1,6 @@
 FormsViewGroup.dll
+ModernHttpClient.dll
+OkHttp.dll
 Plugin.Messaging.dll
 Rg.Plugins.Popup.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
@@ -8,6 +10,7 @@ Syncfusion.SfComboBox.XForms.Android.dll
 Syncfusion.SfDataGrid.XForms.Android.dll
 Syncfusion.SfNumericTextBox.Android.dll
 Syncfusion.SfNumericTextBox.XForms.Android.dll
+Syncfusion.SfPopupLayout.XForms.Android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
 Xamarin.AndroidX.Annotation.Experimental.dll
@@ -111,5 +114,3 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
-ModernHttpClient.dll
-OkHttp.dll

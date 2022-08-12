@@ -10,13 +10,16 @@
       "GeraAdvantage/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "13.0.1",
           "Rg.Plugins.Popup": "2.1.0",
           "Syncfusion.Xamarin.SfChart": "20.1.0.61",
           "Syncfusion.Xamarin.SfDataGrid": "20.1.0.61",
+          "Syncfusion.Xamarin.SfPopupLayout": "20.1.0.61",
           "Xam.Plugins.Messaging": "5.2.0",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "Xamarin.Forms.DataGrid": "4.8.0",
+          "modernhttpclient": "2.4.2",
           "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
@@ -24,9 +27,25 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "modernhttpclient/2.4.2": {
+        "runtime": {
+          "lib/Portable-Net45+WinRT45+WP8+WPA81/ModernHttpClient.dll": {
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
+          }
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
         }
       },
       "Rg.Plugins.Popup/2.1.0": {
@@ -170,6 +189,18 @@
           }
         }
       },
+      "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.1.0.61",
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll": {
+            "assemblyVersion": "20.1451.0.61",
+            "fileVersion": "20.1451.0.61"
+          }
+        }
+      },
       "System.Buffers/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {
@@ -275,12 +306,26 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
+    "modernhttpclient/2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Srkrjz2wBCh7af+AGqpPkJ3FSSFSruzg9mHVwwXiklf9gx2L1Ss2M+p2Mf4Fw17AOe6yPuJwdu4AAoslc6zP+w==",
+      "path": "modernhttpclient/2.4.2",
+      "hashPath": "modernhttpclient.2.4.2.nupkg.sha512"
+    },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "Rg.Plugins.Popup/2.1.0": {
       "type": "package",
@@ -372,6 +417,13 @@
       "sha512": "sha512-fVY4OhAJLtgd0/FnnRvhVxbXc24/iUrUouAVOeGKrLGYvEbd9GpRLxDssYDBE1cyBPIwMNoggdDfZ3obCa7k4A==",
       "path": "syncfusion.xamarin.sfnumerictextbox/20.1.0.61",
       "hashPath": "syncfusion.xamarin.sfnumerictextbox.20.1.0.61.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfPopupLayout/20.1.0.61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DRlMF6dyq+oHvdEUkEpo1QUG7q3GVCQhbvoNorFqx4BU5qj2f0OTJcjFTbMY7eqrxEo7XV6HBkLLKF02YwUqVA==",
+      "path": "syncfusion.xamarin.sfpopuplayout/20.1.0.61",
+      "hashPath": "syncfusion.xamarin.sfpopuplayout.20.1.0.61.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",
