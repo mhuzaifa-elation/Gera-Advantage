@@ -152,10 +152,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Category_Clicked" />
+                                Clicked="SubCategory_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding CategoryPick}" />
+                                Text="{Binding SubCategoryPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />

@@ -229,6 +229,19 @@ namespace GeraAdvantage.SQLServices
             }
 
         }
+        public bool InsertAll<T>(List<T> item)
+        {
+            lock (locker)
+            {
+                int i = connection.InsertAll(item,true);
+                if (i > 0)
+                {
+                    return true;
+                }
+                else return false;
+            }
+
+        }
 
 
     }

@@ -1,4 +1,5 @@
-﻿using GeraAdvantage.Utils;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,18 +11,85 @@ namespace GeraAdvantage.WebServices
 {
     public class GlobalWebServices
     {
+        public async Task<bool> SyncGlobalData()
+        {
+
+            try
+            {
+                List<RootCause> rootCauses = new List<RootCause>();
+                List<UnitType> unitTypes = new List<UnitType>();
+                List<Severity> severities = new List<Severity>();
+                List<Category> categories = new List<Category>();
+                List<CheckListStatusUserRoles> checkListStatusUserRoles = new List<CheckListStatusUserRoles>();
+                List<CheckListStages> checkListStages = new List<CheckListStages>();
+                List<Floor> floors = new List<Floor>();
+                List<StructuralMember> structuralMembers = new List<StructuralMember>();
+                List<StatusGroup> statusGroups = new List<StatusGroup>();
+                List<UnitTypeRoom> unitTypeRooms = new List<UnitTypeRoom>();
+                List<NCStatus> nCStatuses = new List<NCStatus>();
+                List<NCStatusRole> nCStatusRoles = new List<NCStatusRole>();
+                List<BuildingUnit> buildingUnits = new List<BuildingUnit>();
+                List<ReadyRecknor> readyRecknors = new List<ReadyRecknor>();
+                List<CheckListType> checkListTypes = new List<CheckListType>();
+                List<Building> buildings = new List<Building>();
+                List<CheckListPointStatus> checkListPointStatuses = new List<CheckListPointStatus>();
+                List<RoomType> roomTypes = new List<RoomType>();
+                List<City> cities = new List<City>();
+                List<Project> projects = new List<Project>();
+                List<CheckList> checkLists = new List<CheckList>();
+                List<ApprovalCycle> approvalCycles = new List<ApprovalCycle>();
+
+                rootCauses = await GetRootCauseAsync().ConfigureAwait(false);
+                unitTypes = await GetUnitTypeAsync().ConfigureAwait(false);
+                severities = await GetSeverityAsync().ConfigureAwait(false);
+                categories = await GetCategoryAsync().ConfigureAwait(false);
+                checkListStatusUserRoles = await GetCheckListStatusUserRolesAsync().ConfigureAwait(false);
+                checkListStages = await GetCheckListStagesAsync().ConfigureAwait(false);
+                floors = await GetFloorAsync().ConfigureAwait(false);
+                structuralMembers = await GetStructuralMemberAsync().ConfigureAwait(false);
+                statusGroups = await GetStatusGroupAsync().ConfigureAwait(false);
+                unitTypeRooms = await GetUnitTypeRoomAsync().ConfigureAwait(false);
+                nCStatuses = await GetNCStatusAsync().ConfigureAwait(false);
+                nCStatusRoles = await GetNCStatusRoleAsync().ConfigureAwait(false);
+                buildingUnits = await GetBuildingUnitAsync().ConfigureAwait(false);
+                readyRecknors = await GetReadyRecknorAsync().ConfigureAwait(false);
+                checkListTypes = await GetCheckListTypeAsync().ConfigureAwait(false);
+                buildings = await GetBuildingAsync().ConfigureAwait(false);
+                checkListPointStatuses = await GetCheckListPointStatusAsync().ConfigureAwait(false);
+                roomTypes = await GetRoomTypeAsync().ConfigureAwait(false);
+                cities = await GetCityAsync().ConfigureAwait(false);
+                projects = await GetProjectAsync().ConfigureAwait(false);
+                checkLists = await GetCheckListAsync().ConfigureAwait(false);
+                approvalCycles = await GetApprovalCycleAsync().ConfigureAwait(false);
+
+                GlobalSQLServices sQLServices = new GlobalSQLServices();
+                bool Saved = sQLServices.SaveAll(rootCauses, unitTypes,severities,categories, checkListStatusUserRoles, checkListStages, floors, structuralMembers, statusGroups,
+                        unitTypeRooms, nCStatuses, nCStatusRoles, buildingUnits, readyRecknors, checkListTypes, buildings, checkListPointStatuses, roomTypes,
+                        cities, projects, checkLists, approvalCycles);
+                return Saved;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+
+            }
+        }
+
+
         public async Task<List<RootCause>> GetRootCauseAsync()
         {
             List<RootCause> RootCauseList = new List<RootCause>();
             HttpClient client = UtilServices.GetHttpClient();
 
             Uri uri = new Uri(URLManager.GetRootCauseURL());
-           var asd=await client.SendAsync(new HttpRequestMessage(HttpMethod.Get, uri)).ConfigureAwait(false);
+            //var asd=await client.SendAsync(new HttpRequestMessage(HttpMethod.Get, uri)).ConfigureAwait(false);
             var response = await client.GetAsync(uri).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                RootCauseList = JsonConvert.DeserializeObject<List<RootCause>>(content);
+                if (UtilServices.IsValidJson(content))
+                    RootCauseList = JsonConvert.DeserializeObject<RootCauseList>(content).rootCause;
                 return RootCauseList;
             }
             else
@@ -40,7 +108,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                UnitTypeList = JsonConvert.DeserializeObject<List<UnitType>>(content);
+                if (UtilServices.IsValidJson(content))
+                    UnitTypeList = JsonConvert.DeserializeObject<UnitTypeList>(content).unitTypeDataModels;
                 return UnitTypeList;
             }
             else
@@ -59,7 +128,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                SeverityList = JsonConvert.DeserializeObject<List<Severity>>(content);
+                if (UtilServices.IsValidJson(content))
+                    SeverityList = JsonConvert.DeserializeObject<SeverityList>(content).severity;
                 return SeverityList;
             }
             else
@@ -77,7 +147,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CategoryList = JsonConvert.DeserializeObject<List<Category>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CategoryList = JsonConvert.DeserializeObject<CategoryList>(content).categoryDataModels;
                 return CategoryList;
             }
             else
@@ -95,7 +166,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CheckListStatusUserRolesList = JsonConvert.DeserializeObject<List<CheckListStatusUserRoles>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CheckListStatusUserRolesList = JsonConvert.DeserializeObject<List<CheckListStatusUserRoles>>(content);
                 return CheckListStatusUserRolesList;
             }
             else
@@ -113,7 +185,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                NCStatusList = JsonConvert.DeserializeObject<List<NCStatus>>(content);
+                if (UtilServices.IsValidJson(content))
+                    NCStatusList = JsonConvert.DeserializeObject<NCStatusList>(content).ncStatusDataModels;
                 return NCStatusList;
             }
             else
@@ -131,7 +204,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                FloorList = JsonConvert.DeserializeObject<List<Floor>>(content);
+                if (UtilServices.IsValidJson(content))
+                    FloorList = JsonConvert.DeserializeObject<FloorList>(content).floorDataModels;
                 return FloorList;
             }
             else
@@ -149,7 +223,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                BuildingFloorList = JsonConvert.DeserializeObject<List<BuildingFloor>>(content);
+                if (UtilServices.IsValidJson(content))
+                    BuildingFloorList = JsonConvert.DeserializeObject<BuildingFloorList>(content).buildingFloorDataModel;
                 return BuildingFloorList;
             }
             else
@@ -167,7 +242,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CheckListStagesList = JsonConvert.DeserializeObject<List<CheckListStages>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CheckListStagesList = JsonConvert.DeserializeObject<List<CheckListStages>>(content);
                 return CheckListStagesList;
             }
             else
@@ -185,7 +261,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                UserRoleList = JsonConvert.DeserializeObject<List<UserRole>>(content);
+                if (UtilServices.IsValidJson(content))
+                    UserRoleList = JsonConvert.DeserializeObject<UserRoleList>(content).roles;
                 return UserRoleList;
             }
             else
@@ -203,7 +280,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                StructuralMemberList = JsonConvert.DeserializeObject<List<StructuralMember>>(content);
+                if (UtilServices.IsValidJson(content))
+                    StructuralMemberList = JsonConvert.DeserializeObject<StructuralMemberList>(content).structuralMembers;
                 return StructuralMemberList;
             }
             else
@@ -221,7 +299,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                StatusGroupList = JsonConvert.DeserializeObject<List<StatusGroup>>(content);
+                if (UtilServices.IsValidJson(content))
+                    StatusGroupList = JsonConvert.DeserializeObject<StatusGroupList>(content).statusGroup;
                 return StatusGroupList;
             }
             else
@@ -239,7 +318,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                UnitTypeRoomList = JsonConvert.DeserializeObject<List<UnitTypeRoom>>(content);
+                if (UtilServices.IsValidJson(content))
+                    UnitTypeRoomList = JsonConvert.DeserializeObject<UnitTypeRoomList>(content).unitTypeRoomDataModel;
                 return UnitTypeRoomList;
             }
             else
@@ -257,7 +337,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                NCStatusRoleList = JsonConvert.DeserializeObject<List<NCStatusRole>>(content);
+                if (UtilServices.IsValidJson(content))
+                    NCStatusRoleList = JsonConvert.DeserializeObject<NCStatusRoleList>(content).ncStatusDataRoleModels;
                 return NCStatusRoleList;
             }
             else
@@ -275,7 +356,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                BuildingUnitList = JsonConvert.DeserializeObject<List<BuildingUnit>>(content);
+                if (UtilServices.IsValidJson(content))
+                    BuildingUnitList = JsonConvert.DeserializeObject<BuildingUnitList>(content).buildingUnitDataModel;
                 return BuildingUnitList;
             }
             else
@@ -293,7 +375,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                ReadyRecknorList = JsonConvert.DeserializeObject<List<ReadyRecknor>>(content);
+                if (UtilServices.IsValidJson(content))
+                    ReadyRecknorList = JsonConvert.DeserializeObject<ReadyRecknorList>(content).readyRecknorDataModels;
                 return ReadyRecknorList;
             }
             else
@@ -311,7 +394,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CheckListTypeList = JsonConvert.DeserializeObject<List<CheckListType>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CheckListTypeList = JsonConvert.DeserializeObject<CheckListTypeList>(content).checkListTypes;
                 return CheckListTypeList;
             }
             else
@@ -329,7 +413,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                BuildingList = JsonConvert.DeserializeObject<List<Building>>(content);
+                if (UtilServices.IsValidJson(content))
+                    BuildingList = JsonConvert.DeserializeObject<BuildingList>(content).buildingDataModels;
                 return BuildingList;
             }
             else
@@ -347,7 +432,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CheckListPointStatusList = JsonConvert.DeserializeObject<List<CheckListPointStatus>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CheckListPointStatusList = JsonConvert.DeserializeObject<CheckListPointStatusList>(content).checkListPointStatusDataModel;
                 return CheckListPointStatusList;
             }
             else
@@ -365,7 +451,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                RoomTypeList = JsonConvert.DeserializeObject<List<RoomType>>(content);
+                if (UtilServices.IsValidJson(content))
+                    RoomTypeList = JsonConvert.DeserializeObject<RoomTypeList>(content).roomType;
                 return RoomTypeList;
             }
             else
@@ -383,7 +470,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CityList = JsonConvert.DeserializeObject<List<City>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CityList = JsonConvert.DeserializeObject<CityList>(content).cityDataModels;
                 return CityList;
             }
             else
@@ -401,7 +489,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                ProjectList = JsonConvert.DeserializeObject<List<Project>>(content);
+                if (UtilServices.IsValidJson(content))
+                    ProjectList = JsonConvert.DeserializeObject<ProjectList>(content).projectDataModels;
                 return ProjectList;
             }
             else
@@ -419,7 +508,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                CheckListList = JsonConvert.DeserializeObject<List<CheckList>>(content);
+                if (UtilServices.IsValidJson(content))
+                    CheckListList = JsonConvert.DeserializeObject<List<CheckList>>(content);
                 return CheckListList;
             }
             else
@@ -437,7 +527,8 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                ApprovalCycleList = JsonConvert.DeserializeObject<List<ApprovalCycle>>(content);
+                if (UtilServices.IsValidJson(content))
+                    ApprovalCycleList = JsonConvert.DeserializeObject<List<ApprovalCycle>>(content);
                 return ApprovalCycleList;
             }
             else

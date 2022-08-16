@@ -24,7 +24,7 @@ namespace GeraAdvantage.Views
         private string AvailableImage;
 
         public long SamplePickIndex, BuildingPickIndex, FloorPickIndex, FlatTypePickIndex, SidePickIndex,
-                    RoomPickIndex, CategoryPickIndex, ContractorPickIndex, ResposiblePickIndex, RootCausePickIndex, ProposedSeverityPickIndex, SeverityPickIndex;
+                    RoomPickIndex, CategoryPickIndex, SubCategoryPickIndex, ContractorPickIndex, ResposiblePickIndex, RootCausePickIndex, ProposedSeverityPickIndex, SeverityPickIndex;
         public string SamplePick
         {
             get => _sampleText;
@@ -158,6 +158,21 @@ namespace GeraAdvantage.Views
                 OnPropertyChanged(nameof(CategoryPick));
             }
         }
+        private string _SubCategoryPick;
+
+        public string SubCategoryPick
+        {
+            get => _SubCategoryPick;
+            set
+            {
+                if (value == _SubCategoryPick)
+                {
+                    return;
+                }
+                _SubCategoryPick = value;
+                OnPropertyChanged(nameof(SubCategoryPick));
+            }
+        }
         private string _ContractorPick;
 
         public string ContractorPick
@@ -234,12 +249,12 @@ namespace GeraAdvantage.Views
             model.UnitId = FlatTypePickIndex;
             model.RoomTypeId = RoomPickIndex;
             model.CategoryId = CategoryPickIndex;
+            model.SubCategoryId = SubCategoryPickIndex;
             model.EngineerId = ResposiblePickIndex;
             model.SeverityId = SeverityPickIndex;
             model.RootCauseId = RootCausePickIndex;
             model.IsPotential = IsPotentialChkBx.IsChecked;
             model.ProjectId = 1;
-            model.SubCategoryId = CategoryPickIndex;
             model.ContractorId = ContractorPickIndex;
             //model.Image = AvailableImage; TBD
             model.CorrectiveAction = CorrectiveActionEnt.Text;
@@ -248,7 +263,7 @@ namespace GeraAdvantage.Views
             model.CreatedOn = DateTime.Now;
             model.UpdatedBy = ResposiblePickIndex;
             model.UpdatedOn = DateTime.Now;
-            model.StatusId = 1;
+            model.StatusId = 0;
             model.DeadlineDate = DateTime.Now.AddDays(10);
 
             NCServices ncServices = new NCServices();
@@ -386,6 +401,27 @@ namespace GeraAdvantage.Views
                                         MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
                                 });
+        }
+        private async void SubCategory_Clicked(object sender, EventArgs e)
+        {
+
+            if ((CategoryPick??"").Length>0)
+            {
+                SQLConfig Config = new SQLConfig();
+                var List = Config.GetItems<Category>().Where(x => x.ParentCategoryId == CategoryPickIndex).ToList();
+                await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+                MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                    (value) =>
+                                    {
+                                        if (value.Length > 0)
+                                        {
+                                            var Option = List.FirstOrDefault(x => x.Title == value);
+                                            SubCategoryPick = Option.Title;
+                                            SubCategoryPickIndex = Convert.ToInt64(Option.Id);
+                                            MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                        }
+                                    });
+            }
         }
         private async void Contractor_Clicked(object sender, EventArgs e)
         {

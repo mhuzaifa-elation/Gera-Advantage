@@ -168,7 +168,10 @@ namespace GeraAdvantage.Utils
         public string Title { get; set; }
         public long Password { get; set; }
     }
-      
+    public class BuildingList
+    {
+        public List<Building> buildingDataModels { get; set; }
+    }
     public class Building
     {
         [PrimaryKey, AutoIncrement] 
@@ -178,6 +181,10 @@ namespace GeraAdvantage.Utils
 
        
     }
+    public class BuildingFloorList
+    {
+        public List<BuildingFloor> buildingFloorDataModel { get; set; }
+    }
     public class BuildingFloor
     {
         [PrimaryKey, AutoIncrement]
@@ -185,6 +192,10 @@ namespace GeraAdvantage.Utils
         public long FloorId { get; set; }
         public long BuildingId { get; set; }
 
+    }
+    public class BuildingUnitList   
+    {
+        public List<BuildingUnit> buildingUnitDataModel { get; set; }
     }
     public class BuildingUnit
     {
@@ -212,16 +223,24 @@ namespace GeraAdvantage.Utils
     public class ApprovalCycle
     {
     
-    } 
+    }
+    public class CheckListPointStatusList
+    {
+        public List<CheckListPointStatus> checkListPointStatusDataModel { get; set; }
+    }
     public class CheckListPointStatus
     {
         public string Id { get; set; }
         public string Title { get; set; }
-        public long DisplayText { get; set; }
+        public string DisplayText { get; set; }
         public long ShowNCButton { get; set; }
-        public long ButtonImage { get; set; }
-        public long ButtonImageSelected { get; set; }
-        public long ButtonColour { get; set; }
+        public string ButtonImage { get; set; }
+        public string ButtonImageSelected { get; set; }
+        public string ButtonColour { get; set; }
+    }
+    public class CheckListTypeList
+    {
+        public List<CheckListType> checkListTypes { get; set; }
     }
     public class CheckListType
     {
@@ -231,6 +250,10 @@ namespace GeraAdvantage.Utils
         public long NoOfStages { get; set; }
         public long AllowMultipleSelection { get; set; }
     }
+    public class CategoryList
+    {
+        public List<Category> categoryDataModels { get; set; }
+    }
     public class Category
     {
         [PrimaryKey, AutoIncrement]
@@ -239,12 +262,21 @@ namespace GeraAdvantage.Utils
         public long ParentCategoryId { get; set; }
 
     }
+    public class CityList
+    {
+        public List<City> cityDataModels { get; set; }
+    }
+
     public class City
     {
         [PrimaryKey, AutoIncrement] 
         public string Id { get; set; }
         public string Name { get; set; }
 
+    }
+    public class FloorList
+    {
+        public List<Floor> floorDataModels { get; set; }
     }
     public class Floor
     {
@@ -254,6 +286,11 @@ namespace GeraAdvantage.Utils
         public long FloorNo { get; set; }
 
     }
+    
+    public class NCStatusList
+    {
+        public List<NCStatus> ncStatusDataModels { get; set; }
+    }
     public class NCStatus
     {
         [PrimaryKey, AutoIncrement] 
@@ -262,6 +299,10 @@ namespace GeraAdvantage.Utils
         public long StatusGroupId { get; set; }
 
     }
+    public class NCStatusRoleList   
+    {
+        public List<NCStatusRole> ncStatusDataRoleModels { get; set; }
+    }
     public class NCStatusRole
     {
         [PrimaryKey, AutoIncrement] 
@@ -269,7 +310,10 @@ namespace GeraAdvantage.Utils
         public long NCStatusId { get; set; }
         public long UserRoleId { get; set; }
     }
-
+    public class ProjectList
+    {
+        public List<Project> projectDataModels { get; set; }
+    }
     public class Project
     {
         [PrimaryKey, AutoIncrement] 
@@ -281,7 +325,10 @@ namespace GeraAdvantage.Utils
 
     }
 }
-
+public class ReadyRecknorList
+{
+    public List<ReadyRecknor> readyRecknorDataModels { get; set; }
+}
 public class ReadyRecknor
 {
     [PrimaryKey, AutoIncrement]
@@ -291,6 +338,10 @@ public class ReadyRecknor
     public string File { get; set; }
 
 }
+public class RoomTypeList
+{
+    public List<RoomType> roomType { get; set; }
+}
 
 public class RoomType
 {
@@ -298,24 +349,40 @@ public class RoomType
     public string Id { get; set; }
     public string Title { get; set; }
 }
+public class RootCauseList
+{
+    public List<RootCause> rootCause { get; set; }
+}
 public class RootCause
 {
     [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
 }
-
+public class SeverityList
+{
+    public List<Severity> severity { get; set; }
+}
 public class Severity
 {
     [PrimaryKey, AutoIncrement] 
     public string Id { get; set; }
     public string Title { get; set; }
 }
+public class StatusGroupList
+{
+    public List<StatusGroup> statusGroup { get; set; }
+}
+
 public class StatusGroup
 {
     [PrimaryKey, AutoIncrement] 
     public string Id { get; set; }
     public string Title { get; set; }
+}
+public class StructuralMemberList
+{
+    public List<StructuralMember> structuralMembers { get; set; }
 }
 public class StructuralMember
 {
@@ -323,7 +390,10 @@ public class StructuralMember
     public string Id { get; set; }
     public string Title { get; set; }
 }
-
+public class UnitTypeList
+{
+    public List<UnitType> unitTypeDataModels { get; set; }
+}
 public class UnitType
 {
     [PrimaryKey, AutoIncrement] 
@@ -331,6 +401,11 @@ public class UnitType
     public string Title { get; set; }
     public long ParentUnitTypeId { get; set; }
 }
+public class UnitTypeRoomList
+{
+    public List<UnitTypeRoom> unitTypeRoomDataModel { get; set; }
+}
+
 public class UnitTypeRoom
 {
     [PrimaryKey, AutoIncrement] 
@@ -339,6 +414,10 @@ public class UnitTypeRoom
     public long RoomTypeId { get; set; }
 }
 
+public class UserRoleList
+{
+    public List<UserRole> roles { get; set; }
+}
 public class UserRole
 {
     [PrimaryKey, AutoIncrement]

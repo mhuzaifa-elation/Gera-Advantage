@@ -32,8 +32,8 @@ namespace GeraAdvantage
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
-            //InitializeComponentAPIData();
-            InitializeTempSQLData();
+            InitializeComponentAPIData();
+            //InitializeTempSQLData();
         }
 
         private async void InitializeComponentAPIData()
@@ -41,8 +41,20 @@ namespace GeraAdvantage
             try
             {
                 GlobalWebServices webServices = new GlobalWebServices();
-                var RCs = await webServices.GetRootCauseAsync();
-                popupLayoutRefresh.Show();
+                SQLConfig sqlConfig = new SQLConfig();
+                //sqlConfig.DeleteAll<RootCause>("RootCause");
+
+                //if (!sqlConfig.GetItems<RootCause>().Any())
+                //{
+                var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
+
+                //TempData
+                sqlConfig.DeleteAll<User>("User");
+                sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
+                sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
+               
+                //}
+                //popupLayoutRefresh.Show();
                 //await Task.Run(async () =>
                 //{
                 //    await Device.InvokeOnMainThreadAsync(() =>
@@ -50,16 +62,11 @@ namespace GeraAdvantage
                 //        popupLayoutRefresh.IsVisible=true;
                 //    });
                 //});
-
-
-
-
-                popupLayoutRefresh.IsOpen = false;
+                //popupLayoutRefresh.IsOpen = false;
             }
             catch (Exception ex)
             {
-                popupLayoutRefresh.IsOpen = false;
-                DisplayAlert("ERROR", ex.Message, "OK");
+                //DisplayAlert("ERROR", ex.Message, "OK");
             }
 
         }
