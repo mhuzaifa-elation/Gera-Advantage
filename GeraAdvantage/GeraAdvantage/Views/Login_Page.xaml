@@ -18,89 +18,78 @@
         </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Content>
+
         <StackLayout
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
-            <sfPopup:SfPopupLayout
-                x:Name="popupLayoutRefresh"
+
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                x:Name="WaitingDialog"
                 IsVisible="false">
-                <sfPopup:SfPopupLayout.PopupView>
-                    <sfPopup:PopupView
-                        AppearanceMode="OneButton"
-                        ShowFooter="false"
-                        ShowHeader="false"
-                        HeightRequest="100"
-                        WidthRequest="100">
-
-                        <sfPopup:PopupView.ContentTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <ActivityIndicator
-                                        x:Name="activityIndicator"
-                                        VerticalOptions="CenterAndExpand"
-                                        HorizontalOptions="Fill"
-                                        IsRunning="true"
-                                        HeightRequest="90"
-                                        Color="#7a6fbe" />
-
-                                </StackLayout>
-                            </DataTemplate>
-                        </sfPopup:PopupView.ContentTemplate>
-                    </sfPopup:PopupView>
-                </sfPopup:SfPopupLayout.PopupView>
-
-                <sfPopup:SfPopupLayout.Content>
-                    <Label
-                        Text="Loading"></Label>
-                </sfPopup:SfPopupLayout.Content>
-            </sfPopup:SfPopupLayout>
-            <StackLayout
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="StartAndExpand"
-                Margin="10,40,10,0">
-                <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Start"
-                    Orientation="Horizontal">
-                    <Image
-                        Source="user.png" />
-                    <Entry
-                        HorizontalOptions="FillAndExpand"
-                        Placeholder="Username"
-                        Text="{Binding UsernameB}" />
-                </StackLayout>
-                <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Start"
-                    Orientation="Horizontal">
-                    <Image
-                        Source="Password.png" />
-                    <Entry
-                        Placeholder="Password"
-                        HorizontalOptions="FillAndExpand"
-                        IsPassword="True"
-                        Text="{Binding PasswordB}" />
-                </StackLayout>
-                <Button
-                    Text="LOGIN"
-                    TextColor="White"
-                    Margin="10"
-                    Clicked="btnlogin_Clicked" />
-                
-            </StackLayout>
-            <StackLayout>
+                <ActivityIndicator
+                    IsRunning="true"
+                    Color="DodgerBlue" />
+                <Label
+                    FontSize="20"
+                    Text="Synching Data..."
+                    TextColor="DodgerBlue"
+                    FontAttributes="Bold" />
             </StackLayout>
             <StackLayout
-                x:Name="ChartLayout" />
-            <StackLayout
                 HorizontalOptions="FillAndExpand"
-                Orientation="Horizontal"
-                VerticalOptions="End">
-                <Button
+                VerticalOptions="FillAndExpand"
+                x:Name="MainLayout">
+                <StackLayout
                     HorizontalOptions="FillAndExpand"
-                    Text="Register"
-                    Margin="10"
-                    Command="{Binding RegisterCommand}" />
+                    VerticalOptions="StartAndExpand"
+                    Margin="10,40,10,0">
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Orientation="Horizontal">
+                        <Image
+                            Source="user.png" />
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Username"
+                            Text="{Binding UsernameB}" />
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Orientation="Horizontal">
+                        <Image
+                            Source="Password.png" />
+                        <Entry
+                            Placeholder="Password"
+                            HorizontalOptions="FillAndExpand"
+                            IsPassword="True"
+                            Text="{Binding PasswordB}" />
+                    </StackLayout>
+                    <Button
+                        Text="LOGIN"
+                        TextColor="White"
+                        Margin="10"
+                        Clicked="btnlogin_Clicked" />
+
+
+                </StackLayout>
+                <StackLayout>
+                </StackLayout>
+                <StackLayout
+                    x:Name="ChartLayout" />
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="End">
+                    <Button
+                        HorizontalOptions="FillAndExpand"
+                        Text="Register"
+                        Margin="10"
+                        Command="{Binding RegisterCommand}" />
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

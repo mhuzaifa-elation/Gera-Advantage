@@ -167,7 +167,7 @@ namespace GeraAdvantage.WebServices
             {
                 string content = await response.Content.ReadAsStringAsync();
                 if (UtilServices.IsValidJson(content))
-                    CheckListStatusUserRolesList = JsonConvert.DeserializeObject<List<CheckListStatusUserRoles>>(content);
+                    CheckListStatusUserRolesList = JsonConvert.DeserializeObject<CheckListStatusUserRolesList>(content).checkListPointStatusDataModel;
                 return CheckListStatusUserRolesList;
             }
             else
@@ -243,7 +243,7 @@ namespace GeraAdvantage.WebServices
             {
                 string content = await response.Content.ReadAsStringAsync();
                 if (UtilServices.IsValidJson(content))
-                    CheckListStagesList = JsonConvert.DeserializeObject<List<CheckListStages>>(content);
+                    CheckListStagesList = JsonConvert.DeserializeObject<CheckListStagesList>(content).checkListPointStatusDataModel;
                 return CheckListStagesList;
             }
             else

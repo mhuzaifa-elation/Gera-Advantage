@@ -8,7 +8,7 @@ namespace GeraAdvantage.Utils
     {
         private static string GetServiceURL(string serviceName)
         {
-            string url = string.Format("https://windowsdev.in/Api/{0}", serviceName);
+            string url = string.Format("https://windowsdev.in/Api/{0}/GetAll", serviceName);
             //DomainName = enSettings.DomainName;
             return url;
         }

@@ -32,7 +32,7 @@ namespace GeraAdvantage
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
-            InitializeComponentAPIData();
+           InitializeComponentAPIData();
             //InitializeTempSQLData();
         }
 
@@ -40,19 +40,31 @@ namespace GeraAdvantage
         {
             try
             {
+                //if (!sqlConfig.GetItems<RootCause>().Any())
+                //{
+                MainLayout.IsVisible = false;
+                WaitingDialog.IsVisible = true;
+
                 GlobalWebServices webServices = new GlobalWebServices();
                 SQLConfig sqlConfig = new SQLConfig();
                 //sqlConfig.DeleteAll<RootCause>("RootCause");
 
-                //if (!sqlConfig.GetItems<RootCause>().Any())
-                //{
+                
                 var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
 
                 //TempData
                 sqlConfig.DeleteAll<User>("User");
                 sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
                 sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
-               
+                await Task.Run(async () =>
+                {
+                    await Device.InvokeOnMainThreadAsync(() =>
+                    {
+                        MainLayout.IsVisible = true;
+                        WaitingDialog.IsVisible = false;
+                    });
+                });
+                
                 //}
                 //popupLayoutRefresh.Show();
                 //await Task.Run(async () =>
@@ -66,6 +78,14 @@ namespace GeraAdvantage
             }
             catch (Exception ex)
             {
+                await Task.Run(async () =>
+                {
+                    await Device.InvokeOnMainThreadAsync(() =>
+                    {
+                        MainLayout.IsVisible = true;
+                        WaitingDialog.IsVisible = false;
+                    });
+                });
                 //DisplayAlert("ERROR", ex.Message, "OK");
             }
 

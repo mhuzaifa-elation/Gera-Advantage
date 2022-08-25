@@ -36,11 +36,11 @@ namespace GeraAdvantage.SQLServices
                 if (categories.Count > 0)
                     sql_SC.InsertAll(categories);
 
-                if (checkListStatusUserRoles.Count > 0)
-                    sql_SC.InsertAll(checkListStatusUserRoles);
+                //if (checkListStatusUserRoles.Count > 0)
+                //    sql_SC.InsertAll(checkListStatusUserRoles);
 
-                if (checkListStages.Count > 0)
-                    sql_SC.InsertAll(checkListStages);
+                //if (checkListStages.Count > 0)
+                //    sql_SC.InsertAll(checkListStages);
 
                 if (floors.Count > 0)
                     sql_SC.InsertAll(floors);

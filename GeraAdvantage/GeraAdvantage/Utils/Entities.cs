@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Newtonsoft.Json;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,8 +53,8 @@ namespace GeraAdvantage.Utils
             public bool btnA { get; set; }
             public bool btnAWC { get; set; }
             public bool btnR { get; set; }
-           public List<ImageSource> Images { get; set; }
-           public List<PlaceType> Places { get; set; }
+            public List<ImageSource> Images { get; set; }
+            public List<PlaceType> Places { get; set; }
         }
         public class PlaceType
         {
@@ -170,19 +171,21 @@ namespace GeraAdvantage.Utils
     }
     public class BuildingList
     {
+        [JsonProperty("data")]
         public List<Building> buildingDataModels { get; set; }
     }
     public class Building
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Title { get; set; }
         public long ProjectId { get; set; }
 
-       
+
     }
     public class BuildingFloorList
     {
+        [JsonProperty("data")]
         public List<BuildingFloor> buildingFloorDataModel { get; set; }
     }
     public class BuildingFloor
@@ -193,39 +196,67 @@ namespace GeraAdvantage.Utils
         public long BuildingId { get; set; }
 
     }
-    public class BuildingUnitList   
+    public class BuildingUnitList
     {
+        [JsonProperty("data")]
         public List<BuildingUnit> buildingUnitDataModel { get; set; }
     }
     public class BuildingUnit
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public long BuildingFloorId { get; set; }
         public string Title { get; set; }
         public long UnitTypeId { get; set; }
 
-       
-    }
 
+    }
+    public class CheckListStatusUserRolesList
+    {
+        [JsonProperty("data")]
+        public List<CheckListStatusUserRoles> checkListPointStatusDataModel { get; set; }
+    }
     public class CheckListStatusUserRoles
     {
-    
-    } 
+        [PrimaryKey, AutoIncrement]
+        public string Id { get; set; }
+        public int ChecklistPointStatusId { get; set; }
+        public string Title { get; set; }
+        public string DisplayText { get; set; }
+        public bool ShowCommentBox { get; set; }
+        public bool ShowNCButton { get; set; }
+        public string ButtonImage { get; set; }
+        public string ButtonImageSelected { get; set; }
+        public string ButtonColour { get; set; }
+        public int UserRoleId { get; set; }
+        public string UserRoleName { get; set; }
+        public int DisplayOrder { get; set; }
+    }
+
+    public class CheckListStagesList
+    {
+        [JsonProperty("data")]
+        public List<CheckListStages> checkListPointStatusDataModel { get; set; }
+    }
     public class CheckListStages
     {
-    
-    } 
+        [PrimaryKey, AutoIncrement]
+        public string Id { get; set; }
+        public int ChecklistTypeId { get; set; }
+        public string Title { get; set; }
+        public int StageNo { get; set; }
+    }
     public class CheckList
     {
-    
-    }  
+
+    }
     public class ApprovalCycle
     {
-    
+
     }
     public class CheckListPointStatusList
     {
+        [JsonProperty("data")]
         public List<CheckListPointStatus> checkListPointStatusDataModel { get; set; }
     }
     public class CheckListPointStatus
@@ -240,6 +271,7 @@ namespace GeraAdvantage.Utils
     }
     public class CheckListTypeList
     {
+        [JsonProperty("data")]
         public List<CheckListType> checkListTypes { get; set; }
     }
     public class CheckListType
@@ -252,6 +284,7 @@ namespace GeraAdvantage.Utils
     }
     public class CategoryList
     {
+        [JsonProperty("data")]
         public List<Category> categoryDataModels { get; set; }
     }
     public class Category
@@ -264,59 +297,64 @@ namespace GeraAdvantage.Utils
     }
     public class CityList
     {
+        [JsonProperty("data")]
         public List<City> cityDataModels { get; set; }
     }
 
     public class City
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Name { get; set; }
 
     }
     public class FloorList
     {
+        [JsonProperty("data")]
         public List<Floor> floorDataModels { get; set; }
     }
     public class Floor
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Title { get; set; }
         public long FloorNo { get; set; }
 
     }
-    
+
     public class NCStatusList
     {
+        [JsonProperty("data")]
         public List<NCStatus> ncStatusDataModels { get; set; }
     }
     public class NCStatus
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Title { get; set; }
         public long StatusGroupId { get; set; }
 
     }
-    public class NCStatusRoleList   
+    public class NCStatusRoleList
     {
+        [JsonProperty("data")]
         public List<NCStatusRole> ncStatusDataRoleModels { get; set; }
     }
     public class NCStatusRole
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public long NCStatusId { get; set; }
         public long UserRoleId { get; set; }
     }
     public class ProjectList
     {
+        [JsonProperty("data")]
         public List<Project> projectDataModels { get; set; }
     }
     public class Project
     {
-        [PrimaryKey, AutoIncrement] 
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Name { get; set; }
         public long CityId { get; set; }
@@ -327,6 +365,7 @@ namespace GeraAdvantage.Utils
 }
 public class ReadyRecknorList
 {
+    [JsonProperty("data")]
     public List<ReadyRecknor> readyRecknorDataModels { get; set; }
 }
 public class ReadyRecknor
@@ -340,17 +379,19 @@ public class ReadyRecknor
 }
 public class RoomTypeList
 {
+    [JsonProperty("data")]
     public List<RoomType> roomType { get; set; }
 }
 
 public class RoomType
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
 }
 public class RootCauseList
 {
+    [JsonProperty("data")]
     public List<RootCause> rootCause { get; set; }
 }
 public class RootCause
@@ -361,54 +402,59 @@ public class RootCause
 }
 public class SeverityList
 {
+    [JsonProperty("data")]
     public List<Severity> severity { get; set; }
 }
 public class Severity
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
 }
 public class StatusGroupList
 {
+    [JsonProperty("data")]
     public List<StatusGroup> statusGroup { get; set; }
 }
 
 public class StatusGroup
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
 }
 public class StructuralMemberList
 {
+    [JsonProperty("data")]
     public List<StructuralMember> structuralMembers { get; set; }
 }
 public class StructuralMember
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
 }
 public class UnitTypeList
 {
+    [JsonProperty("data")]
     public List<UnitType> unitTypeDataModels { get; set; }
 }
 public class UnitType
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public string Title { get; set; }
     public long ParentUnitTypeId { get; set; }
 }
 public class UnitTypeRoomList
 {
+    [JsonProperty("data")]
     public List<UnitTypeRoom> unitTypeRoomDataModel { get; set; }
 }
 
 public class UnitTypeRoom
 {
-    [PrimaryKey, AutoIncrement] 
+    [PrimaryKey, AutoIncrement]
     public string Id { get; set; }
     public long UnitTypeId { get; set; }
     public long RoomTypeId { get; set; }
@@ -416,6 +462,7 @@ public class UnitTypeRoom
 
 public class UserRoleList
 {
+    [JsonProperty("data")]
     public List<UserRole> roles { get; set; }
 }
 public class UserRole

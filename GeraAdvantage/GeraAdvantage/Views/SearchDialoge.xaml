@@ -22,11 +22,11 @@
                 x:Name="EntSearch"
                 Placeholder="enter search text."
                 Style="{StaticResource DialogeEntry}"
-                ClearButtonVisibility="WhileEditing"/>
+                ClearButtonVisibility="WhileEditing" />
             <ImageButton
                 Source="bsearch.png"
                 Style="{StaticResource DialogeImage}"
-                Clicked="Search_Clicked"/>
+                Clicked="Search_Clicked" />
         </StackLayout>
         <ListView
             x:Name="listView"
