@@ -32,7 +32,7 @@ namespace GeraAdvantage
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
             InitializeComponent();
-           InitializeComponentAPIData();
+           //InitializeComponentAPIData();
             //InitializeTempSQLData();
         }
 

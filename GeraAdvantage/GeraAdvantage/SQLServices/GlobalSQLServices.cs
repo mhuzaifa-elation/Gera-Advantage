@@ -66,8 +66,8 @@ namespace GeraAdvantage.SQLServices
                 if (readyRecknors.Count > 0)
                     sql_SC.InsertAll(readyRecknors);
 
-                //if (checkListTypes.Count > 0)
-                //    sql_SC.InsertAll(checkListTypes);
+                if (checkListTypes.Count > 0)
+                    sql_SC.InsertAll(checkListTypes);
 
                 if (buildings.Count > 0)
                     sql_SC.InsertAll(buildings);

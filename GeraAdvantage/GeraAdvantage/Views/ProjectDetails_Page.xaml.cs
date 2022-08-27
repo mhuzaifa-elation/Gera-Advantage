@@ -1,4 +1,6 @@
-﻿using GeraAdvantage.Views;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
+using GeraAdvantage.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,27 @@ namespace GeraAdvantage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectDetails_Page : ContentPage
     {
+        private List<CheckListType> CheckListTypes;
+
         public ProjectDetails_Page()
         {
             InitializeComponent();
+            InitializeChecklists();
+
         }
+
+        private void InitializeChecklists()
+        {
+            ChecklistSQLServices checklistSQLServices = new ChecklistSQLServices();
+            CheckListTypes = checklistSQLServices.GetChecklistTypes();
+            if (CheckListTypes.Count > 0)
+            {
+                listView.ItemsSource = CheckListTypes;
+                listView.HeightRequest = CheckListTypes.Count * 60;
+            }
+        }
+
+
         private async void StakeHolders_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new StakeHoldersList());
@@ -45,10 +64,10 @@ namespace GeraAdvantage
         {
             await Navigation.PushAsync(new NCManagement());
         }
-        private async void BtnChecklist_Tapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Checklists_Page());
-        }
+        //private async void BtnChecklist_Tapped(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new Checklists_Page());
+        //}
         private async void BtnSnaglist_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CreateSnaglist());
@@ -60,6 +79,13 @@ namespace GeraAdvantage
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             DisplayAlert("asd", "asd", "asd");
+        }
+
+        private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var SelectedItem = (CheckListType)e.Item;
+            await Navigation.PushAsync(new Checklists_Page(SelectedItem.Title));
+
         }
     }
 }

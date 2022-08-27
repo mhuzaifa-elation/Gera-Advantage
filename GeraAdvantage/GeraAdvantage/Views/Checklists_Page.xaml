@@ -29,6 +29,7 @@
                         Source="pencil.png"
                         Style="{StaticResource checklistImage}" />
                     <Label
+                        x:Name="LblCreate"
                         Text="Create Checklist"
                         Style="{StaticResource checklistLabel}" />
                     <Image
@@ -52,6 +53,7 @@
                             Source="rotate.png"
                             Style="{StaticResource checklistImage}" />
                         <Label
+                            x:Name="LblUpdate"
                             Text="Update Checklist"
                             Style="{StaticResource checklistLabel}" />
                         <Image
@@ -72,6 +74,7 @@
                         Source="incomplete.png"
                         Style="{StaticResource checklistImage}" />
                     <Label
+                        x:Name="LblIncomplete"
                         Text="Incomplete Checklist"
                         Style="{StaticResource checklistLabel}" />
                     <Image

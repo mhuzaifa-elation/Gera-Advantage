@@ -264,7 +264,7 @@ namespace GeraAdvantage.Utils
         public string Id { get; set; }
         public string Title { get; set; }
         public string DisplayText { get; set; }
-        public long ShowNCButton { get; set; }
+        public bool ShowNCButton { get; set; }
         public string ButtonImage { get; set; }
         public string ButtonImageSelected { get; set; }
         public string ButtonColour { get; set; }
@@ -278,9 +278,8 @@ namespace GeraAdvantage.Utils
     {
         public string Id { get; set; }
         public string Title { get; set; }
-        public long Checklist { get; set; }
         public long NoOfStages { get; set; }
-        public long AllowMultipleSelection { get; set; }
+        public bool AllowMultipleSelection { get; set; }
     }
     public class CategoryList
     {

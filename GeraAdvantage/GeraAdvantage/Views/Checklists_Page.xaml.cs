@@ -12,10 +12,21 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Checklists_Page : ContentPage
     {
-        public Checklists_Page()
+        public Checklists_Page(string checklistType)
         {
             InitializeComponent();
+            InitializeTitles(checklistType);
         }
+
+        private void InitializeTitles(string checklistType)
+        {
+            Title = checklistType;
+            LblCreate.Text = "Create " + checklistType;
+            LblUpdate.Text = "Update " + checklistType;
+           LblIncomplete.Text = "Incomlete " + checklistType;
+
+        }
+
         private async void BtnUpdateChecklist_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new UpdateChecklists_Page());

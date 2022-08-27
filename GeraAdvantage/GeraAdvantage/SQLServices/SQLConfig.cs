@@ -213,6 +213,11 @@ namespace GeraAdvantage.SQLServices
                 var ret = connection.DeleteAll<User>();
                 connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='User'; ", new List<object>().ToArray());
             }
+            lock (locker)
+            {
+                var ret = connection.DeleteAll<CheckListType>();
+                connection.Execute("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='CheckListType'; ", new List<object>().ToArray());
+            }
 
         }
 

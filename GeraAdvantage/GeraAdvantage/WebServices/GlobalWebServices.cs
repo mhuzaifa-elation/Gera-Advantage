@@ -97,7 +97,6 @@ namespace GeraAdvantage.WebServices
                 return new List<RootCause>();
             }
         }
-
         public async Task<List<UnitType>> GetUnitTypeAsync()
         {
             List<UnitType> UnitTypeList = new List<UnitType>();
