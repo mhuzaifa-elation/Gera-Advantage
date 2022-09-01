@@ -16,10 +16,18 @@ namespace GeraAdvantage.Utils
         {
             return GetServiceURL("RootCause");
         }
-
         internal static string GetUnitTypeURL()
         {
             return GetServiceURL("UnitType");
+        }
+
+        internal static string GetUserURL()
+        {
+            return GetServiceURL("User");
+        }
+        internal static string GetLoginURL(string username,string Password, string DeviceID)
+        {
+            return string.Format("https://windowsdev.in/api/User/ValidateLogin?userName={0}&password={1}&deviceid={2}",username,Password,DeviceID);
         }
 
         internal static string GetSeverityURL()

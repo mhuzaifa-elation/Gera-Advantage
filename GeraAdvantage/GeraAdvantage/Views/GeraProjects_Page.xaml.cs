@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static GeraAdvantage.Utils.Entities;
@@ -110,6 +110,18 @@ namespace GeraAdvantage
         private async void MyProfile_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new StakeholderDetail("My Profile", true));
+        }
+
+        private async void Logout_Clicked(object sender, EventArgs e)
+        {
+            ClearPreferences();
+            await Navigation.PopAsync();
+        }
+
+        private void ClearPreferences()
+        {
+            Preferences.Set("UserName", String.Empty);
+            Preferences.Set("Password", String.Empty);
         }
     }
 }

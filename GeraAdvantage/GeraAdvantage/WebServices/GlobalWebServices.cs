@@ -117,6 +117,43 @@ namespace GeraAdvantage.WebServices
             }
         }
 
+        public async Task<bool> GetUsers()
+        {
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetUserURL());
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                //if (UtilServices.IsValidJson(content))
+                //    UnitTypeList = JsonConvert.DeserializeObject<UnitTypeList>(content).unitTypeDataModels;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<bool> Login(string username, string password,string DeviceID)
+        {
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetLoginURL(username,password,DeviceID));
+            var response = await client.PostAsync(uri, null).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                //if (UtilServices.IsValidJson(content))
+                //    UnitTypeList = JsonConvert.DeserializeObject<UnitTypeList>(content).unitTypeDataModels;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public async Task<List<Severity>> GetSeverityAsync()
         {
             List<Severity> SeverityList = new List<Severity>();

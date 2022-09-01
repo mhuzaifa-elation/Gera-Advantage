@@ -22,7 +22,9 @@
         <ToolbarItem
             Text="Logout"
             Order="Secondary"
-            Priority="2" />
+            Priority="2"
+            Clicked="Logout_Clicked" />
+
     </ContentPage.ToolbarItems>
     <ContentPage.Padding>
         <OnPlatform

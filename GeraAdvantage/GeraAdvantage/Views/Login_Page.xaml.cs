@@ -16,7 +16,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static GeraAdvantage.Utils.Entities;
@@ -27,13 +27,78 @@ namespace GeraAdvantage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login_Page : ContentPage
     {
+        private string _password=string.Empty;
+        private string _username = string.Empty;
+
+        public string Password
+        {
+            get => _password;
+            set
+            {
+                if (value == _password)
+                {
+                    return;
+                }
+                _password = value;
+                OnPropertyChanged(nameof(Password));
+            }
+        }
+        public string Username
+        {
+            get => _username;
+            set
+            {
+                if (value == _username)
+                {
+                    return;
+                }
+                _username = value;
+                OnPropertyChanged(nameof(Username));
+            }
+        }
         public Login_Page()
         {
             string LicKey = "NjUwOTUxQDMyMzAyZTMxMmUzMGhyWkZGSW9hWVdTTkZid2FucFBDV3dKWVh0NnpOa1pLVFB5QmpDcW5jTjg9";
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicKey);
+            BindingContext = this;
             InitializeComponent();
-           //InitializeComponentAPIData();
+            InitializeComponentAPIData();
+            //CheckPreferences();
             //InitializeTempSQLData();
+        }
+
+        private async void CheckPreferences()
+        {
+            try
+            {
+                string username = Preferences.Get("UserName", string.Empty);
+                string password = Preferences.Get("Password", string.Empty);
+                if (username == string.Empty || password == string.Empty)
+                {
+                    return ;
+                }
+                else
+                {
+                    GlobalWebServices webServices = new GlobalWebServices();
+                    var LoggedIn = await webServices.Login(username, password, "123");
+                    if (LoggedIn)
+                    {
+                        await Task.Run(async () =>
+                        {
+                            await Device.InvokeOnMainThreadAsync(() =>
+                            {
+                                Navigation.PushAsync(new GeraProjects_Page());
+                            });
+                        });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+             await  DisplayAlert("ERROR", ex.Message, "OK");
+
+            }
         }
 
         private async void InitializeComponentAPIData()
@@ -50,12 +115,13 @@ namespace GeraAdvantage
                 //sqlConfig.DeleteAll<RootCause>("RootCause");
 
                 
-                var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
-
+              var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
+                
                 //TempData
                 sqlConfig.DeleteAll<User>("User");
                 sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
                 sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
+                CheckPreferences();
                 await Task.Run(async () =>
                 {
                     await Device.InvokeOnMainThreadAsync(() =>
@@ -234,7 +300,37 @@ namespace GeraAdvantage
 
         private async void btnlogin_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GeraProjects_Page());
+            try
+            {
+                if (Username.Length==0)
+                    throw new Exception("Username cannot be empty.");
+                if (Password.Length == 0)
+                    throw new Exception("Password cannot be empty.");
+                GlobalWebServices webServices = new GlobalWebServices();
+                var LoggedIn = await webServices.Login(Username, Password, "123").ConfigureAwait(false);
+                //var LoggedIn = await webServices.GetUsers().ConfigureAwait(false);
+                if (LoggedIn)
+                {
+                    CreateSession(Username, Password);
+                    await Task.Run(async () =>
+                    {
+                        await Device.InvokeOnMainThreadAsync(() =>
+                        {
+                             Navigation.PushAsync(new GeraProjects_Page());
+                        });
+                    });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("ERROR", ex.Message, "OK");
+            }
+        }
+        public void CreateSession( string Username, string Password)
+        {
+            Preferences.Set("UserName", Username);
+            Preferences.Set("Password", Password);
         }
     }
 }
