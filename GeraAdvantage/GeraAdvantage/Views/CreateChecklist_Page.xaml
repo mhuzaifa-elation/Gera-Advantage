@@ -42,7 +42,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Building_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding BuildingPick}" />
@@ -63,7 +63,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Category_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding CategoryPick}" />
@@ -81,7 +81,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Floor_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding FloorPick}" />
@@ -99,7 +99,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Flat_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding FlatTypePick}" />
@@ -135,7 +135,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Flat_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding FlatTypePick}" />
@@ -153,7 +153,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Room_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding RoomPick}" />
@@ -171,10 +171,10 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Member_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
-                                Text="{Binding SamplePick}" />
+                                Text="{Binding MemberPick}" />
                             <Image
                                 Source="down.png"
                                 Style="{StaticResource downImgStyle}" />
@@ -201,7 +201,7 @@
                         <Grid>
                             <Button
                                 Style="{StaticResource TButton}"
-                                Clicked="Button_Clicked" />
+                                Clicked="Contractor_Clicked" />
                             <Entry
                                 Style="{StaticResource TEntry}"
                                 Text="{Binding ContractorPick}" />

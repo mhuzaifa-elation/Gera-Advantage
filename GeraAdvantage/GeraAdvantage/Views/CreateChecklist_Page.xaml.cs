@@ -92,6 +92,21 @@ namespace GeraAdvantage.Views
                 OnPropertyChanged(nameof(CategoryPick));
             }
         }
+        private string _MemberPick;
+
+        public string MemberPick
+        {
+            get => _MemberPick;
+            set
+            {
+                if (value == _MemberPick)
+                {
+                    return;
+                }
+                _MemberPick = value;
+                OnPropertyChanged(nameof(MemberPick));
+            }
+        }
         private string _RoomPick;
 
         public string RoomPick
@@ -123,7 +138,7 @@ namespace GeraAdvantage.Views
             }
         }
         public long SamplePickIndex, BuildingPickIndex, FloorPickIndex, FlatTypePickIndex,
-                    RoomPickIndex, CategoryPickIndex,  ContractorPickIndex ;
+                    RoomPickIndex, CategoryPickIndex,  ContractorPickIndex, MemberPickIndex;
 
         public CreateChecklist_Page()
         {
@@ -245,18 +260,36 @@ namespace GeraAdvantage.Views
                                     }
                                 });
         }
-        private async void Contractor_Clicked(object sender, EventArgs e)
+        private async void Member_Clicked(object sender, EventArgs e)
         {
             SQLConfig Config = new SQLConfig();
             var List = Config.GetItems<User>().ToList();
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.UserName).ToList()));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
                                     if (value.Length > 0)
                                     {
-                                        var Option = List.FirstOrDefault(x => x.Title == value);
-                                        ContractorPick = Option.Title;
+                                        var Option = List.FirstOrDefault(x => x.UserName == value);
+                                        MemberPick = Option.UserName;
+                                        MemberPickIndex = Convert.ToInt64(Option.Id);
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    }
+                                });
+
+        }
+        private async void Contractor_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<User>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.UserName).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.UserName == value);
+                                        ContractorPick = Option.UserName;
                                         ContractorPickIndex = Convert.ToInt64(Option.Id);
                                         MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }

@@ -43,8 +43,8 @@ namespace GeraAdvantage.Views
                 DisplayNC.Building = sQLServices.GetBuilding(item.BuildingId.ToString()).Title;
                 DisplayNC.Floor = sQLServices.GetFloor(item.FloorId.ToString()).Title;
                 DisplayNC.Category = sQLServices.GetCategory(item.CategoryId.ToString()).Title;
-                DisplayNC.CreatedBy = sQLServices.GetUser(item.CreatedBy.ToString()).Title+" "+item.CreatedOn.ToShortDateString();
-                DisplayNC.UpdatedBy = sQLServices.GetUser(item.UpdatedBy.ToString()).Title+ " " + item.UpdatedOn.ToShortDateString();
+                DisplayNC.CreatedBy = sQLServices.GetUser(item.CreatedBy.ToString()).UserName+" "+item.CreatedOn.ToShortDateString();
+                DisplayNC.UpdatedBy = sQLServices.GetUser(item.UpdatedBy.ToString()).UserName+ " " + item.UpdatedOn.ToShortDateString();
                 DisplayNC.Cstatus = sQLServices.GetNCStatus(item.StatusId.ToString()).Title;
                 DisplayNC.ProjDate = item.DeadlineDate.ToString();
                 DisplayNC.Deadline = item.DeadlineDate.ToShortDateString();

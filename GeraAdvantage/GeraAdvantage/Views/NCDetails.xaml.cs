@@ -66,10 +66,10 @@ namespace GeraAdvantage.Views
                     SeverityEnt.Text = sQLServices.GetSeverity(NCDetail.SeverityId.ToString()).Title;
                     CreatedDateEnt.Text = NCDetail.CreatedOn.ToString();
                     DeadlineDateEnt.Text = NCDetail.DeadlineDate.ToShortDateString();
-                    ContractorEnt.Text = sQLServices.GetUser(NCDetail.ContractorId.ToString()).Title;
-                    CreatedByEnt.Text = sQLServices.GetUser(NCDetail.CreatedBy.ToString()).Title;
-                    UpdatedByEnt.Text = sQLServices.GetUser(NCDetail.UpdatedBy.ToString()).Title;
-                    EngineerEnt.Text = sQLServices.GetUser(NCDetail.EngineerId.ToString()).Title;
+                    ContractorEnt.Text = sQLServices.GetUser(NCDetail.ContractorId.ToString()).UserName;
+                    CreatedByEnt.Text = sQLServices.GetUser(NCDetail.CreatedBy.ToString()).UserName;
+                    UpdatedByEnt.Text = sQLServices.GetUser(NCDetail.UpdatedBy.ToString()).UserName;
+                    EngineerEnt.Text = sQLServices.GetUser(NCDetail.EngineerId.ToString()).UserName;
                     NCStatusEnt.Text = sQLServices.GetNCStatus(NCDetail.StatusId.ToString()).Title;
 
 

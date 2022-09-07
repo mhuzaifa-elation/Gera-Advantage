@@ -381,14 +381,14 @@ namespace GeraAdvantage.Views
         {
             SQLConfig Config = new SQLConfig();
             var List = Config.GetItems<User>().ToList();
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.UserName).ToList()));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
                                     if (value.Length > 0)
                                     {
-                                        var Option = List.FirstOrDefault(x => x.Title == value);
-                                        ContractorPick = Option.Title;
+                                        var Option = List.FirstOrDefault(x => x.UserName == value);
+                                        ContractorPick = Option.UserName;
                                         CategoryPickIndex = Convert.ToInt64(Option.Id);
                                         MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
@@ -399,14 +399,14 @@ namespace GeraAdvantage.Views
         {
             SQLConfig Config = new SQLConfig();
             var List = Config.GetItems<User>().ToList();
-            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.UserName).ToList()));
             MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
                                     if (value.Length > 0)
                                     {
-                                        var Option = List.FirstOrDefault(x => x.Title == value);
-                                        ResponsiblePick = Option.Title;
+                                        var Option = List.FirstOrDefault(x => x.UserName == value);
+                                        ResponsiblePick = Option.UserName;
                                         ResposiblePickIndex = Convert.ToInt64(Option.Id);
                                         MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }

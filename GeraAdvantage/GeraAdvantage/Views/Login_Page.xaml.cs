@@ -118,9 +118,9 @@ namespace GeraAdvantage
               var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
                 
                 //TempData
-                sqlConfig.DeleteAll<User>("User");
-                sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
-                sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
+                //sqlConfig.DeleteAll<User>("User");
+                //sqlConfig.Insert(new User() { Id = "1", UserName = "Test User" });
+                //sqlConfig.Insert(new User() { Id = "2", UserName = "Test Contractor" });
                 CheckPreferences();
                 await Task.Run(async () =>
                 {
@@ -169,8 +169,8 @@ namespace GeraAdvantage
                 {
                     sqlConfig.DeleteAllData();
                     sqlConfig.DeleteAll<User>("User");
-                    sqlConfig.Insert(new User() { Id = "1", Title = "Test User" });
-                    sqlConfig.Insert(new User() { Id = "2", Title = "Test Contractor" });
+                    sqlConfig.Insert(new User() { Id = "1", UserName = "Test User" });
+                    sqlConfig.Insert(new User() { Id = "2", UserName = "Test Contractor" });
 
                     sqlConfig.DeleteAll<UserRole>("UserRole");
                     sqlConfig.Insert(new UserRole() { Id = "1", Title = "Site Engineer" });

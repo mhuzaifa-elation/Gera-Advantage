@@ -14,7 +14,7 @@ namespace GeraAdvantage.SQLServices
             sql_SC = new SQLConfig();
 
         }
-        public bool SaveAll(List<RootCause> rootCauses, List<UnitType> unitTypes,List<Severity> severities,List<Category> categories, List<CheckListStatusUserRoles> checkListStatusUserRoles, List<CheckListStages> checkListStages,
+        public bool SaveAll(List<User> users, List<RootCause> rootCauses, List<UnitType> unitTypes,List<Severity> severities,List<Category> categories, List<CheckListStatusUserRoles> checkListStatusUserRoles, List<CheckListStages> checkListStages,
                                 List<Floor> floors, List<StructuralMember> structuralMembers, List<StatusGroup> statusGroups, List<UnitTypeRoom> unitTypeRooms,
                                 List<NCStatus> nCStatuses, List<NCStatusRole> nCStatusRoles, List<BuildingUnit> buildingUnits, List<ReadyRecknor> readyRecknors, List<CheckListType> checkListTypes,
                                 List<Building> buildings, List<CheckListPointStatus> checkListPointStatuses, List<RoomType> roomTypes, List<City> cities, List<Project> projects,
@@ -23,6 +23,9 @@ namespace GeraAdvantage.SQLServices
             try
             {
                 sql_SC.DeleteAllData();
+
+                if (users.Count > 0)
+                    sql_SC.InsertAll(users);
 
                 if (rootCauses.Count > 0)
                     sql_SC.InsertAll(rootCauses);

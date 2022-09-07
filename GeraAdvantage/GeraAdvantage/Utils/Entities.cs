@@ -166,9 +166,27 @@ namespace GeraAdvantage.Utils
     {
         [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
-        public string Title { get; set; }
-        public long Password { get; set; }
+        public int UserRoleId { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MobileNumber { get; set; }
+        public string EmailId { get; set; }
+        public string DeviceId { get; set; }
+        public bool Active { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime? CreatedOn { get; set; }
+        public DateTime? LastLoggedInOn { get; set; }
     }
+
+    public class UserList
+    {
+        [JsonProperty("data")]
+        public List<User> data { get; set; }
+    }
+
+
     public class BuildingList
     {
         [JsonProperty("data")]

@@ -16,6 +16,7 @@ namespace GeraAdvantage.WebServices
 
             try
             {
+                List<User> users = new List<User>();
                 List<RootCause> rootCauses = new List<RootCause>();
                 List<UnitType> unitTypes = new List<UnitType>();
                 List<Severity> severities = new List<Severity>();
@@ -39,6 +40,7 @@ namespace GeraAdvantage.WebServices
                 List<CheckList> checkLists = new List<CheckList>();
                 List<ApprovalCycle> approvalCycles = new List<ApprovalCycle>();
 
+                users = await GetUsersAsync().ConfigureAwait(false);
                 rootCauses = await GetRootCauseAsync().ConfigureAwait(false);
                 unitTypes = await GetUnitTypeAsync().ConfigureAwait(false);
                 severities = await GetSeverityAsync().ConfigureAwait(false);
@@ -63,7 +65,7 @@ namespace GeraAdvantage.WebServices
                 approvalCycles = await GetApprovalCycleAsync().ConfigureAwait(false);
 
                 GlobalSQLServices sQLServices = new GlobalSQLServices();
-                bool Saved = sQLServices.SaveAll(rootCauses, unitTypes,severities,categories, checkListStatusUserRoles, checkListStages, floors, structuralMembers, statusGroups,
+                bool Saved = sQLServices.SaveAll(users, rootCauses, unitTypes,severities,categories, checkListStatusUserRoles, checkListStages, floors, structuralMembers, statusGroups,
                         unitTypeRooms, nCStatuses, nCStatusRoles, buildingUnits, readyRecknors, checkListTypes, buildings, checkListPointStatuses, roomTypes,
                         cities, projects, checkLists, approvalCycles);
                 return Saved;
@@ -95,6 +97,26 @@ namespace GeraAdvantage.WebServices
             else
             {
                 return new List<RootCause>();
+            }
+        }
+        public async Task<List<User>> GetUsersAsync()
+        {
+            List<User> UsersList = new List<User>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetUserURL());
+            //var asd=await client.SendAsync(new HttpRequestMessage(HttpMethod.Get, uri)).ConfigureAwait(false);
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    UsersList = JsonConvert.DeserializeObject<UserList>(content).data;
+                return UsersList;
+            }
+            else
+            {
+                return new List<User>();
             }
         }
         public async Task<List<UnitType>> GetUnitTypeAsync()
