@@ -24,79 +24,87 @@ namespace GeraAdvantage.Views
 
             listView.ItemsSource = SampleList;
         }
+        protected override bool OnBackgroundClicked()
+        {
 
+            MessagingCenter.Send<string>("", "SelectedOption");
+            PopupNavigation.Instance.PopAsync();
+            return base.OnBackgroundClicked();
+
+        }
+      
         private void DataInitialization(List<string> _Options)
         {
             SampleList = new List<FilterDetail>();
             foreach (var item in _Options)
             {
-                SampleList.Add( new FilterDetail() { Title = item });
+                SampleList.Add(new FilterDetail() { Title = item });
             }
-           // if(paramter== "Building")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
-           //     }
-           // }
-           //else if (paramter == "Floor")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Floor " + i });
-           //     }
-           // }
-           //else if (paramter == "Flat")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Flat " + i });
-           //     }
-           // }
-           //else if (paramter == "Side")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Side " + i });
-           //     }
-           // }
-           //else if (paramter == "Room")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Room " + i });
-           //     }
-           // }
-           // else if (paramter == "Category")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Category " + i });
-           //     }
-           // }
-           //else if (paramter == "Contractor")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
-           //     }
-           // }
-           //else if (paramter == "Resposible")
-           // {
-           //     SampleList = new List<FilterDetail>();
-           //     for (int i = 1; i <= 15; i++)
-           //     {
-           //         SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
-           //     }
-           // }
-            
+            // if(paramter== "Building")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
+            //     }
+            // }
+            //else if (paramter == "Floor")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Floor " + i });
+            //     }
+            // }
+            //else if (paramter == "Flat")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Flat " + i });
+            //     }
+            // }
+            //else if (paramter == "Side")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Side " + i });
+            //     }
+            // }
+            //else if (paramter == "Room")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Room " + i });
+            //     }
+            // }
+            // else if (paramter == "Category")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Category " + i });
+            //     }
+            // }
+            //else if (paramter == "Contractor")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
+            //     }
+            // }
+            //else if (paramter == "Resposible")
+            // {
+            //     SampleList = new List<FilterDetail>();
+            //     for (int i = 1; i <= 15; i++)
+            //     {
+            //         SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
+            //     }
+            // }
+
         }
 
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)

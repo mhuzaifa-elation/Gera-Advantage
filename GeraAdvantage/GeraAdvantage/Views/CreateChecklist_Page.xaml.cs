@@ -17,7 +17,7 @@ namespace GeraAdvantage.Views
     public partial class CreateChecklist_Page : ContentPage, INotifyPropertyChanged
     {
 
-        private string  _sampleText;
+        private string _sampleText;
 
         public string SamplePick
         {
@@ -138,13 +138,13 @@ namespace GeraAdvantage.Views
             }
         }
         public long SamplePickIndex, BuildingPickIndex, FloorPickIndex, FlatTypePickIndex,
-                    RoomPickIndex, CategoryPickIndex,  ContractorPickIndex, MemberPickIndex;
+                    RoomPickIndex, CategoryPickIndex, ContractorPickIndex, MemberPickIndex;
 
         public CreateChecklist_Page()
         {
             InitializeComponent();
             BindingContext = this;
-           
+
         }
         private async void BtnView_Clicked(object sender, EventArgs e)
         {
@@ -163,8 +163,8 @@ namespace GeraAdvantage.Views
                                     {
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         SamplePick = Option.Title;
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
         private async void Building_Clicked(object sender, EventArgs e)
@@ -180,8 +180,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         BuildingPick = Option.Title;
                                         BuildingPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -200,8 +200,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         CategoryPick = Option.Title;
                                         CategoryPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
 
@@ -218,8 +218,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         FloorPick = Option.Title;
                                         FloorPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -237,8 +237,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         FlatTypePick = Option.Title;
                                         FlatTypePickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -256,8 +256,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         RoomPick = Option.Title;
                                         RoomPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
         private async void Member_Clicked(object sender, EventArgs e)
@@ -273,8 +273,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.UserName == value);
                                         MemberPick = Option.UserName;
                                         MemberPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -291,8 +291,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.UserName == value);
                                         ContractorPick = Option.UserName;
                                         ContractorPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }

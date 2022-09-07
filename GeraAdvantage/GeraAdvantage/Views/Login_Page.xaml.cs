@@ -65,6 +65,8 @@ namespace GeraAdvantage
             InitializeComponentAPIData();
             //CheckPreferences();
             //InitializeTempSQLData();
+          //  Username = "qa";
+           // Password = "gera@123";
         }
 
         private async void CheckPreferences()
@@ -81,7 +83,7 @@ namespace GeraAdvantage
                 {
                     GlobalWebServices webServices = new GlobalWebServices();
                     var LoggedIn = await webServices.Login(username, password, "123");
-                    if (LoggedIn)
+                    if (LoggedIn.UserRoleId != null)
                     {
                         await Task.Run(async () =>
                         {
@@ -307,9 +309,10 @@ namespace GeraAdvantage
                 if (Password.Length == 0)
                     throw new Exception("Password cannot be empty.");
                 GlobalWebServices webServices = new GlobalWebServices();
-                var LoggedIn = await webServices.Login(Username, Password, "123").ConfigureAwait(false);
+                User LoggedUser = new User();
+                LoggedUser= await webServices.Login(Username, Password, "123").ConfigureAwait(false);
                 //var LoggedIn = await webServices.GetUsers().ConfigureAwait(false);
-                if (LoggedIn)
+                if (LoggedUser.UserRoleId!=null)
                 {
                     CreateSession(Username, Password);
                     await Task.Run(async () =>
@@ -324,7 +327,15 @@ namespace GeraAdvantage
             }
             catch (Exception ex)
             {
-                await DisplayAlert("ERROR", ex.Message, "OK");
+                await Task.Run(async () =>
+                {
+                    await Device.InvokeOnMainThreadAsync(async() =>
+                    {
+                        await DisplayAlert("ERROR", ex.Message, "OK");
+                        Username=string.Empty;
+                        Password=string.Empty;
+                    });
+                });
             }
         }
         public void CreateSession( string Username, string Password)

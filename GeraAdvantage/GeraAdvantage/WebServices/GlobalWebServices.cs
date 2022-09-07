@@ -157,8 +157,9 @@ namespace GeraAdvantage.WebServices
                 return false;
             }
         }
-        public async Task<bool> Login(string username, string password,string DeviceID)
+        public async Task<User> Login(string username, string password,string DeviceID)
         {
+            User LoggedUser=null;
             HttpClient client = UtilServices.GetHttpClient();
 
             Uri uri = new Uri(URLManager.GetLoginURL(username,password,DeviceID));
@@ -166,13 +167,18 @@ namespace GeraAdvantage.WebServices
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                //if (UtilServices.IsValidJson(content))
-                //    UnitTypeList = JsonConvert.DeserializeObject<UnitTypeList>(content).unitTypeDataModels;
-                return true;
+                if (UtilServices.IsValidJson(content))
+                {
+                    LoggedUser = JsonConvert.DeserializeObject<UserList>(content).data[0];
+                    return LoggedUser;
+                }
+                else
+                    throw new Exception("Username/Password Invalid.");
             }
             else
             {
-                return false;
+                throw new Exception("Login Unsuccessful.\nTry Again!");
+
             }
         }
 

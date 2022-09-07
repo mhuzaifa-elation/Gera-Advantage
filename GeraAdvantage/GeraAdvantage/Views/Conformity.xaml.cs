@@ -176,8 +176,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         SamplePick = Option.Title;
                                         SamplePickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
 
@@ -288,8 +288,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         BuildingPick = Option.Title;
                                         BuildingPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -306,8 +306,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         FloorPick = Option.Title;
                                         FloorPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 }); 
 
         }
@@ -324,8 +324,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         FlatTypePick = Option.Title;
                                         FlatTypePickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 }); 
 
         }
@@ -355,8 +355,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         RoomPick = Option.Title;
                                         RoomPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
         private async void Category_Clicked(object sender, EventArgs e)
@@ -373,8 +373,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.Title == value);
                                         CategoryPick = Option.Title;
                                         CategoryPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
         }
         private async void Contractor_Clicked(object sender, EventArgs e)
@@ -390,8 +390,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.UserName == value);
                                         ContractorPick = Option.UserName;
                                         CategoryPickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
@@ -408,8 +408,8 @@ namespace GeraAdvantage.Views
                                         var Option = List.FirstOrDefault(x => x.UserName == value);
                                         ResponsiblePick = Option.UserName;
                                         ResposiblePickIndex = Convert.ToInt64(Option.Id);
-                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                     }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
 
         }
