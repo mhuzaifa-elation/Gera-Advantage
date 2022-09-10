@@ -107,22 +107,15 @@ namespace GeraAdvantage
         {
             try
             {
-                //if (!sqlConfig.GetItems<RootCause>().Any())
-                //{
+
                 MainLayout.IsVisible = false;
                 WaitingDialog.IsVisible = true;
 
                 GlobalWebServices webServices = new GlobalWebServices();
                 SQLConfig sqlConfig = new SQLConfig();
-                //sqlConfig.DeleteAll<RootCause>("RootCause");
 
-                
-              var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
-                
-                //TempData
-                //sqlConfig.DeleteAll<User>("User");
-                //sqlConfig.Insert(new User() { Id = "1", UserName = "Test User" });
-                //sqlConfig.Insert(new User() { Id = "2", UserName = "Test Contractor" });
+                var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
+
                 CheckPreferences();
                 await Task.Run(async () =>
                 {
@@ -132,17 +125,7 @@ namespace GeraAdvantage
                         WaitingDialog.IsVisible = false;
                     });
                 });
-                
-                //}
-                //popupLayoutRefresh.Show();
-                //await Task.Run(async () =>
-                //{
-                //    await Device.InvokeOnMainThreadAsync(() =>
-                //    {
-                //        popupLayoutRefresh.IsVisible=true;
-                //    });
-                //});
-                //popupLayoutRefresh.IsOpen = false;
+
             }
             catch (Exception ex)
             {

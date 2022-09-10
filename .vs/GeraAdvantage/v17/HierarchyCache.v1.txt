@@ -240,11 +240,13 @@ i:{756619b9-7c68-45d9-b469-fd594932aaa6}:d:\projects\git\gera-advantage\geraadva
 ++styles.xml
 i:{756619b9-7c68-45d9-b469-fd594932aaa6}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.android\resources\values\styles.xml
 ++Dependencies
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>244
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>488
 ++Models
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\models\
 ++SQLServices
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\
+++ChecklistSQLServices.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\checklistsqlservices.cs
 ++GlobalSQLServices.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\globalsqlservices.cs
 ++NCServices.cs
@@ -255,12 +257,6 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\sqlservices\sqliteservice.cs
 ++Utils
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\
-++Entities.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\entities.cs
-++URLManager.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\urlmanager.cs
-++UtilServices.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\utilservices.cs
 ++ViewModels
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\viewmodels\
 ++Views
@@ -287,6 +283,8 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml
 ++Login_Page.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml
+++Login_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml.cs
 ++NCDashboard.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml
 ++NCDetails.xaml
@@ -303,12 +301,8 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml
 ++ProjectDashboard.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml
-++ProjectDashboard.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml.cs
 ++ProjectDetails_Page.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml
-++ProjectDetails_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml.cs
 ++ReviewQuestion.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml
 ++SearchDialoge.xaml
@@ -333,10 +327,6 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewsnaglist.xaml
 ++WebServices
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\webservices\
-++GlobalWebServices.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\webservices\globalwebservices.cs
-++NCWebServices.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\webservices\ncwebservices.cs
 ++App.xaml
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml
 ++GeraAdvDB.sqlite
@@ -347,6 +337,12 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:packages
 ++NCAndCModel.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\models\ncandcmodel.cs
+++Entities.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\entities.cs
+++URLManager.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\urlmanager.cs
+++UtilServices.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\utils\utilservices.cs
 ++NCAndCViewModel.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\viewmodels\ncandcviewmodel.cs
 ++Checklists_Page.xaml.cs
@@ -369,8 +365,6 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\filters.xaml.cs
 ++GeraProjects_Page.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\geraprojects_page.xaml.cs
-++Login_Page.xaml.cs
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\login_page.xaml.cs
 ++NCDashboard.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\ncdashboard.xaml.cs
 ++NCDetails.xaml.cs
@@ -385,6 +379,10 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\nonconformityfilterstemplate.xaml.cs
 ++ProfileEditor.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\profileeditor.xaml.cs
+++ProjectDashboard.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdashboard.xaml.cs
+++ProjectDetails_Page.xaml.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\projectdetails_page.xaml.cs
 ++ReviewQuestion.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\reviewquestion.xaml.cs
 ++SearchDialoge.xaml.cs
@@ -407,36 +405,38 @@ i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadva
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewchecklist.xaml.cs
 ++ViewSnaglist.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\views\viewsnaglist.xaml.cs
+++GlobalWebServices.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\webservices\globalwebservices.cs
+++NCWebServices.cs
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\webservices\ncwebservices.cs
 ++App.xaml.cs
 i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage\app.xaml.cs
 ++modernhttpclient (2.4.2)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>253
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>497
 ++NETStandard.Library (2.0.3)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>252
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>496
 ++Newtonsoft.Json (13.0.1)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>247
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>491
 ++Rg.Plugins.Popup (2.1.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>256
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>500
 ++sqlite-net-pcl (1.8.116)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>250
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>494
 ++Syncfusion.Xamarin.SfChart (20.1.0.61)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>254
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>498
 ++Syncfusion.Xamarin.SfDataGrid (20.1.0.61)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>255
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>499
 ++Syncfusion.Xamarin.SfPopupLayout (20.1.0.61)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>248
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>492
 ++Xam.Plugins.Messaging (5.2.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>246
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>490
 ++Xamarin.Essentials (1.7.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>251
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>495
 ++Xamarin.Forms (5.0.0.2196)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>257
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>501
 ++Xamarin.Forms.DataGrid (4.8.0)
-i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>249
+i:{7be1ceac-0b3a-446c-950d-9b387bb99440}:>493
 ++GeraAdvantage.iOS
 i:{00000000-0000-0000-0000-000000000000}:GeraAdvantage.iOS
-++Xamarin.iOS
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 ++Asset Catalogs
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 ++Native References
@@ -445,20 +445,8 @@ i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\assets.xcassets\
 ++bin
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\
-++iPhone
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphone\
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\
-++Debug
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphone\debug\
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\debug\
-++iPhoneSimulator
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphonesimulator\
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\
 ++obj
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\
-++Xamarin.iOS,Version=v1.0.AssemblyAttributes.cs
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\debug\xamarin.ios,version=v1.0.assemblyattributes.cs
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\release\xamarin.ios,version=v1.0.assemblyattributes.cs
 ++AppDelegate.cs
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\appdelegate.cs
 ++Entitlements.plist
@@ -469,11 +457,26 @@ i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadva
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\main.cs
 ++SQLite_iOS.cs
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\sqlite_ios.cs
+++Xamarin.iOS
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:
 ++AppIcon.appiconset
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\assets.xcassets\appicon.appiconset\
-++Release
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphonesimulator\release\
-i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\release\
+++iPhone
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphone\
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\
+++iPhoneSimulator
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphonesimulator\
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\
+++GeraAdvantage.iOS.csproj.nuget.dgspec.json
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\geraadvantage.ios.csproj.nuget.dgspec.json
+++GeraAdvantage.iOS.csproj.nuget.g.props
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\geraadvantage.ios.csproj.nuget.g.props
+++GeraAdvantage.iOS.csproj.nuget.g.targets
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\geraadvantage.ios.csproj.nuget.g.targets
+++project.assets.json
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\project.assets.json
+++project.nuget.cache
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\project.nuget.cache
 ++Default-568h@2x.png
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\resources\default-568h@2x.png
 ++Default-Portrait.png
@@ -514,3 +517,12 @@ i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadva
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\assets.xcassets\appicon.appiconset\icon80.png
 ++Icon87.png
 i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\assets.xcassets\appicon.appiconset\icon87.png
+++Debug
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphone\debug\
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\debug\
+++Release
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\bin\iphonesimulator\release\
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\release\
+++Xamarin.iOS,Version=v1.0.AssemblyAttributes.cs
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphone\debug\xamarin.ios,version=v1.0.assemblyattributes.cs
+i:{de8b0b5e-664e-4716-b32c-908b321ab940}:d:\projects\git\gera-advantage\geraadvantage\geraadvantage.ios\obj\iphonesimulator\release\xamarin.ios,version=v1.0.assemblyattributes.cs

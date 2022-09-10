@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace GeraAdvantage.Utils
@@ -54,9 +55,10 @@ namespace GeraAdvantage.Utils
         {
             return GetServiceURL("BuildingFloor");
         }
-        internal static string GetCheckListStagesURL()
+        internal static string GetCheckListStagesURL(int CheckListTypeId)
         {
-            return GetServiceURL("CheckListStages");
+            return string.Format("https://windowsdev.in/api/CheckListType/GetStages?checkListTypeId={0}", CheckListTypeId);
+
         }
         internal static string GetUserRoleURL()
         {
@@ -101,6 +103,10 @@ namespace GeraAdvantage.Utils
         internal static string GetCheckListPointStatusURL()
         {
             return GetServiceURL("CheckListPointStatus");
+        }
+        internal static string GetCheckListPointStatusURL(int checklisttypeId, int categoryId)
+        {
+            return string.Format("https://windowsdev.in/api/CheckListType/GetCheckPoints?checklistTypeId={0}&categoryId={1}", checklisttypeId, categoryId);
         }
         internal static string GetRoomTypeURL()
         {

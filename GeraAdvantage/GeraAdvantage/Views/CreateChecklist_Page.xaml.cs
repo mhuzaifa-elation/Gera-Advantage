@@ -18,6 +18,7 @@ namespace GeraAdvantage.Views
     {
 
         private string _sampleText;
+        private int ChecklistTypeId;
 
         public string SamplePick
         {
@@ -140,15 +141,19 @@ namespace GeraAdvantage.Views
         public long SamplePickIndex, BuildingPickIndex, FloorPickIndex, FlatTypePickIndex,
                     RoomPickIndex, CategoryPickIndex, ContractorPickIndex, MemberPickIndex;
 
-        public CreateChecklist_Page()
+        public CreateChecklist_Page(int checklistTypeId)
         {
             InitializeComponent();
+            ChecklistTypeId = checklistTypeId;
             BindingContext = this;
 
         }
         private async void BtnView_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ViewCheckList());
+            if (CategoryPickIndex > 0)
+            {
+                await Navigation.PushAsync(new ViewCheckList(ChecklistTypeId, (int)CategoryPickIndex));
+            }
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

@@ -12,9 +12,11 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Checklists_Page : ContentPage
     {
-        public Checklists_Page(string checklistType)
+        private int ChecklistTypeId = 0;
+        public Checklists_Page(string checklistType,int checklistTypeId)
         {
             InitializeComponent();
+            this.ChecklistTypeId = checklistTypeId;
             InitializeTitles(checklistType);
         }
 
@@ -33,7 +35,7 @@ namespace GeraAdvantage.Views
         }
         private async void BtnCreateChecklist_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CreateChecklist_Page());
+            await Navigation.PushAsync(new CreateChecklist_Page(ChecklistTypeId));
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

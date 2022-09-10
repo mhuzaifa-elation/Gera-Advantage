@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.WebServices;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -14,6 +16,8 @@ namespace GeraAdvantage.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ViewCheckList : ContentPage, INotifyPropertyChanged, INotifyCollectionChanged
     {
+        private int ChecklistTypeId;
+        private int CategoryId;
         private List<MultileOps> List;
 
         private List<MultileOps> _opsList
@@ -33,22 +37,62 @@ namespace GeraAdvantage.Views
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
-        public ViewCheckList()
+        public ViewCheckList(int checklistTypeId,int categoryId)
         {
             BindingContext = this;
             InitializeComponent();
+            ChecklistTypeId = checklistTypeId;
+            CategoryId = categoryId;
+            InitializeData();
             InitializeDummyData();
             listView.ItemsSource = _opsList;
             LCount.Text = _opsList.Count.ToString();
         }
+
+        private async void InitializeData()
+        {
+            try
+            {
+
+                ChecklistSQLServices sQLServices = new ChecklistSQLServices();
+                var Stages = sQLServices.GetCheckListStages(ChecklistTypeId);
+                foreach (var item in Stages)
+                {
+                    switch (Stages.IndexOf(item))
+                    {
+                        case 0:
+                            lblFirstBanner.Text = item.Title;
+                            break;
+                        case 1:
+                            lblSecondBanner.Text = item.Title;
+                            break;
+                        case 2:
+                            lblThirdBanner.Text = item.Title;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                GlobalWebServices globalWeb = new GlobalWebServices();
+                var checkpoints = await globalWeb.GetCheckListStatusUserRolesAsync(ChecklistTypeId, CategoryId).ConfigureAwait(false);
+
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
+
         private void InitializeDummyData()
         {
             _opsList = new List<MultileOps>();
             _opsList.Add(new MultileOps() { Title = "1- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false ,Images= new List<ImageSource>()});
-            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "2- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = true, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
             _opsList.Add(new MultileOps() { Title = "3- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
-            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
-            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "4- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = true, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
+            _opsList.Add(new MultileOps() { Title = "5- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = true, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
             _opsList.Add(new MultileOps() { Title = "6- This is sample", isfour = true, isthree = false, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
             _opsList.Add(new MultileOps() { Title = "7- This is sample", isfour = false, isthree = true, ConverttoNC = false, SEComment = false, AddImage = false, btnYes = false, btnNo = false, btnNA = false, btnA = false, btnAWC = false, btnR = false });
         }

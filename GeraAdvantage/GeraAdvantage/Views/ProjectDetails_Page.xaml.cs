@@ -84,7 +84,7 @@ namespace GeraAdvantage
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var SelectedItem = (CheckListType)e.Item;
-            await Navigation.PushAsync(new Checklists_Page(SelectedItem.Title));
+            await Navigation.PushAsync(new Checklists_Page(SelectedItem.Title, Convert.ToInt32(SelectedItem.Id)));
 
         }
     }

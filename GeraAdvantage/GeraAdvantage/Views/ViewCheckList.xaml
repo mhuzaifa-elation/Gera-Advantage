@@ -58,7 +58,7 @@
                             Style="{StaticResource BannerStyle}" />
 
                         <Label
-                            Text="Pre"
+                            x:Name="lblFirstBanner"
                             Style="{StaticResource BannerLabel}" />
 
                     </Grid>
@@ -66,11 +66,11 @@
                         Grid.Column="1">
 
                         <ImageButton
-                            Source="garrow.png"
+                            Source="barrow.png"
                             Style="{StaticResource BannerStyle}" />
 
                         <Label
-                            Text="In Process"
+                            x:Name="lblSecondBanner"
                             Style="{StaticResource BannerLabel}" />
 
                     </Grid>
@@ -78,11 +78,11 @@
                         Grid.Column="2">
 
                         <ImageButton
-                            Source="garrow.png"
+                            Source="barrow.png"
                             Style="{StaticResource BannerStyle}" />
 
                         <Label
-                            Text="Post"
+                            x:Name="lblThirdBanner"
                             Style="{StaticResource BannerLabel}" />
 
                     </Grid>
@@ -100,7 +100,7 @@
                                 <StackLayout
                                     Padding="15,15,5,5"
                                     Orientation="Horizontal"
-                                    HeightRequest="200"
+                                    HeightRequest="240"
                                     VerticalOptions="FillAndExpand">
                                     <StackLayout
                                         HorizontalOptions="FillAndExpand"
@@ -116,6 +116,7 @@
                                             HeightRequest="60"
                                             VerticalOptions="CenterAndExpand"
                                             HorizontalOptions="FillAndExpand"
+                                            MinimumHeightRequest="100"
                                             IsVisible="{Binding isthree}">
                                             <Button
                                                 x:Name="btnYes"
@@ -204,6 +205,7 @@
                                             HeightRequest="60"
                                             VerticalOptions="CenterAndExpand"
                                             HorizontalOptions="FillAndExpand"
+                                            MinimumHeightRequest="100"
                                             IsVisible="{Binding isfour}">
                                             <Button
                                                 x:Name="btnA"
@@ -327,7 +329,9 @@
                                                 Text="ConverttoNC" />
                                         </StackLayout>
                                         <StackLayout
-                                            Orientation="Vertical">
+                                            Orientation="Vertical"
+                                            HorizontalOptions="Start"
+                                            IsVisible="{Binding AddImage}">
                                             <ImageButton
                                                 Source="camera.png"
                                                 Style="{StaticResource PhoneMailIcon}" />
@@ -337,6 +341,7 @@
                                                 x:Name="PicsGrid" />
                                         </StackLayout>
                                     </StackLayout>
+                                    
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

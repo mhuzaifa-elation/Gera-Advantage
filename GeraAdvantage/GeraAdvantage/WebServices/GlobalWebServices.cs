@@ -3,6 +3,7 @@ using GeraAdvantage.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,7 @@ namespace GeraAdvantage.WebServices
                 severities = await GetSeverityAsync().ConfigureAwait(false);
                 categories = await GetCategoryAsync().ConfigureAwait(false);
                 checkListStatusUserRoles = await GetCheckListStatusUserRolesAsync().ConfigureAwait(false);
-                checkListStages = await GetCheckListStagesAsync().ConfigureAwait(false);
+                checkListTypes = await GetCheckListTypeAsync().ConfigureAwait(false);
                 floors = await GetFloorAsync().ConfigureAwait(false);
                 structuralMembers = await GetStructuralMemberAsync().ConfigureAwait(false);
                 statusGroups = await GetStatusGroupAsync().ConfigureAwait(false);
@@ -55,7 +56,6 @@ namespace GeraAdvantage.WebServices
                 nCStatusRoles = await GetNCStatusRoleAsync().ConfigureAwait(false);
                 buildingUnits = await GetBuildingUnitAsync().ConfigureAwait(false);
                 readyRecknors = await GetReadyRecknorAsync().ConfigureAwait(false);
-                checkListTypes = await GetCheckListTypeAsync().ConfigureAwait(false);
                 buildings = await GetBuildingAsync().ConfigureAwait(false);
                 checkListPointStatuses = await GetCheckListPointStatusAsync().ConfigureAwait(false);
                 roomTypes = await GetRoomTypeAsync().ConfigureAwait(false);
@@ -63,12 +63,15 @@ namespace GeraAdvantage.WebServices
                 projects = await GetProjectAsync().ConfigureAwait(false);
                 checkLists = await GetCheckListAsync().ConfigureAwait(false);
                 approvalCycles = await GetApprovalCycleAsync().ConfigureAwait(false);
+                var checklisttypeIds = checkListTypes.Select(x => Convert.ToInt32(x.Id)).ToList();
+                checkListStages = await GetCheckListStagesAsync(checklisttypeIds).ConfigureAwait(false);
+
 
                 GlobalSQLServices sQLServices = new GlobalSQLServices();
                 bool Saved = sQLServices.SaveAll(users, rootCauses, unitTypes,severities,categories, checkListStatusUserRoles, checkListStages, floors, structuralMembers, statusGroups,
                         unitTypeRooms, nCStatuses, nCStatusRoles, buildingUnits, readyRecknors, checkListTypes, buildings, checkListPointStatuses, roomTypes,
                         cities, projects, checkLists, approvalCycles);
-                return Saved;
+                 return Saved;
             }
             catch (Exception ex)
             {
@@ -78,6 +81,7 @@ namespace GeraAdvantage.WebServices
             }
         }
 
+        
 
         public async Task<List<RootCause>> GetRootCauseAsync()
         {
@@ -225,7 +229,7 @@ namespace GeraAdvantage.WebServices
             List<CheckListStatusUserRoles> CheckListStatusUserRolesList = new List<CheckListStatusUserRoles>();
             HttpClient client = UtilServices.GetHttpClient();
 
-            Uri uri = new Uri(URLManager.GetCheckListStatusUserRolesURL());
+            Uri uri = new Uri(URLManager.GetCheckListPointStatusURL());
             var response = await client.GetAsync(uri).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -237,6 +241,25 @@ namespace GeraAdvantage.WebServices
             else
             {
                 return new List<CheckListStatusUserRoles>();
+            }
+        }
+        public async Task<List<CheckListPointStatus>> GetCheckListStatusUserRolesAsync(int checklisttypeId, int categoryId)
+        {
+            List<CheckListPointStatus> CheckListStatusUserRolesList = new List<CheckListPointStatus>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetCheckListPointStatusURL(checklisttypeId,categoryId));
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    CheckListStatusUserRolesList = JsonConvert.DeserializeObject<CheckListPointStatusList>(content).checkListPointStatusDataModel;
+                return CheckListStatusUserRolesList;
+            }
+            else
+            {
+                throw new Exception(response.StatusCode.ToString());
             }
         }
         public async Task<List<NCStatus>> GetNCStatusAsync()
@@ -296,24 +319,26 @@ namespace GeraAdvantage.WebServices
                 return new List<BuildingFloor>();
             }
         }
-        public async Task<List<CheckListStages>> GetCheckListStagesAsync()
+        public async Task<List<CheckListStages>> GetCheckListStagesAsync(List<int> CheckListTypeIds)
         {
             List<CheckListStages> CheckListStagesList = new List<CheckListStages>();
             HttpClient client = UtilServices.GetHttpClient();
+            foreach (var item in CheckListTypeIds)
+            {
+                List<CheckListStages> ItemCheckListStagesList = new List<CheckListStages>();
 
-            Uri uri = new Uri(URLManager.GetCheckListStagesURL());
-            var response = await client.GetAsync(uri).ConfigureAwait(false);
-            if (response.IsSuccessStatusCode)
-            {
-                string content = await response.Content.ReadAsStringAsync();
-                if (UtilServices.IsValidJson(content))
-                    CheckListStagesList = JsonConvert.DeserializeObject<CheckListStagesList>(content).checkListPointStatusDataModel;
-                return CheckListStagesList;
+                Uri uri = new Uri(URLManager.GetCheckListStagesURL(item));
+                var response = await client.GetAsync(uri).ConfigureAwait(false);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    if (UtilServices.IsValidJson(content))
+                       ItemCheckListStagesList = JsonConvert.DeserializeObject<CheckListStagesList>(content).checkListPointStatusDataModel;
+                     CheckListStagesList.AddRange(ItemCheckListStagesList);
+                }
+                
             }
-            else
-            {
-                return new List<CheckListStages>();
-            }
+            return CheckListStagesList;
         }
         public async Task<List<UserRole>> GetUserRoleAsync()
         {
