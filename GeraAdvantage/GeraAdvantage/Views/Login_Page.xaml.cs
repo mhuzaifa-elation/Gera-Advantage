@@ -114,7 +114,7 @@ namespace GeraAdvantage
                 GlobalWebServices webServices = new GlobalWebServices();
                 SQLConfig sqlConfig = new SQLConfig();
 
-                var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
+                //var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
 
                 CheckPreferences();
                 await Task.Run(async () =>

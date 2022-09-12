@@ -40,71 +40,6 @@ namespace GeraAdvantage.Views
             {
                 SampleList.Add(new FilterDetail() { Title = item });
             }
-            // if(paramter== "Building")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Buliding " + i });
-            //     }
-            // }
-            //else if (paramter == "Floor")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Floor " + i });
-            //     }
-            // }
-            //else if (paramter == "Flat")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Flat " + i });
-            //     }
-            // }
-            //else if (paramter == "Side")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Side " + i });
-            //     }
-            // }
-            //else if (paramter == "Room")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Room " + i });
-            //     }
-            // }
-            // else if (paramter == "Category")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Category " + i });
-            //     }
-            // }
-            //else if (paramter == "Contractor")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Contractor " + i });
-            //     }
-            // }
-            //else if (paramter == "Resposible")
-            // {
-            //     SampleList = new List<FilterDetail>();
-            //     for (int i = 1; i <= 15; i++)
-            //     {
-            //         SampleList.Add(new FilterDetail() { Title = "Resposible " + i });
-            //     }
-            // }
-
         }
 
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -116,10 +51,10 @@ namespace GeraAdvantage.Views
 
         private void Search_Clicked(object sender, EventArgs e)
         {
-            if (EntSearch.Text.Length>0)
+            if (EntSearch.Text.Length > 0)
             {
                 var SearchedList = SampleList.FindAll(x => x.Title.ToLower().Contains(EntSearch.Text.ToLower()));
-                if (SearchedList.Count>0)
+                if (SearchedList.Count > 0)
                 {
                     listView.ItemsSource = null;
                     listView.ItemsSource = SearchedList;

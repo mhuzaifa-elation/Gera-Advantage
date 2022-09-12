@@ -408,6 +408,25 @@
                 Value="Gray" />
         </Style>
         <Style
+            x:Key="SnaglistLabel"
+            TargetType="Label">
+            <Setter
+                Property="FontSize"
+                Value="Medium" />
+            <Setter
+                Property="VerticalOptions"
+                Value="Center" />
+            <Setter
+                Property="FontAttributes"
+                Value="Bold" />
+            <Setter
+                Property="TextColor"
+                Value="Black" />
+            <Setter
+                Property="Margin"
+                Value="0,0,20,0" />
+        </Style>
+        <Style
             x:Key="ListIcon"
             TargetType="Image">
             <Setter

@@ -35,7 +35,10 @@ namespace GeraAdvantage.Views
         }
         private async void BtnCreateChecklist_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CreateChecklist_Page(ChecklistTypeId));
+            if (ChecklistTypeId==2)
+                await Navigation.PushAsync(new CreateSnaglist());
+            else
+                await Navigation.PushAsync(new CreateChecklist_Page(ChecklistTypeId));
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

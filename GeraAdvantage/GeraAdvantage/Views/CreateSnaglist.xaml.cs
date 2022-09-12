@@ -1,4 +1,6 @@
-﻿using Rg.Plugins.Popup.Services;
+﻿using GeraAdvantage.SQLServices;
+using GeraAdvantage.Utils;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,52 +17,157 @@ namespace GeraAdvantage.Views
     public partial class CreateSnaglist : ContentPage
     {
 
-        private string _sampleText;
-        public string SamplePick
+        private string _BuildingPick;
+        public string BuildingPick
         {
-            get => _sampleText;
+            get => _BuildingPick;
             set
             {
-                if (value == _sampleText)
+                if (value == _BuildingPick)
                 {
                     return;
                 }
-                _sampleText = value;
-                OnPropertyChanged(nameof(SamplePick));
+                _BuildingPick = value;
+                OnPropertyChanged(nameof(BuildingPick));
             }
         }
+        private string _FloorPick;
 
+        public string FloorPick
+        {
+            get => _FloorPick;
+            set
+            {
+                if (value == _FloorPick)
+                {
+                    return;
+                }
+                _FloorPick = value;
+                OnPropertyChanged(nameof(FloorPick));
+            }
+        }
+        private string _UnitTypePick;
+
+        public string UnitTypePick
+        {
+            get => _UnitTypePick;
+            set
+            {
+                if (value == _UnitTypePick)
+                {
+                    return;
+                }
+                _UnitTypePick = value;
+                OnPropertyChanged(nameof(UnitTypePick));
+            }
+        }
+        private string _UnitNumberPick;
+
+        public string UnitNumberPick
+        {
+            get => _UnitNumberPick;
+            set
+            {
+                if (value == _UnitNumberPick)
+                {
+                    return;
+                }
+                _UnitNumberPick = value;
+                OnPropertyChanged(nameof(UnitNumberPick));
+            }
+        }
+        public long  BuildingPickIndex, FloorPickIndex, UnitTypePickIndex,
+               UnitNumberPickIndex;
         public CreateSnaglist()
         {
             InitializeComponent();
             BindingContext = this;
         }
-        private async void BtnView_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ViewSnaglist());
-        }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Building_Clicked(object sender, EventArgs e)
         {
-            SamplePick = "";
-            await PopupNavigation.Instance.PushAsync(new SearchMultipleDialoge());
-            MessagingCenter.Subscribe<List<FilterDetail>>(this, "SelectedOption",
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Building>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
                                 (value) =>
                                 {
-                                    if (value.Count>0)
+                                    if (value.Length > 0)
                                     {
-                                        foreach (var item in value)
-                                        {
-                                            SamplePick += item.Title + ", ";
-                                        }
-                                        SamplePick = SamplePick.Substring(0, SamplePick.Length - 2);
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        BuildingPick = Option.Title;
+                                        BuildingPickIndex = Convert.ToInt64(Option.Id);
                                     }
-                                    else
-                                    {
-                                        SamplePick = "";
-                                    }
-                                    MessagingCenter.Unsubscribe<List<FilterDetail>>(this, "SelectedOption");
+                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
                                 });
+
         }
+        private async void Floor_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            var List = Config.GetItems<Floor>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        FloorPick = Option.Title;
+                                        FloorPickIndex = Convert.ToInt64(Option.Id);
+                                    }
+                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                });
+
+        }
+
+        private async void UnitType_Clicked(object sender, EventArgs e)
+        {
+            SQLConfig Config = new SQLConfig();
+            List<UnitType> List = Config.GetItems<UnitType>().ToList();
+            await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    if (value.Length > 0)
+                                    {
+                                        var Option = List.FirstOrDefault(x => x.Title == value);
+                                        UnitTypePick = Option.Title;
+                                        UnitTypePickIndex = Convert.ToInt64(Option.Id);
+                                    }
+                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                });
+
+        }
+        private async void UnitNumber_Clicked(object sender, EventArgs e)
+        {
+
+            if ((UnitTypePick ?? "").Length > 0)
+            {
+                SQLConfig Config = new SQLConfig();
+                var List = Config.GetItems<UnitType>().Where(x => x.ParentUnitTypeId == UnitTypePickIndex).ToList();
+                await PopupNavigation.Instance.PushAsync(new SearchDialoge(List.Select(x => x.Title).ToList()));
+                MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                    (value) =>
+                                    {
+                                        if (value.Length > 0)
+                                        {
+                                            var Option = List.FirstOrDefault(x => x.Title == value);
+                                            UnitNumberPick = Option.Title;
+                                            UnitNumberPickIndex = Convert.ToInt64(Option.Id);
+                                        }
+                                        MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                    });
+               
+            }
+        }
+
+
+        private async void BtnSelectRoom_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SnaglistRoomSelection("Project Name", BuildingPick,FloorPick,UnitTypePick,UnitNumberPick)) ;
+        }
+
+        
     }
 }
