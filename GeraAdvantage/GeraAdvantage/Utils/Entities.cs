@@ -24,6 +24,7 @@ namespace GeraAdvantage.Utils
         }
         public class FilterDetail
         {
+            public string Id { get; set; }
             public string Title { get; set; }
             public bool IsChecked { get; set; }
         }
@@ -42,6 +43,7 @@ namespace GeraAdvantage.Utils
         public class MultileOps
         {
             public string Title { get; set; }
+            public string Severity { get; set; }
             public bool isfour { get; set; }
             public bool isthree { get; set; }
             public bool ConverttoNC { get; set; }

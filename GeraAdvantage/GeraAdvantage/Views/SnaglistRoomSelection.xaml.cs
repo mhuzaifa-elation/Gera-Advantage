@@ -15,7 +15,6 @@ namespace GeraAdvantage.Views
     public partial class SnaglistRoomSelection : ContentPage
     {
         private string _projectName = string.Empty;
-
         public string ProjectName
         {
             get => _projectName;
@@ -109,38 +108,57 @@ namespace GeraAdvantage.Views
             SampleList = new List<FilterDetail>();
             foreach (var item in List)
             {
-                SampleList.Add(new FilterDetail() { Title = item.Title });
+                SampleList.Add(new FilterDetail() {Id=item.Id, Title = item.Title });
             }
         }
         private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var SelectedItem = (FilterDetail)e.Item;
-            //MessagingCenter.Send<string>(SelectedItem.Title, "SelectedOption");
+            //MessagingCenter.Send<string>(SelectedItem.Title, "
+            //");
             //await .PopAsync();
         }
 
-        private void Search_Clicked(object sender, EventArgs e)
+        private async void OpenButton_Clicked(object sender, EventArgs e)
         {
-            if (EntSearch.Text.Length > 0)
-            {
-                var SearchedList = SampleList.FindAll(x => x.Title.ToLower().Contains(EntSearch.Text.ToLower()));
-                if (SearchedList.Count > 0)
-                {
-                    listView.ItemsSource = null;
-                    listView.ItemsSource = SearchedList;
-                }
-                else
-                {
-                    listView.ItemsSource = null;
-                    listView.ItemsSource = SampleList;
-                }
-            }
-            else
-            {
-                listView.ItemsSource = null;
-                listView.ItemsSource = SampleList;
-            }
+            var button = (Button)sender;
+            var item = (FilterDetail)button.BindingContext;
+            await Navigation.PushAsync(new ViewSnaglist(item.Id, ProjectName, Building, Floor, UnitType, UnitNo));
+            MessagingCenter.Subscribe<string>(this, "SelectedOption",
+                                (value) =>
+                                {
+                                    //if (value.Length > 0)
+                                    //{
+                                    //    var Option = List.FirstOrDefault(x => x.Title == value);
+                                    //    FloorPick = Option.Title;
+                                    //    FloorPickIndex = Convert.ToInt64(Option.Id);
+                                    //}
+                                    MessagingCenter.Unsubscribe<string>(this, "SelectedOption");
+                                });
         }
+
+        //private void Search_Clicked(object sender, EventArgs e)
+        //{
+        //    if (EntSearch.Text.Length > 0)
+        //    {
+        //        var SearchedList = SampleList.FindAll(x => x.Title.ToLower().Contains(EntSearch.Text.ToLower()));
+        //        if (SearchedList.Count > 0)
+        //        {
+        //            listView.ItemsSource = null;
+        //            listView.ItemsSource = SearchedList;
+        //        }
+        //        else
+        //        {
+        //            listView.ItemsSource = null;
+        //            listView.ItemsSource = SampleList;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        listView.ItemsSource = null;
+        //        listView.ItemsSource = SampleList;
+        //    }
+        //}
     }
 
 }

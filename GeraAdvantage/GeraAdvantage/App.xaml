@@ -412,7 +412,7 @@
             TargetType="Label">
             <Setter
                 Property="FontSize"
-                Value="Medium" />
+                Value="Small" />
             <Setter
                 Property="VerticalOptions"
                 Value="Center" />
@@ -1016,6 +1016,9 @@
             <Setter
                 Property="Padding"
                 Value="5,3,5,3" />
+            <Setter
+                Property="HorizontalOptions"
+                Value="StartAndExpand" />
         </Style>
         <Style
             x:Key="UDialogePage"

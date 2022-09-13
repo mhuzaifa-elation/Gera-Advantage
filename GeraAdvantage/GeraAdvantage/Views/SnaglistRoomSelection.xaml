@@ -56,7 +56,7 @@
                             Text="Select Room"
                             Style="{StaticResource DialogeTitle}" />
                     </StackLayout>
-                    <StackLayout
+                    <!--<StackLayout
                         Orientation="Horizontal"
                         HorizontalOptions="FillAndExpand">
                         <Entry
@@ -68,7 +68,7 @@
                             Source="bsearch.png"
                             Style="{StaticResource DialogeImage}"
                             Clicked="Search_Clicked" />
-                    </StackLayout>
+                    </StackLayout>-->
                     <ListView
                         x:Name="listView"
                         Style="{StaticResource ListviewStyle}"
@@ -80,9 +80,20 @@
                             <DataTemplate>
                                 <ViewCell
                                     Height="50">
-                                    <Label
+                                    <StackLayout
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Start"
+                                        Orientation="Horizontal">
+                                        <Label
                                         Text="{Binding Title}"
-                                        Style="{StaticResource DialogeListLabel}" />
+                                        Style="{StaticResource DialogeListLabel}"
+                                            />
+                                        <Button 
+                                            Text="Open"
+                                            HorizontalOptions="End"
+                                            Clicked="OpenButton_Clicked"/>
+
+                                    </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>

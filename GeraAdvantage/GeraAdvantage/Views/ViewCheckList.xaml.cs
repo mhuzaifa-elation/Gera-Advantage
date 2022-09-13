@@ -77,7 +77,6 @@ namespace GeraAdvantage.Views
                 GlobalWebServices globalWeb = new GlobalWebServices();
                 var checkpoints = await globalWeb.GetCheckListStatusUserRolesAsync(ChecklistTypeId, CategoryId).ConfigureAwait(false);
 
-
             }
             catch (Exception ex)
             {
@@ -114,11 +113,9 @@ namespace GeraAdvantage.Views
 
             };
 
-        } private void Button_Clicked(object sender, EventArgs e)
+        }
+        private void Button_Clicked(object sender, EventArgs e)
         {
-
-            
-
 
             var button = (Button)sender;
             var item = (MultileOps)button.BindingContext;

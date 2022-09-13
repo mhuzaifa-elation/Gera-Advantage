@@ -10,7 +10,7 @@
             VerticalOptions="CenterAndExpand"
             Margin="0,0,10,0">
             <Label
-                Text="Create Checklist"
+                Text="Create Snaglist"
                 FontSize="20"
                 TextColor="White"
                 VerticalOptions="CenterAndExpand"
@@ -31,26 +31,99 @@
         <ScrollView>
             <StackLayout
                 Margin="10"
-                Spacing="0">
-                <Label
-                    Style="{StaticResource QReviewTitle}"
-                    Text="Project Title" />
-                <Label
-                    Style="{StaticResource QReviewLabel}"
-                    Text="B-Bldg | Ground | BG02" />
-                <Label
-                    Style="{StaticResource QReviewLabel}"
-                    TextColor="DodgerBlue"
-                    Text="A/C Installation" />
-                <Label
-                    Style="{StaticResource QReviewLabel}"
-                    Text="Not Applicable |" />
-                <Label
-                    Style="{StaticResource QReviewTitle}"
-                    Text="Type" />
-                <Label
-                    Style="{StaticResource QReviewLabel}"
-                    Text="Sub-type" />
+                Spacing="5">
+                <StackLayout
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="{Binding ProjectName}"
+                        Style="{StaticResource SnaglistLabel}" />
+                    <Label
+                        Text="{Binding Building}"
+                        Style="{StaticResource SnaglistLabel}" />
+                    <Label
+                        Text="{Binding Floor}"
+                        Style="{StaticResource SnaglistLabel}" />
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="{Binding UnitType}"
+                        Style="{StaticResource SnaglistLabel}" />
+                    <Label
+                        Text="{Binding UnitNo}"
+                        Style="{StaticResource SnaglistLabel}" />
+
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="{Binding Room}"
+                        Style="{StaticResource SnaglistLabel}" />
+                </StackLayout>
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="LightGray"
+                    HorizontalOptions="FillAndExpand" />
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Label
+                        Text="Select Category"
+                        Style="{StaticResource ConformityLabel}" />
+                    <Grid>
+                        <Button
+                            Style="{StaticResource TButton}"
+                            Clicked="Category_Clicked" />
+                        <Entry
+                            Style="{StaticResource TEntry}"
+                            Text="{Binding CategoryPick}" />
+                        <Image
+                            Source="down.png"
+                            Style="{StaticResource downImgStyle}" />
+                    </Grid>
+                </StackLayout>
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="LightGray"
+                    HorizontalOptions="FillAndExpand" />
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="{Binding Room}"
+                        Style="{StaticResource SnaglistLabel}" 
+                        HorizontalOptions="StartAndExpand"/>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="End">
+                        <Label
+                            Text="Select Severity"
+                            Style="{StaticResource ConformityLabel}" />
+                        <Grid>
+
+                            <Button
+                                Style="{StaticResource TButton}"
+                                Clicked="Severity_Clicked" />
+                            <Entry
+                                Style="{StaticResource TEntry}"
+                                Text="{Binding SeverityPick}" />
+                            <Image
+                                Source="down.png"
+                                Style="{StaticResource downImgStyle}" />
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    HeightRequest="1"
+                    BackgroundColor="LightGray"
+                    HorizontalOptions="FillAndExpand" />
                 <ListView
                     x:Name="listView"
                     HasUnevenRows="true"
@@ -58,102 +131,68 @@
                     SelectionMode="None"
                     ItemTapped="listView_ItemTapped"
                     ItemsSource="{Binding _opsList}">
-                    <ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout
                                     Padding="15,15,5,5"
                                     Orientation="Horizontal"
-                                    HeightRequest="200"
+                                    HeightRequest="100"
                                     VerticalOptions="FillAndExpand">
                                     <StackLayout
                                         HorizontalOptions="FillAndExpand"
                                         VerticalOptions="FillAndExpand"
                                         Orientation="Vertical">
-                                        <Label
-                                            Text="{Binding Title}"
-                                            FontSize="Medium"
-                                            VerticalOptions="Start"
-                                            TextColor="Black" />
-                                        <Grid
-                                            ColumnDefinitions="*,*"
-                                            HeightRequest="60"
-                                            VerticalOptions="CenterAndExpand"
+                                        <StackLayout
+                                            Orientation="Horizontal"
                                             HorizontalOptions="FillAndExpand"
-                                            IsVisible="{Binding Key.isthree}">
-                                            <Button
-                                                x:Name="btnOk"
-                                                Grid.Column="0"
-                                                Text="OK"
-                                                BackgroundColor="Green"
-                                                Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}">
-                                                <Button.Triggers>
-                                                    <DataTrigger
-                                                        TargetType="Button"
-                                                        Binding="{Binding btnYes}"
-                                                        Value="True">
-                                                        <Setter
-                                                            Property="BorderColor"
-                                                            Value="DodgerBlue" />
-                                                    </DataTrigger>
-                                                    <DataTrigger
-                                                        TargetType="Button"
-                                                        Binding="{Binding btnYes}"
-                                                        Value="False">
-                                                        <Setter
-                                                            Property="BorderColor"
-                                                            Value="Transparent" />
-                                                    </DataTrigger>
-                                                </Button.Triggers>
-                                            </Button>
-                                            <Button
-                                                x:Name="btnNotOk"
-                                                Grid.Column="1"
-                                                Text="Not OK"
-                                                BackgroundColor="Red"
-                                                Clicked="Button_Clicked"
-                                                Style="{StaticResource CircularButton}">
-                                                <Button.Triggers>
-                                                    <DataTrigger
-                                                        TargetType="Button"
-                                                        Binding="{Binding btnNo}"
-                                                        Value="True">
-                                                        <Setter
-                                                            Property="BorderColor"
-                                                            Value="DodgerBlue" />
-                                                    </DataTrigger>
-                                                    <DataTrigger
-                                                        TargetType="Button"
-                                                        Binding="{Binding btnNo}"
-                                                        Value="False">
-                                                        <Setter
-                                                            Property="BorderColor"
-                                                            Value="Transparent" />
-                                                    </DataTrigger>
-                                                </Button.Triggers>
-                                            </Button>
-
-                                        </Grid>
-
+                                            VerticalOptions="StartAndExpand">
+                                            <Label
+                                                Text="{Binding Title}"
+                                                FontSize="Medium"
+                                                VerticalOptions="Start"
+                                                TextColor="Black"
+                                                HorizontalOptions="StartAndExpand" />
+                                            <StackLayout
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="End">
+                                                <Grid>
+                                                    <Button
+                                                        Style="{StaticResource TButton}"
+                                                        Clicked="ListSeverity_Clicked" />
+                                                    <Entry
+                                                        Style="{StaticResource TEntry}"
+                                                        Text="{Binding Severity}" />
+                                                    <Image
+                                                        Source="down.png"
+                                                        Style="{StaticResource downImgStyle}" />
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout
+                                            Orientation="Vertical"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="End"
+                                            IsVisible="{Binding AddImage}">
+                                            <StackLayout
+                                                Orientation="Horizontal">
+                                                <ImageButton
+                                                    Source="camera.png"
+                                                    Style="{StaticResource PhoneMailIcon}" 
+                                                    HorizontalOptions="Start"/>
+                                                <Entry
+                                                    TextColor="Black"
+                                                    PlaceholderColor="Gray"
+                                                    Placeholder="Comment"
+                                                    HorizontalOptions="FillAndExpand" />
+                                            </StackLayout>
+                                            <!--<ListView
+                                                VerticalOptions="End"
+                                                HorizontalOptions="FillAndExpand"
+                                                x:Name="PicsGrid" />-->
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.GroupHeaderTemplate>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout
-                                    HorizontalOptions="FillAndExpand"
-                                    Orientation="Horizontal">
-                                    <CheckBox
-                                        Style="{StaticResource Chkbox}"
-                                        IsChecked="{Binding IsChecked}"
-                                        IsEnabled="False" />
-                                    <Label
-                                        Text="{Binding Title}"
-                                        Style="{StaticResource DialogeListLabel}" />
+
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

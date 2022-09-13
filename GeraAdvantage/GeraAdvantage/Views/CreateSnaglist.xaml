@@ -27,7 +27,6 @@
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start"
                         Orientation="Horizontal">
-
                         <Label
                             Text="Project Title"
                             Style="{StaticResource CreateChecklistTitle}" />
