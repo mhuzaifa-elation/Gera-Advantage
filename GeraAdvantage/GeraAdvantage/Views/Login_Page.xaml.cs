@@ -89,7 +89,7 @@ namespace GeraAdvantage
                         {
                             await Device.InvokeOnMainThreadAsync(() =>
                             {
-                                Navigation.PushAsync(new GeraProjects_Page());
+                                Navigation.PushAsync(new GeraProjects_Page(LoggedIn.Id));
                             });
                         });
                     }
@@ -114,7 +114,7 @@ namespace GeraAdvantage
                 GlobalWebServices webServices = new GlobalWebServices();
                 SQLConfig sqlConfig = new SQLConfig();
 
-                //var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
+               // var RCs = await webServices.SyncGlobalData().ConfigureAwait(false);
 
                 CheckPreferences();
                 await Task.Run(async () =>
@@ -302,7 +302,7 @@ namespace GeraAdvantage
                     {
                         await Device.InvokeOnMainThreadAsync(() =>
                         {
-                             Navigation.PushAsync(new GeraProjects_Page());
+                             Navigation.PushAsync(new GeraProjects_Page(LoggedUser.Id));
                         });
                     });
                 }

@@ -7,9 +7,10 @@ namespace GeraAdvantage.Utils
 {
     public static class URLManager
     {
+        public static readonly string BaseURL = "https://windowsdev.in/Api";
         private static string GetServiceURL(string serviceName)
         {
-            string url = string.Format("https://windowsdev.in/Api/{0}/GetAll", serviceName);
+            string url = string.Format("{0}/{1}/GetAll", BaseURL, serviceName);
             //DomainName = enSettings.DomainName;
             return url;
         }
@@ -28,7 +29,7 @@ namespace GeraAdvantage.Utils
         }
         internal static string GetLoginURL(string username,string Password, string DeviceID)
         {
-            return string.Format("https://windowsdev.in/api/User/ValidateLogin?userName={0}&password={1}&deviceid={2}",username,Password,DeviceID);
+            return string.Format("{0}/User/ValidateLogin?userName={1}&password={2}&deviceid={3}", BaseURL, username,Password,DeviceID);
         }
 
         internal static string GetSeverityURL()
@@ -57,7 +58,7 @@ namespace GeraAdvantage.Utils
         }
         internal static string GetCheckListStagesURL(int CheckListTypeId)
         {
-            return string.Format("https://windowsdev.in/api/CheckListType/GetStages?checkListTypeId={0}", CheckListTypeId);
+            return string.Format("{0}/CheckListType/GetStages?checkListTypeId={1}",BaseURL, CheckListTypeId);
 
         }
         internal static string GetUserRoleURL()
@@ -106,7 +107,7 @@ namespace GeraAdvantage.Utils
         }
         internal static string GetCheckListPointStatusURL(int checklisttypeId, int categoryId)
         {
-            return string.Format("https://windowsdev.in/api/CheckListType/GetCheckPoints?checklistTypeId={0}&categoryId={1}", checklisttypeId, categoryId);
+            return string.Format("{0}/CheckListType/GetCheckPoints?checklistTypeId={1}&categoryId={2}",BaseURL, checklisttypeId, categoryId);
         }
         internal static string GetRoomTypeURL()
         {
@@ -129,5 +130,10 @@ namespace GeraAdvantage.Utils
             return GetServiceURL("ApprovalCycle");
         }
 
+        internal static string GetProjectbyUserURL(string loggedUserId)
+        {
+            return string.Format("{0}/Project/GetByUser?userId={1}", BaseURL,loggedUserId);
+
+        }
     }
 }

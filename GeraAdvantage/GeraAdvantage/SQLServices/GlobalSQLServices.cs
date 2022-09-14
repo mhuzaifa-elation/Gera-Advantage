@@ -105,6 +105,10 @@ namespace GeraAdvantage.SQLServices
         {
             return sql_SC.GetItems<Building>().FirstOrDefault(x => x.Id == Id);
         }
+        //public List<Project> GetProjectsbyUser(string userId)
+        //{
+        //    return sql_SC.GetItems<Project>().Where(x => x.UserId == userId).ToList();
+        //}
         public Project GetProject(string Id)
         {
             return sql_SC.GetItems<Project>().FirstOrDefault(x => x.Id == Id);

@@ -30,7 +30,7 @@ namespace GeraAdvantage.Views
 
         private void GetNCsFromSQL()
         {
-            NCServices ncServices = new NCServices();
+            NCSQLServices ncServices = new NCSQLServices();
             GlobalSQLServices sQLServices = new GlobalSQLServices();
             _NCsList = ncServices.GetNCs();
             

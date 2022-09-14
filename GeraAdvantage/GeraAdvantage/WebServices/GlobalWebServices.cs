@@ -174,6 +174,7 @@ namespace GeraAdvantage.WebServices
                 if (UtilServices.IsValidJson(content))
                 {
                     LoggedUser = JsonConvert.DeserializeObject<UserList>(content).data[0];
+                    LoggedUser = new SQLConfig().GetItems<User>().FirstOrDefault(x => x.UserName.ToUpper() == username.ToUpper());
                     return LoggedUser;
                 }
                 else
@@ -574,6 +575,25 @@ namespace GeraAdvantage.WebServices
             HttpClient client = UtilServices.GetHttpClient();
 
             Uri uri = new Uri(URLManager.GetProjectURL());
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    ProjectList = JsonConvert.DeserializeObject<ProjectList>(content).projectDataModels;
+                return ProjectList;
+            }
+            else
+            {
+                return new List<Project>();
+            }
+        }
+        public async Task<List<Project>> GetProjectsbyUser(string loggedUserId)
+        {
+            List<Project> ProjectList = new List<Project>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetProjectbyUserURL(loggedUserId));
             var response = await client.GetAsync(uri).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {

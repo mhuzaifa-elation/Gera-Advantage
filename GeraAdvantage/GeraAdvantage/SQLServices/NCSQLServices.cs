@@ -6,10 +6,10 @@ using System.Text;
 
 namespace GeraAdvantage.SQLServices
 {
-    public class NCServices
+    public class NCSQLServices
     {
         SQLConfig sql_SC;
-        public NCServices()
+        public NCSQLServices()
         {
             sql_SC = new SQLConfig();
 

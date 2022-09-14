@@ -35,7 +35,7 @@ namespace GeraAdvantage.Views
         {
             BindingContext = this;
             InitializeComponent();
-            NCServices ncServices = new NCServices();
+            NCSQLServices ncServices = new NCSQLServices();
             NCDetail = ncServices.GetNCbyId(Id);
             PopulateData();
             SampleText = "This is Sample Text.";

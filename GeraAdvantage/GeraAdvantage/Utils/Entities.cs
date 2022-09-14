@@ -324,6 +324,7 @@ namespace GeraAdvantage.Utils
     {
         [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
+        [JsonProperty("Title")]
         public string Name { get; set; }
 
     }
@@ -379,6 +380,8 @@ namespace GeraAdvantage.Utils
         public long CityId { get; set; }
         public string Image { get; set; }
         public string Address { get; set; }
+        public string UserId { get; set; }
+        public string UserProjectsId { get; set; }
 
     }
 }

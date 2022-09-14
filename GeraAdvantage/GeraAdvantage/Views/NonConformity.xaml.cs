@@ -266,7 +266,7 @@ namespace GeraAdvantage.Views
             model.StatusId = 0;
             model.DeadlineDate = DateTime.Now.AddDays(10);
 
-            NCServices ncServices = new NCServices();
+            NCSQLServices ncServices = new NCSQLServices();
 
             //bool res = DependencyService.Get<ISQLite>().SaveNCAndC(model);
             //bool res =true;
