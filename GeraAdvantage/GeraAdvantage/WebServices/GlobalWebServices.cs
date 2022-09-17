@@ -12,6 +12,7 @@ namespace GeraAdvantage.WebServices
 {
     public class GlobalWebServices
     {
+        
         public async Task<bool> SyncGlobalData()
         {
 
@@ -81,7 +82,22 @@ namespace GeraAdvantage.WebServices
             }
         }
 
-        
+        //public async Task<bool> SyncChecklistData(int buildingID)
+        //{
+
+        //    try
+        //    {
+        //        var buildingFloors=await GetBuildingFloorAsync().ConfigureAwait(false);
+        //        var buildingflats=await GetBuildingFlatsAsync().ConfigureAwait(false);
+        //        var Unitrooms=await GetUnitRoomAsync().ConfigureAwait(false);
+        //        var Usercities=await GetUserCityAsync().ConfigureAwait(false);
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
 
         public async Task<List<RootCause>> GetRootCauseAsync()
         {
@@ -301,12 +317,69 @@ namespace GeraAdvantage.WebServices
                 return new List<Floor>();
             }
         }
-        public async Task<List<BuildingFloor>> GetBuildingFloorAsync()
+        public async Task<List<BuldingFloor>> GetFloorbyUserAsync()
+        {
+            List<BuldingFloor> FloorList = new List<BuldingFloor>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetFloorURL());
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    FloorList = JsonConvert.DeserializeObject<BuldingFloorList>(content).data;
+                return FloorList;
+            }
+            else
+            {
+                return new List<BuldingFloor>();
+            }
+        }
+        public async Task<List<BuildingFlat>> GetBuildingFlatsAsync(int buildingId,int floorId)
+        {
+            List<BuildingFlat> BuildingFloorList = new List<BuildingFlat>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetBuildingFlatsURL(buildingId, floorId));
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    BuildingFloorList = JsonConvert.DeserializeObject<BuildingFlatList>(content).data;
+                return BuildingFloorList;
+            }
+            else
+            {
+                return new List<BuildingFlat>();
+            }
+        }
+        public async Task<List<UnitRoom>> GetUnitRoomAsync(int unittypeId)
+        {
+            List<UnitRoom> BuildingFloorList = new List<UnitRoom>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetUnitRoomsURL(unittypeId));
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    BuildingFloorList = JsonConvert.DeserializeObject<UnitRoomList>(content).data;
+                return BuildingFloorList;
+            }
+            else
+            {
+                return new List<UnitRoom>();
+            }
+        }
+        public async Task<List<BuildingFloor>> GetBuildingFloorAsync(int buildingId)
         {
             List<BuildingFloor> BuildingFloorList = new List<BuildingFloor>();
             HttpClient client = UtilServices.GetHttpClient();
 
-            Uri uri = new Uri(URLManager.GetBuildingFloorURL());
+            Uri uri = new Uri(URLManager.GetBuildingFloorURL(buildingId));
             var response = await client.GetAsync(uri).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -567,6 +640,25 @@ namespace GeraAdvantage.WebServices
             else
             {
                 return new List<City>();
+            }
+        }
+        public async Task<List<UserCity>> GetUserCityAsync(int userId)
+        {
+            List<UserCity> CityList = new List<UserCity>();
+            HttpClient client = UtilServices.GetHttpClient();
+
+            Uri uri = new Uri(URLManager.GetUserCityURL(userId));
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                if (UtilServices.IsValidJson(content))
+                    CityList = JsonConvert.DeserializeObject<UserCityList>(content).data;
+                return CityList;
+            }
+            else
+            {
+                return new List<UserCity>();
             }
         }
         public async Task<List<Project>> GetProjectAsync()

@@ -123,8 +123,8 @@ namespace GeraAdvantage
                         int nCol = Grid.GetColumn((BindableObject)s);
 
                         int projID = 2 * nRow + nCol;
-                        await DisplayAlert("Title", projectsList[projID].Name, "OK");
-                        await Navigation.PushAsync(new ProjectDetails_Page());
+                        //await DisplayAlert("Title", projectsList[projID].Name, "OK");
+                        await Navigation.PushAsync(new ProjectDetails_Page(projectsList[projID].Id));
                     };
                     GridCellLayout.GestureRecognizers.Add(tapGestureRecognizer);
                     projectsGLayout.Children.Add(GridCellLayout, columnIndex, rowIndex);

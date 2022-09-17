@@ -52,9 +52,20 @@ namespace GeraAdvantage.Utils
         {
             return GetServiceURL("Floor");
         }
-        internal static string GetBuildingFloorURL()
+        internal static string GetBuildingFlatsURL(int BuildingId,int FloorId)
         {
-            return GetServiceURL("BuildingFloor");
+            return string.Format("{0}/api/BuildingFloor/GetUnits?buildingId={1}&floorId={2}", BaseURL, BuildingId,FloorId);
+
+        }
+        internal static string GetUnitRoomsURL(int unittypeId)
+        {
+            return string.Format("{0}/UnitType/GetRoomTypes?unitTypeId={1}", BaseURL, unittypeId);
+
+        }
+        internal static string GetBuildingFloorURL(int BuildingId)
+        {
+            return string.Format("{0}/BuildingFloor/GetFloors?buildingId={1}", BaseURL, BuildingId);
+
         }
         internal static string GetCheckListStagesURL(int CheckListTypeId)
         {
@@ -134,6 +145,11 @@ namespace GeraAdvantage.Utils
         {
             return string.Format("{0}/Project/GetByUser?userId={1}", BaseURL,loggedUserId);
 
+        }
+
+        internal static string GetUserCityURL(int userId)
+        {
+            return string.Format("{0}/Project/GetCityByUser?userId=1", BaseURL, userId);
         }
     }
 }

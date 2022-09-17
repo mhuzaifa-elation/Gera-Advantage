@@ -16,12 +16,12 @@ namespace GeraAdvantage
     public partial class ProjectDetails_Page : ContentPage
     {
         private List<CheckListType> CheckListTypes;
-
-        public ProjectDetails_Page()
+        private string _projectId= string.Empty;
+        public ProjectDetails_Page(string projectId)
         {
             InitializeComponent();
+            _projectId = projectId;
             InitializeChecklists();
-
         }
 
         private void InitializeChecklists()

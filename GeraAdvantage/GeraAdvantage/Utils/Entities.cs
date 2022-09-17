@@ -203,6 +203,26 @@ namespace GeraAdvantage.Utils
 
 
     }
+    public class BuildingFlatList
+    {
+        [JsonProperty("data")]
+        public List<BuildingFlat> data { get; set; }
+    }
+    public class BuildingFlat
+    { }
+    public class UnitRoomList
+    {
+        [JsonProperty("data")]
+        public List<UnitRoom> data { get; set; }
+    }
+    public class UnitRoom
+    {
+        public int Id { get; set; }
+        public int UnitTypeId { get; set; }
+        public string UnitTypeName { get; set; }
+        public int RoomTypeId { get; set; }
+        public string RoomTypeName { get; set; }
+    }
     public class BuildingFloorList
     {
         [JsonProperty("data")]
@@ -314,6 +334,24 @@ namespace GeraAdvantage.Utils
         public long ParentCategoryId { get; set; }
 
     }
+    public class UserCityList
+    {
+        [JsonProperty("data")]
+        public List<UserCity> data { get; set; }
+    }
+
+    public class UserCity
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public string Address { get; set; }
+        public int UserProjectsId { get; set; }
+        public int UserId { get; set; }
+        public int CityId { get; set; }
+        public string CityName { get; set; }
+    }
+
     public class CityList
     {
         [JsonProperty("data")]
@@ -334,6 +372,20 @@ namespace GeraAdvantage.Utils
         public List<Floor> floorDataModels { get; set; }
     }
     public class Floor
+    {
+        [PrimaryKey, AutoIncrement]
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public long FloorNo { get; set; }
+
+    }
+
+    public class BuldingFloorList
+    {
+        [JsonProperty("data")]
+        public List<BuldingFloor> data { get; set; }
+    }
+    public class BuldingFloor
     {
         [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
